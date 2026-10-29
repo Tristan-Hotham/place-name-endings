@@ -1,0 +1,675 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Place-Name Endings of Britain and Ireland</title>
+<meta name="description" content="105,532 town, village and townland names in Britain and Ireland, tagged by the old words inside them: English -ton and -ham, Norse -by and -thorpe, Latin -chester, Welsh llan- and aber-, Cornish tre-, Gaelic bally-, kil- and inver-.">
+<meta property="og:title" content="-ton, -by, llan-, bally-: the place-name map of Britain and Ireland">
+<meta property="og:description" content="Every settlement in Britain and Ireland, and every Irish townland, by the English, Norse, Latin, Brittonic and Gaelic words in its name. Map, search and findings.">
+<meta property="og:image" content="https://maps.tristanhotham.com/place-name-endings/header.png">
+<meta property="og:url" content="https://maps.tristanhotham.com/place-name-endings/">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,800;9..144,900&family=IBM+Plex+Mono:wght@400;500;600&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&display=swap">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css">
+<style>
+/* Vellum and ink, with one colour per language family. */
+:root{
+  --bg:#F5F1E6; --panel:#EAE4D4; --fg:#1D1A16; --muted:#625D54; --rule:#DAD2C0; --card:#FCFAF4; --border:#C8BEA8;
+  --en:#B23A48; --no:#2B5C9E; --la:#7A5195; --br:#13866A; --ga:#C98A0B; --none:#E0D9C9; --acc:#B23A48; --sea:#E4E8E6; --land:#EFEADD;
+  --display:"Fraunces",Georgia,"Times New Roman",serif;
+  --body:"Source Serif 4",Georgia,"Times New Roman",serif;
+  --mono:"IBM Plex Mono",ui-monospace,Menlo,Consolas,monospace;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#17161A; --panel:#211F25; --fg:#EEEBE4; --muted:#A6A19A; --rule:#34313A; --card:#1E1C22; --border:#4A4650;
+  --en:#E3707E; --no:#6E9BDA; --la:#B394D3; --br:#4FC4A2; --ga:#F0B640; --none:#302D35; --acc:#E3707E; --sea:#1A1D21; --land:#26242A; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#17161A; --panel:#211F25; --fg:#EEEBE4; --muted:#A6A19A; --rule:#34313A; --card:#1E1C22; --border:#4A4650;
+  --en:#E3707E; --no:#6E9BDA; --la:#B394D3; --br:#4FC4A2; --ga:#F0B640; --none:#302D35; --acc:#E3707E; --sea:#1A1D21; --land:#26242A; color-scheme:dark}
+*,*::before,*::after{box-sizing:border-box}
+[hidden]{display:none!important}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--fg);font:400 18px/1.62 var(--body);
+  padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));overflow-x:hidden}
+.wrap{max-width:680px;margin:0 auto;padding-block:28px 64px}
+.wrap .bleed{width:min(1120px,calc(100vw - 32px));margin-left:calc((100% - min(1120px,100vw - 32px))/2);margin-right:0}
+a{color:inherit;text-decoration-color:var(--acc);text-underline-offset:3px}
+.kicker{font:500 12px/1 var(--mono);letter-spacing:.12em;text-transform:uppercase;color:var(--muted);display:flex;gap:10px;flex-wrap:wrap;align-items:center}
+.kicker b{background:var(--fg);color:var(--bg);padding:5px 8px;font-weight:500}
+header.hero{border-bottom:6px double var(--fg);padding-bottom:22px;margin-top:18px}
+.chips{display:flex;gap:8px;flex-wrap:wrap;margin:10px 0 14px}
+.chip{font:800 clamp(22px,5.6vw,40px)/1 var(--display);padding:8px 12px 6px;border-radius:3px;color:#fff;letter-spacing:-.01em}
+.chip small{display:block;font:500 10.5px/1.2 var(--mono);letter-spacing:.06em;text-transform:uppercase;opacity:.9;margin-top:4px}
+.c-en{background:var(--en)}.c-no{background:var(--no)}.c-la{background:var(--la)}.c-br{background:var(--br)}.c-ga{background:var(--ga);color:#1D1A16}
+h1{font:900 clamp(38px,9vw,78px)/.96 var(--display);letter-spacing:-.02em;margin:6px 0 0;text-wrap:balance}
+.dek{font-size:21px;line-height:1.42;margin:14px 0 0;max-width:54ch}
+.byline{font:400 13px/1.4 var(--mono);color:var(--muted);margin-top:14px}
+h2{font:800 34px/1.04 var(--display);letter-spacing:-.01em;margin:52px 0 10px;text-wrap:balance}
+h2 .n{font:500 13px/1 var(--mono);color:var(--acc);display:block;letter-spacing:.1em;margin-bottom:10px}
+h3{font:600 20px/1.25 var(--display);margin:28px 0 6px}
+p{margin:0 0 16px}
+.lede::first-letter{font:900 72px/.8 var(--display);float:left;margin:6px 10px 0 0;color:var(--en)}
+.stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:1px;background:var(--rule);border:1px solid var(--rule);margin:26px 0 8px}
+.stats div{background:var(--card);padding:14px 12px}
+.stats b{display:block;font:900 clamp(26px,5.6vw,38px)/1 var(--display)}
+.stats span{font:400 12px/1.35 var(--mono);color:var(--muted);display:block;margin-top:6px}
+@media (max-width:600px){.stats{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.figure{margin:26px 0 30px}
+.fig-h{font:600 19px/1.25 var(--display);margin:0 0 4px}
+.fig-sub{font:400 13px/1.45 var(--mono);color:var(--muted);margin:0 0 12px}
+.src{font:400 12px/1.45 var(--mono);color:var(--muted);margin-top:10px}
+.chart{width:100%;position:relative}
+.chart svg{display:block;width:100%;height:auto;overflow:visible}
+svg text{font-family:var(--mono);fill:var(--fg)}
+.controls{display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin:0 0 8px}
+.controls label.l{font:500 11px/1 var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-right:2px;white-space:nowrap}
+.btn{font:500 12px/1 var(--mono);background:var(--card);color:var(--fg);border:1px solid var(--border);border-radius:3px;padding:8px 10px;cursor:pointer;min-height:36px;white-space:nowrap}
+.btn[aria-pressed="true"]{background:var(--fg);color:var(--bg);border-color:var(--fg)}
+.btn:focus-visible,input:focus-visible,select:focus-visible,summary:focus-visible{outline:2px solid var(--acc);outline-offset:2px}
+.seg{display:inline-flex;border:1px solid var(--border);border-radius:3px;overflow:hidden;max-width:100%;flex:0 0 auto}
+.seg .btn{border:0;border-radius:0;border-right:1px solid var(--border)}
+.seg .btn:last-child{border-right:0}
+select{font:500 12px/1 var(--mono);background:var(--card);color:var(--fg);border:1px solid var(--border);border-radius:3px;padding:8px 8px;min-height:36px;max-width:100%}
+.searchbox{position:relative;flex:1 1 220px;min-width:0}
+input[type=search]{font:400 15px/1 var(--mono);background:var(--card);color:var(--fg);border:1px solid var(--border);border-radius:3px;padding:9px 11px;min-height:38px;width:100%}
+.suggest{position:absolute;left:0;right:0;top:100%;margin:2px 0 0;padding:0;list-style:none;background:var(--card);border:1px solid var(--border);z-index:1001;font:400 13px/1.3 var(--mono);display:none;max-height:300px;overflow:auto}
+.suggest li{padding:8px 10px;cursor:pointer;border-bottom:1px solid var(--rule)}
+.suggest li span{color:var(--muted)}
+.suggest li[aria-selected="true"],.suggest li:hover{background:var(--panel)}
+@media (max-width:700px){
+  .controls.scroll{flex-wrap:nowrap;overflow-x:auto;-webkit-overflow-scrolling:touch;padding-bottom:4px;scrollbar-width:thin}
+  .controls.scroll .seg{flex:0 0 auto}
+}
+.mapgrid{display:grid;grid-template-columns:minmax(0,1fr) 330px;gap:16px;align-items:start}
+@media (max-width:900px){.mapgrid{grid-template-columns:1fr}}
+#lmap{height:760px;border:1px solid var(--border);background:var(--sea);border-radius:2px}
+@media (max-width:900px){#lmap{height:600px}}
+@media (max-width:600px){#lmap{height:min(62vh,500px)}}
+.leaflet-container{font:400 12px/1.4 var(--mono);background:var(--sea)}
+.leaflet-bar a,.leaflet-bar a:hover{background:var(--card);color:var(--fg);border-bottom-color:var(--border)}
+@media (max-width:600px){.leaflet-control-attribution{font-size:10px;line-height:1.25}}
+.leaflet-control-attribution{background:color-mix(in srgb,var(--card) 85%,transparent)!important;color:var(--muted)}
+.leaflet-control-attribution a{color:var(--fg)}
+.city{font:500 11px/1 var(--mono);color:var(--fg);white-space:nowrap;text-shadow:0 0 3px var(--bg),0 0 3px var(--bg),0 0 2px var(--bg);pointer-events:none}
+.city.r1{font-size:10px;font-weight:400}
+.city i{display:inline-block;width:5px;height:5px;border-radius:50%;background:var(--fg);margin-right:4px;vertical-align:1px}
+.city.r1 i{width:4px;height:4px}
+.lyrBtn{background:var(--card);color:var(--fg);border:1px solid var(--border);border-radius:3px;font:600 12px/1 var(--mono);padding:8px 10px;cursor:pointer;box-shadow:0 1px 4px rgba(0,0,0,.12)}
+.lyrBtn[aria-expanded="true"]{background:var(--fg);color:var(--bg)}
+.lyrPanel{background:var(--card);color:var(--fg);border:1px solid var(--border);border-radius:3px;padding:10px 12px 8px;margin-top:6px;width:236px;box-shadow:0 2px 10px rgba(0,0,0,.15);font:400 12px/1.3 var(--mono)}
+.lyrPanel .row{display:grid;grid-template-columns:auto 1fr;gap:4px 8px;align-items:center;margin:0 0 9px}
+.lyrPanel label{display:flex;gap:6px;align-items:center;cursor:pointer;font-weight:600}
+.lyrPanel input[type=range]{width:100%;accent-color:var(--fg)}
+.lyrPanel select{font:400 12px var(--mono);background:var(--bg);color:var(--fg);border:1px solid var(--border);border-radius:2px;padding:2px 4px;width:100%;min-height:0}
+.lyrPanel .sub{grid-column:1/-1;display:flex;gap:6px;align-items:center;color:var(--muted);font-size:11px}
+.lyrPanel .sub span{flex:0 0 52px}
+.lyrPanel .reset{font:400 11px var(--mono);color:var(--muted);background:none;border:0;padding:0;cursor:pointer;text-decoration:underline}
+.pin{width:16px;height:16px;border:3px solid var(--fg);border-radius:50%;background:transparent;box-shadow:0 0 0 2px var(--bg)}
+.side{background:var(--card);border:1px solid var(--border);padding:14px 14px 10px}
+.side h4{font:500 11px/1.2 var(--mono);letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin:0 0 8px}
+#legend{font:400 12px/1.35 var(--mono)}
+.lg{display:flex;flex-wrap:wrap;gap:4px 12px;margin:4px 0}
+.lg span{display:inline-flex;align-items:center;gap:6px;white-space:nowrap}
+.sw{display:inline-block;width:13px;height:13px;border:1px solid var(--border);flex:0 0 auto}
+#info{font:400 13px/1.45 var(--mono);border-top:1px solid var(--rule);padding-top:10px;margin-top:10px;min-height:80px}
+#info b{font-weight:600}
+#info .big{font:800 24px/1.12 var(--display);margin:0 0 2px}
+#info .alt{font:italic 400 15px/1.3 var(--body);color:var(--muted)}
+#info .el{border-left:5px solid var(--muted);padding:3px 0 3px 9px;margin:8px 0}
+#info .el b{font:700 16px/1.2 var(--display)}
+#info ol{margin:6px 0 8px;padding-left:22px}
+.fambar{display:flex;height:12px;margin:6px 0;border:1px solid var(--border)}
+.muted{color:var(--muted)}
+.cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin:20px 0}
+@media (max-width:700px){.cards{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:420px){.cards{grid-template-columns:1fr}}
+.card{background:var(--card);border:1px solid var(--border);border-top:8px solid var(--acc);padding:10px 12px;font:400 12.5px/1.45 var(--mono);cursor:pointer;text-align:left;color:var(--fg)}
+.card b{font:700 21px/1.1 var(--display);display:block;margin-bottom:2px}
+.card .big{font:900 26px/1.05 var(--display);margin:4px 0 2px}
+.card:hover{background:var(--panel)}
+.pull{font:600 26px/1.25 var(--display);border-left:6px solid var(--ga);padding:4px 0 4px 18px;margin:30px 0}
+.note{background:var(--panel);border:1px solid var(--rule);padding:14px 16px;font-size:16px;margin:22px 0}
+.note h3{margin-top:0}
+table.t{width:100%;border-collapse:collapse;font:400 13px/1.35 var(--mono)}
+table.t th{text-align:left;font-weight:500;color:var(--muted);border-bottom:2px solid var(--fg);padding:6px 8px 6px 0}
+table.t td{border-bottom:1px solid var(--rule);padding:7px 8px 7px 0;vertical-align:top}
+table.t td.num,table.t th.num{text-align:right;white-space:nowrap}
+table.t td small{display:block}
+table.t tr.go{cursor:pointer}
+table.t tr.go:hover td{background:var(--panel)}
+.tablewrap{overflow-x:auto}
+@media (max-width:600px){table.t .wide{display:none}}
+details{margin:14px 0}
+summary{font:500 13px/1.4 var(--mono);cursor:pointer;color:var(--fg);padding:8px 0}
+.cta{display:flex;gap:10px;flex-wrap:wrap;margin:18px 0}
+.cta a{font:500 13px/1 var(--mono);text-decoration:none;border:1px solid var(--fg);padding:11px 14px;border-radius:3px}
+.cta a.p{background:var(--fg);border-color:var(--fg);color:var(--bg)}
+footer{border-top:6px double var(--fg);margin-top:56px;padding-top:16px;font:400 13px/1.55 var(--mono);color:var(--muted)}
+footer p{margin:0 0 10px}
+.theme{position:fixed;right:12px;bottom:12px;z-index:1002}
+.loading{font:400 12px/1.4 var(--mono);color:var(--muted)}
+@media print{.theme,.controls{display:none}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<div class="kicker"><b>Data study</b><span>Place names</span><span>Britain and Ireland, 2026</span></div>
+<header class="hero">
+  <div class="chips" aria-hidden="true">
+    <span class="chip c-en">-ton<small>English</small></span><span class="chip c-no">-by<small>Norse</small></span><span class="chip c-la">-chester<small>Latin</small></span><span class="chip c-br">llan-<small>Welsh</small></span><span class="chip c-ga">bally-<small>Gaelic</small></span>
+  </div>
+  <h1>What is your town's name made of?</h1>
+  <p class="dek">Every town, village and hamlet in Britain and Ireland, and every Irish townland, 105,532 names in all, sorted by the old words hidden inside them. One map for the English, the Vikings, the Romans, the Welsh, the Cornish and the Gaels.</p>
+</header>
+<div class="byline">Dr Tristan Hotham, Independent researcher · 2026 · Data: OS Open Names; OSNI Open Data; Tailte Éireann National Placenames Gazetteer</div>
+
+<div class="stats">
+  <div><b>45,632</b><span>settlements in Britain and Ireland, plus 59,900 Irish townlands</span></div>
+  <div><b style="color:var(--en)">5,949</b><span>settlements end in -ton, the commonest element: 16% of England's</span></div>
+  <div><b style="color:var(--ga)">6,282</b><span>Irish townlands start with Bally- or Bal-, 10% of all</span></div>
+  <div><b style="color:var(--ga)">30%</b><span>of Kil- names with an official Irish form come from coill, wood, not cill, church</span></div>
+</div>
+
+<p class="lede">Place names are the oldest documents most of us read every day. Bradford, Grimsby, Lancaster, Llandudno, Pitlochry and Ballymena each carry a word from a language that named the place: Old English, Old Norse, Latin, Welsh, Pictish, Gaelic. Scholars have studied these words for well over a century, county by county. What is harder to see is the whole picture at once, across both islands, from the same open data.</p>
+<p>So I took every settlement in the Ordnance Survey's open gazetteer of Great Britain, Northern Ireland's official place names and townlands, and the Republic of Ireland's official gazetteer of towns and townlands, and tagged each name with 67 spelling rules: endings such as -ton, -by and -chester, and beginnings such as llan-, aber-, tre-, pit-, inver- and bally-. The map shows where each word lives. Search for your own town to see what its name is made of.</p>
+<div class="note"><b>A word of caution.</b> A spelling is not an etymology. Kil- in Ireland can mean church or wood, -ham can be a homestead or a river meadow, and some -bys and -thorpes may be English names in Norse dress. The rules find the letters; the meanings given are the usual readings from the place-name literature, and only a place-name dictionary can settle a single name. Treat each tag as a good first guess.</div>
+
+<h2><span class="n">01 · The map</span>Where the old words live</h2>
+<div class="figure bleed" id="mapfig">
+  <div class="controls scroll">
+    <label class="l">Show</label>
+    <div class="seg" role="group" aria-label="What the map shows" id="modeBtns"><button class="btn" data-m="fam" aria-pressed="true">Languages</button><button class="btn" data-m="el" aria-pressed="false">One element</button></div>
+    <label class="l">Ireland</label>
+    <div class="seg" role="group" aria-label="Which Irish names" id="ireBtns"><button class="btn" data-i="towns" aria-pressed="true">Towns</button><button class="btn" data-i="townlands" aria-pressed="false">Townlands</button></div>
+  </div>
+  <div class="controls" id="elRow" hidden>
+    <label class="l" for="elSel">Element</label>
+    <select id="elSel" aria-label="Place-name element to map"></select>
+  </div>
+  <div class="controls">
+    <div class="searchbox"><input type="search" id="q" placeholder="Your town, village or townland" aria-label="Look up a place name" autocomplete="off" role="combobox" aria-expanded="false" aria-controls="sug"><ul class="suggest" id="sug" role="listbox"></ul></div>
+    <span class="loading" id="msg">Loading the map data...</span>
+  </div>
+  <div class="mapgrid">
+    <div id="lmap" role="region" aria-label="Map of place-name elements across Britain and Ireland"></div>
+    <div class="side">
+      <h4 id="keyTitle">Key</h4>
+      <div id="legend"></div>
+      <div id="info">Tap a square, or zoom in and tap a place, to see what its name is made of.</div>
+    </div>
+  </div>
+  <div class="src" id="mapNote">Zoomed out, squares of 0.3 by 0.5 degrees (about 33 km), then 0.15 by 0.25 degrees; zoom in further to see every place as a dot. In Ireland the map shows towns and villages by default; switch to townlands, the small land divisions that carry most Irish place names. Grey: names with none of the 67 elements.</div>
+</div>
+
+<h2><span class="n">02 · Five languages</span>One map, five layers</h2>
+<p>43% of all settlements, and 44% of Irish townlands, carry at least one element on my list. The rest have names my rules do not cover (Newport, Church End, Felindre, Mount Pleasant) or newer names. Here is the share of each nation's settlements with an element from each language family.</p>
+<div class="figure">
+  <div class="fig-h">Share of settlements with an element from each language family</div>
+  <div class="fig-sub">A name can carry more than one family (Kirkby Lonsdale is Norse and English). Townland rows for Ireland are shown separately.</div>
+  <div class="chart" id="famChart"></div>
+</div>
+<p>England is English: 41% of its settlements carry an English element, against 4.2% with a Norse one. Wales splits: 28% of its settlements have a Welsh (Brittonic) element and 8% an English one. Scotland is the most mixed, with Gaelic (13%) and English (13%) about level and Norse strong in the Northern Isles. In Ireland, Gaelic dominates: 38% of townlands in the Republic and 44% in Northern Ireland start with a Gaelic element on my list.</p>
+<p>On the map, of the 976 squares with at least three tagged settlements, English is the leading family in 591, Gaelic in 251, Brittonic in 91 and Norse in 43.</p>
+
+<h2><span class="n">03 · The English map</span>-ton, -ley, -ing and -ham</h2>
+<p>The single commonest element is the Old English tūn, a farmstead or estate that later became a village: 5,949 settlements end in -ton, 16% of all those in England. Behind it come -ley, a woodland clearing (1,902), -ing (1,724), -ham (1,251), -ford (1,020) and -field (819).</p>
+<div class="figure">
+  <div class="fig-h">The commonest elements</div>
+  <div class="fig-sub">Settlements in Britain and Ireland (not townlands) carrying each element, coloured by language family. Click a bar to map it.</div>
+  <div class="chart" id="topChart"></div>
+</div>
+<p>Some elements are big-town words. The Old English ceaster, borrowed from Latin castra and used for a Roman fort or town, sits in 67 settlement names, and 33% of them are towns or cities in Ordnance Survey's terms (Manchester, Lancaster, Doncaster, Chester), against 3.3% of all settlements in Great Britain. Others are hamlet words: 50% of tre- names and 49% of -cote names are hamlets.</p>
+<div class="figure">
+  <div class="fig-h">Which elements make towns?</div>
+  <div class="fig-sub">Share of each element's settlements in Great Britain that Ordnance Survey classes as a town or city. Elements with at least 40 settlements. The dashed line is the share for all settlements.</div>
+  <div class="chart" id="sizeChart"></div>
+</div>
+<p>This fits the usual reading, that ceaster names often mark Roman forts and towns, many of which stayed important; the data show the link, not the reason. The English -bury (burh, a fortified place) and the river-mouth words aber- and inver- also lean towards towns.</p>
+
+<h2><span class="n">04 · The Vikings</span>-by, -thorpe and -thwaite</h2>
+<p>Norse elements are rarer than English ones but tightly packed. 719 settlements end in -by (Old Norse bý, a farmstead), 389 in -thorpe, 85 in -thwaite. In Lincolnshire 33% of settlements have a Norse element; across England, 4.2%. In Shetland (25%) and Orkney (18%) the Norse words are of another kind: -setter and -bister (a farm or dwelling) and -wick from vík, a bay.</p>
+<div class="cards" id="norseCards">
+  <button class="card" data-e="by" style="border-top-color:var(--no)"><b>-by</b><div class="big">719</div>Most in Lincolnshire (205) and North Yorkshire (130).</button>
+  <button class="card" data-e="thorpe" style="border-top-color:var(--no)"><b>-thorpe</b><div class="big">389</div>An outlying farm. Lincolnshire (73) and Norfolk (39).</button>
+  <button class="card" data-e="thwaite" style="border-top-color:var(--no)"><b>-thwaite</b><div class="big">85</div>A clearing, the Lake District word: Cumberland leads.</button>
+</div>
+<p>The line between the -bys and the rest has been mapped many times, and my earlier study <a href="https://maps.tristanhotham.com/dale-down-fell-beck/">Beck, brook or burn?</a> compares it with the old Danelaw boundary, so I do not repeat that here.</p>
+
+<h2><span class="n">05 · Offa's line</span>How sharp is the Welsh border?</h2>
+<p>Welsh elements (llan-, pen-, aber-, tre-, cwm, bryn, nant, rhyd, maes, pont, caer, betws) mark 30% of the settlements in Wales. Llan-, a church enclosure, is the commonest, in 384 names. To see how sharply they stop, I measured every settlement's distance from the land border between England and Wales and applied the Welsh rules on both sides.</p>
+<div class="figure">
+  <div class="fig-h">Welsh and English elements either side of the border</div>
+  <div class="fig-sub">Share of settlements with a Welsh element (green) or an English element (red), in 5 km bands by distance from the England and Wales land border, between latitude 51.45 and 53.45. England to the left, Wales to the right.</div>
+  <div class="chart" id="borderChart"></div>
+</div>
+<p>The change is sharp but not a cliff. Between 20 and 40 km inside Wales, 31% of settlements have a Welsh element; the same distance inside England, 0.5%. In the 5 km either side of the line the shares are 15% on the Welsh side and 7% on the English side. 73 English settlements within 60 km have Welsh spellings, from Llanyblodwel and Llanfair Waterdine in Shropshire to Pontrilas and Llangrove in Herefordshire, borderlands where Welsh was spoken for centuries after the border was drawn. English elements fade the other way: 19% of settlements just inside Wales, and 5% deeper in.</p>
+
+<h2><span class="n">06 · Over the Tamar</span>Tre, pol and pen</h2>
+<p>"By Tre, Pol and Pen shall ye know the Cornishmen", runs the old rhyme. Cornwall's farms and coves are named in Cornish: 183 settlements start with tre- (a farmstead), more with pol- (a pool or cove), pen- (a headland), porth- (a cove), bos- (a dwelling), lan- and ros-. Together they mark 27% of Cornwall's settlements. In Devon, with the same rules, 1.4%, and most of those are false friends such as Rosemary Lane and Pennymoor.</p>
+<div class="figure">
+  <div class="fig-h">Cornish elements from Land's End to Devon</div>
+  <div class="fig-sub">Share of settlements in Cornwall and Devon with a Cornish element, in bands of a quarter of a degree of longitude. The Tamar, the county border, runs at about 4.2 degrees west.</div>
+  <div class="chart" id="cornChart"></div>
+</div>
+<p>The drop at the Tamar is abrupt. Within Cornwall, the share falls only gently eastwards, from 26% west of 5 degrees to 21% in the east of the county.</p>
+
+<h2><span class="n">07 · Scotland</span>Aber or inver, and the Picts' pit-</h2>
+<p>Scotland has two words for a river mouth or confluence. Aber- is Brittonic, the language of the Britons and, in the north east, the Picts; inver- is Gaelic. On my count Scotland has 22 aber- settlements and 54 inver- ones. 20 of the abers lie east of 4 degrees west, in Perth and Kinross, Fife and Aberdeenshire; the invers spread west and north, 19 of them in Highland.</p>
+<p>Pit-, from the Pictish pett, a portion of land, is the clearest Pictish trace on the modern map: 25 settlements, 21 of them east of 4 degrees west, in Fife, Aberdeenshire and Perth and Kinross (Pitlochry, Pittenweem, Pitmedden). Many pit- names join the Pictish word to a Gaelic one, a sign of the Gaelic speakers who took over the Pictish lands.</p>
+<div class="cards" id="scotCards">
+  <button class="card" data-e="aber" style="border-top-color:var(--br)"><b>aber-</b><div class="big">87</div>River mouth, Brittonic: 64 in Wales and 22 in Scotland.</button>
+  <button class="card" data-e="inver" style="border-top-color:var(--ga)"><b>inver-</b><div class="big">55</div>River mouth, Gaelic: almost all in Scotland.</button>
+  <button class="card" data-e="pit" style="border-top-color:var(--br)"><b>pit-</b><div class="big">25</div>Pictish, a share of land. The east of Scotland only.</button>
+</div>
+
+<h2><span class="n">08 · Ireland</span>Bally, Kil and the townlands</h2>
+<p>Ireland's place names live in its townlands, about 59,900 small land units, each with its own name. In the Republic, the official gazetteer gives an Irish form for 35,223 of them, the forms researched by the state's Placenames Branch. That allows something a spelling map cannot usually do: check what an English spelling really stands for.</p>
+<p>Bally- (and Balli-, Bal-) is the commonest beginning, in 6,282 townlands, 10% of the total. Its Irish form is usually baile, a homestead or settlement: 90% of Bally- names with an Irish form begin with Baile. But 184 begin with Béal, as in Béal Átha, the mouth of a ford (Ballina, Ballinasloe), and 99 with Bealach, a pass or road.</p>
+<p class="pull">Kil- is a church only about two times in three. In 30% of cases with an Irish form, it is coill, a wood.</p>
+<p>Of 2,120 Kil- names with an Irish form, 1,448 begin with Cill (a church or monastic cell) and 629 with Coill or its forms (wood). Wood names cluster: among townlands, coill accounts for 95 of 105 Kil- names in Monaghan, 35 of 42 in Cavan and 51 of 67 in Leitrim, but only 7 of 78 in Kilkenny. Dun- is usually dún, a fort, but 35 of 271 are domhnach, a church (Donaghmore). Agha- is usually achadh, a field, but 75 of 331 are áth, a ford. Most other elements are what they seem: Knock- is cnoc, a hill, 99% of the time, Drum- is droim, a ridge, 99%, and Lis- is lios, a ringfort, 98%.</p>
+<div class="figure">
+  <div class="fig-h">How often does the spelling mean what it seems?</div>
+  <div class="fig-sub">Republic of Ireland names (townlands and towns) with an official Irish form, by their first word: the share whose Irish form begins with the expected Irish word. Elements with at least 20 names.</div>
+  <div class="chart" id="irishChart"></div>
+</div>
+<p>Where Bally- lives is a story of its own. In Ards and North Down, 48% of townlands start with Bally-; in Wexford, 21%. In Leitrim, Monaghan, Cavan and Fermanagh and Omagh, under 2% do; townland names there start with Drum-, Kil-, Lis-, Derry- and Tully- instead. In Meath, 35% of townlands end in -town (Faganstown, Pagestown and Warrenstown are typical), as do 26% in Dublin and 25% in Kildare: the English-speaking Pale of the Middle Ages.</p>
+<div class="figure">
+  <div class="fig-h">Bally- by county</div>
+  <div class="fig-sub">Share of townlands starting with Bally- or Bal-. Republic of Ireland counties and Northern Ireland council areas.</div>
+  <div class="chart" id="ballyChart"></div>
+</div>
+
+<h2><span class="n">09 · Method</span>How I did this, and what to watch for</h2>
+<p><b>Names.</b> Great Britain: the 43,274 populated places in OS Open Names (cities, towns, villages, hamlets, suburban areas and other settlements), with their Welsh or Gaelic forms where Ordnance Survey gives one. Northern Ireland: the 336 towns and villages in the OSNI Open Data gazetteer, and 9,520 townlands from OSNI's townland boundaries. Republic of Ireland: the 2,022 centres of population and 50,380 townlands in Tailte Éireann's National Placenames Gazetteer, with their official Irish forms. Townlands are land units, not settlements, so they are counted separately.</p>
+<p><b>Rules.</b> Each name is split into words (Upper, Little, North, Saint and similar words are dropped), and each word is tested against 67 spelling rules. Endings must have at least two letters in front (so Ton alone does not count); some beginnings are only tested where the language was spoken, so that Balham and Kilburn in London are not counted as Gaelic, and Kirk- counts as Norse only in England. A name can carry several elements: Birmingham has -ing and -ham. The meaning shown for each element is the standard reading in the place-name literature; where one spelling covers several words, the text says so.</p>
+<p><b>Checks.</b> During the analysis, random samples of 20 matches for each of 14 common elements (280 names) were read through for plain false friends, such as Tucking Mill caught by -ing or Duncanstone by dun-: 9 were found, so about 97% of matches fit the element's spelling as intended. This checks the rules, not the history: a name can pass and still have a different origin. For Ireland the official Irish forms give a real test of meaning, shown in section 08.</p>
+<p><b>Limits.</b> The datasets differ. Great Britain's list goes down to hamlets; the Irish town lists hold only larger places, which is why the townland layer matters there. Modern spellings can hide an element or fake one, and new names (Newtown, Mount Pleasant) are counted as English. Grid squares are equal steps of latitude and longitude, so squares in the north are a little smaller. Nothing here dates a name: an element shows which language shaped the name, not when the place was founded.</p>
+<div class="note"><h3>Data and code</h3><p>Every name with its tags, the counts by area and by grid square, the Irish-form check, the rules and the code are in the <a href="https://github.com/Tristan-Hotham/place-name-endings">GitHub repository</a> and archived with the paper at <a href="https://doi.org/10.5281/zenodo.23761433">doi.org/10.5281/zenodo.23761433</a>.</p></div>
+<div class="cta"><a class="p" href="https://doi.org/10.5281/zenodo.23761433">Read the paper</a><a href="https://github.com/Tristan-Hotham/place-name-endings">Data and code</a><a href="https://blog.tristanhotham.com/2026/10/29/place-name-endings/">Blog post</a><a href="https://blog.tristanhotham.com/">More data studies</a></div>
+<p>Related: <a href="https://maps.tristanhotham.com/dale-down-fell-beck/">Beck, brook or burn?</a> on the words for streams, valleys and hills and the Danelaw line; <a href="https://maps.tristanhotham.com/bloody-place-names/">Bloody place names</a> on Battle, Slaughter and Gallows; <a href="https://maps.tristanhotham.com/street-names/">High Street or Main Street?</a> on street names.</p>
+
+<footer>
+  <p><b>Sources.</b> OS Open Names, Ordnance Survey: contains OS data © Crown copyright and database right 2026, Open Government Licence v3.0. OSNI Open Data Gazetteer Place Names and Largescale Boundaries Townlands, Land and Property Services: contains public sector information licensed under the Open Government Licence v3.0, © Crown copyright. National Placenames Gazetteer (Centres of Population; Townlands), © Tailte Éireann, CC BY 4.0. Retrieved 2026-10-29. Boundaries for the border analysis: Office for National Statistics, OGL v3.0; Natural Earth (public domain). Map tiles © Esri.</p>
+  <p><b>Licences.</b> Code MIT. Data and text CC BY 4.0 (keep the source credits above when reusing).</p>
+  <p><b>Cite.</b> Hotham, T. (2026) What is your town's name made of? Place-name elements of Britain and Ireland. Zenodo. <a href="https://doi.org/10.5281/zenodo.23761433">https://doi.org/10.5281/zenodo.23761433</a></p>
+  <p>I wrote the text, with drafting and editing assistance from Claude (Anthropic), which also helped prepare the analysis code. I reviewed and checked all text and results.</p>
+  <p>Dr Tristan Hotham, Independent researcher, ORCID <a href="https://orcid.org/0000-0003-4931-9349">0000-0003-4931-9349</a> · <a href="https://blog.tristanhotham.com/">blog.tristanhotham.com</a> · <a href="https://maps.tristanhotham.com/place-name-endings/">maps.tristanhotham.com/place-name-endings</a></p>
+</footer>
+</div>
+<button class="btn theme" id="themeBtn" aria-label="Switch light or dark theme">Theme</button>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
+<script>
+const R = {"fam_order":["english","norse","latin","brittonic","goidelic"],"fam_labels":{"english":"English","norse":"Norse","latin":"Latin (via English or Welsh)","brittonic":"Brittonic (Welsh, Cornish, Cumbric, Pictish)","goidelic":"Gaelic (Irish and Scottish)"},"elements":[["ton","-ton","english","farmstead, estate, later village (Old English tun). Some -ston names are stan, stone",5949,185],["town","-town","english","town, farm or settlement (later English town, from Old English tun)",783,3013],["ham","-ham","english","homestead, village (Old English ham); some are hamm, land in a river bend, which the spelling cannot separate",1251,0],["ing","-ing / -ings","english","the people of, or place of (Old English -ingas, -ing)",1724,0],["ley","-ley / -leigh","english","woodland clearing, later meadow (Old English leah)",1902,0],["worth","-worth","english","enclosure, enclosed farmstead (Old English worth)",392,0],["bury","-bury / -borough","english","fortified place, later manor or town (Old English burh); some -borough names are beorg, hill",601,0],["field","-field","english","open land, cleared country (Old English feld)",819,0],["ford","-ford","english","ford, a river crossing (Old English ford)",1020,0],["stead","-stead","english","place, site, farm (Old English stede)",168,0],["hurst","-hurst","english","wooded hill (Old English hyrst)",120,0],["den","-den / -dean","english","valley (denu) or woodland pasture for pigs (denn), Old English",336,0],["don","-don","english","hill (Old English dun)",431,0],["cot","-cote / -cott","english","cottage, hut, shelter (Old English cot)",374,0],["stow","-stow","english","place, often a holy place or meeting place (Old English stow)",82,0],["minster","-minster","english","monastery or major church (Old English mynster)",33,0],["wick","-wick / -wich","english","specialised farm (often a dairy farm) or trading place (Old English wic, from Latin vicus)",308,0],["chester","-chester / -caster","latin","Old English ceaster, a Roman fort or town (from Latin castra)",67,0],["strat","strat- / stret-","latin","Old English straet, a paved road, often Roman (from Latin strata)",65,0],["eccles","eccles-","latin","church, from Brittonic, from Latin ecclesia",20,0],["pont","pont-","latin","bridge (Welsh pont, from Latin pons)",52,0],["by","-by","norse","farmstead, village (Old Norse byr)",719,0],["thorpe","-thorpe","norse","outlying farm (Old Norse thorp; a few are Old English throp)",389,0],["thwaite","-thwaite","norse","clearing, meadow (Old Norse thveit)",85,0],["toft","-toft","norse","site of a house, homestead (Old Norse topt)",45,0],["holme","-holme / -holm","norse","island, dry ground in marsh, water meadow (Old Norse holmr)",162,0],["kirk","kirk-","norse","church (Old Norse kirkja). Counted in England only, because Scots kirk is an everyday word",84,0],["scale","-scale(s)","norse","hut, shieling (Old Norse skali)",6,0],["setter","-setter / -bister","norse","dwelling, farm (Old Norse setr, bolstadr)",75,0],["vik","-wick (bay)","norse","bay (Old Norse vik)",50,0],["aber","aber-","brittonic","river mouth or confluence (Brittonic aber)",87,0],["llan","llan-","brittonic","church enclosure, church (Welsh llan)",394,0],["pen","pen-","brittonic","head, top, end (Brittonic penn)",336,0],["tre","tre- / tref-","brittonic","farmstead, settlement (Welsh tref, Cornish tre)",279,0],["caer","caer- / car-","brittonic","fort (Brittonic caer)",23,0],["cwm","cwm-","brittonic","valley (Welsh cwm)",97,0],["bryn","bryn-","brittonic","hill (Welsh bryn)",82,0],["nant","nant-","brittonic","stream, stream valley (Welsh nant)",40,0],["rhyd","rhyd-","brittonic","ford (Welsh rhyd)",42,0],["maes","maes-","brittonic","open field (Welsh maes)",21,0],["betws","betws","brittonic","chapel, prayer house (Welsh betws, from Old English bedhus)",8,0],["pol","pol-","brittonic","pool, cove (Cornish pol)",18,0],["porth","porth-","brittonic","cove, landing place (Cornish porth)",28,0],["bos","bos-","brittonic","dwelling (Cornish bod, bos)",17,0],["lan","lan-","brittonic","church enclosure (Cornish lann)",19,0],["ros","ros-","brittonic","heath, promontory (Cornish ros)",17,0],["pit","pit-","brittonic","a portion of land, farm (Pictish pett)",25,0],["bal","bally- / bal-","goidelic","baile: farm, homestead, settlement. In Irish names Bally- can also be beal atha, ford mouth",343,6282],["kil","kil- / kill-","goidelic","cill: church. Kil- can also be coill, wood, and other words",267,3054],["inver","inver-","goidelic","inbhir: river mouth or confluence",55,1],["dun","dun- / dum-","goidelic","dun: fort, stronghold. Irish Don- is often domhnach, church",121,437],["strath","strath-","goidelic","srath: broad river valley",28,0],["auch","auch- / agha-","goidelic","achadh: field",147,629],["glen","glen-","goidelic","gleann: glen, valley",103,617],["knock","knock-","goidelic","cnoc: hill",56,1781],["drum","drum- / drom-","goidelic","druim: ridge",102,2389],["ard","ard-","goidelic","ard: height, high place, promontory",83,608],["kin","kin- / ken-","goidelic","ceann: head, end",98,150],["carrick","carrick- / carrig-","goidelic","carraig: rock",35,642],["clon","clon- / cloon-","goidelic","cluain: meadow, pasture",48,1703],["rath","rath-","goidelic","rath: ringfort",33,698],["lis","lis-","goidelic","lios: ringfort, enclosure",31,1394],["tully","tully- / tulla-","goidelic","tulach: low hill, mound",13,797],["derry","derry-","goidelic","doire: oak wood",13,1281],["inis","ennis- / inish-","goidelic","inis: island, river meadow",46,310],["mullagh","mullagh-","goidelic","mullach: summit",4,455],["bel","bel- / bella-","goidelic","beal: mouth, approach (often to a ford)",21,176]],"families":{"labels":{"english":"English","norse":"Norse","latin":"Latin (via English or Welsh)","brittonic":"Brittonic (Welsh, Cornish, Cumbric, Pictish)","goidelic":"Gaelic (Irish and Scottish)"},"order":["english","norse","latin","brittonic","goidelic"],"settlements":{"England":{"english":0.4094,"norse":0.0422,"latin":0.0044,"brittonic":0.0119,"goidelic":0.0},"Wales":{"english":0.0791,"norse":0.0,"latin":0.0141,"brittonic":0.2847,"goidelic":0.0},"Scotland":{"english":0.1307,"norse":0.0286,"latin":0.0007,"brittonic":0.0077,"goidelic":0.134},"Northern Ireland":{"english":0.0863,"norse":0.0,"latin":0.0,"brittonic":0.0,"goidelic":0.2679},"Republic of Ireland":{"english":0.0707,"norse":0.0,"latin":0.0,"brittonic":0.0,"goidelic":0.3665}},"townlands":{"Northern Ireland":{"english":0.0197,"norse":0.0,"latin":0.0,"brittonic":0.0,"goidelic":0.4351},"Republic of Ireland":{"english":0.0597,"norse":0.0,"latin":0.0,"brittonic":0.0,"goidelic":0.3814}},"counts":{"english":14951,"norse":1585,"latin":204,"brittonic":1516,"goidelic":1646},"counts_townlands":{"english":3198,"norse":0,"latin":0,"brittonic":0,"goidelic":23358}},"size":{"base_town_share":0.033,"base_hamlet_share":0.2981,"rows":[["chester",67,22,0.3284,0.0896],["aber",87,13,0.1494,0.2069],["inver",54,7,0.1296,0.2963],["pont",52,6,0.1154,0.1923],["dun",65,7,0.1077,0.3231],["kirk",84,8,0.0952,0.1548],["bury",601,55,0.0915,0.2013],["wick",308,25,0.0812,0.2955],["ham",1251,82,0.0655,0.2182],["strat",65,4,0.0615,0.2308],["worth",392,21,0.0536,0.2577],["ford",1020,51,0.05,0.3078],["stow",82,4,0.0488,0.2317],["kin",84,4,0.0476,0.25],["den",336,15,0.0446,0.3363],["kil",90,4,0.0444,0.3111],["llan",394,17,0.0431,0.2792],["stead",168,7,0.0417,0.3274],["ing",1724,70,0.0406,0.2517],["don",431,17,0.0394,0.2691],["by",719,25,0.0348,0.2684],["ley",1902,66,0.0347,0.2823],["field",819,27,0.033,0.1734],["ton",5931,172,0.029,0.2718],["hurst",120,3,0.025,0.3417],["nant",40,1,0.025,0.45],["pen",336,8,0.0238,0.3423],["toft",45,1,0.0222,0.3111],["vik",50,1,0.02,0.3],["tre",279,5,0.0179,0.4982],["auch",126,2,0.0159,0.4365],["ard",66,1,0.0152,0.3485],["glen",73,1,0.0137,0.3699],["cot",374,5,0.0134,0.4893],["town",629,8,0.0127,0.2496],["holme",162,2,0.0123,0.3457],["bryn",82,1,0.0122,0.2683],["thorpe",389,4,0.0103,0.2931],["cwm",97,1,0.0103,0.3814],["bal",127,1,0.0079,0.3622],["thwaite",85,0,0.0,0.4118],["setter",75,0,0.0,0.3733],["rhyd",42,0,0.0,0.381],["drum",51,0,0.0,0.3725]],"gb_kinds":{"Village":15155,"Hamlet":12900,"Suburban Area":10876,"Other Settlement":2917,"Town":1355,"City":71}},"border":{"rows":[[-60,414,0.0024,0.372],[-55,374,0.0053,0.4011],[-50,397,0.0076,0.461],[-45,412,0.0049,0.4854],[-40,442,0.009,0.4321],[-35,461,0.0,0.397],[-30,426,0.0094,0.4577],[-25,495,0.002,0.4626],[-20,511,0.002,0.4697],[-15,488,0.0082,0.4775],[-10,467,0.0364,0.4604],[-5,470,0.0723,0.3681],[0,334,0.1497,0.1916],[5,274,0.3321,0.1131],[10,204,0.3627,0.0294],[15,189,0.381,0.0212],[20,232,0.2759,0.0517],[25,131,0.2672,0.0534],[30,149,0.349,0.0403],[35,130,0.3538,0.0769],[40,135,0.3407,0.0593],[45,158,0.3291,0.0443],[50,147,0.3061,0.0272],[55,155,0.4065,0.0258]],"welsh_within5_w":0.1497,"welsh_within5_e":0.0723,"welsh_20_40_w":0.3069,"welsh_20_40_e":0.0049,"english_within5_w":0.1916,"english_20_40_w":0.0545,"english_within5_e":0.3681,"welsh_in_england_n":73,"welsh_in_england_examples":["Pontrilas","Pentre-cefn","Ponthen","Pentre","Llanyblodwel","Pen-y-bryn","Bryn","Llanrothal","Rhydspence","Llanfair Waterdine","Rhydycroesau","Pentreheyling"],"welsh_rules":["aber","betws","bryn","caer","cwm","llan","maes","nant","pen","pont","rhyd","tre"]},"cornwall":{"rows":[[-5.75,85,0.4706],[-5.5,117,0.1538],[-5.25,242,0.2314],[-5.0,220,0.3818],[-4.75,213,0.2817],[-4.5,316,0.1361],[-4.25,328,0.0305],[-4.0,274,0.0109],[-3.75,275,0.0182],[-3.5,174,0.0115],[-3.25,83,0.012],[-3.0,23,0.0]],"cornwall_share":0.2718,"devon_share":0.0138,"cornwall_n":1122,"devon_n":1228,"tre_cornwall":183,"tre_devon":1,"west_share":0.2568,"east_share":0.2061,"devon_examples":["Landcross","Landkey Newland","Landkey","Landkey Town","Penstone","Trentishoe","Penstone","Pennymoor","Rosemary Lane","Portington","Portgate","East Portlemouth"]},"irish_forms":{"rows":{"bal":{"label":"bally- / bal-","word":"baile","n":3860,"agree":3480,"agree_share":0.9016,"others":[["beal",184],["bealach",99],["buaile",31],["coimin",7]]},"kil":{"label":"kil- / kill-","word":"cill","n":2120,"agree":1448,"agree_share":0.683,"others":[["coill",487],["coillidh",64],["coillin",35],["coillte",33]]},"rath":{"label":"rath-","word":"rath","n":454,"agree":438,"agree_share":0.9648,"others":[["coill",3],["cill",1],["re",1],["sliabh",1]]},"tully":{"label":"tully- / tulla-","word":"tulach","n":340,"agree":335,"agree_share":0.9853,"others":[["tamhnaigh",3],["tinne",1]]},"ard":{"label":"ard-","word":"ard","n":371,"agree":356,"agree_share":0.9596,"others":[["da",3]]},"clon":{"label":"clon- / cloon-","word":"cluain","n":1063,"agree":1038,"agree_share":0.9765,"others":[["conachlainn",3],["cuil",3],["fairche",2],["raistin",2]]},"drum":{"label":"drum- / drom-","word":"droim","n":1171,"agree":1157,"agree_share":0.988,"others":[["coill",3]]},"mullagh":{"label":"mullagh-","word":"mullach","n":196,"agree":166,"agree_share":0.8469,"others":[["mullan",13],["mullain",6],["muileann",4],["maol",2]]},"lis":{"label":"lis-","word":"lios","n":795,"agree":783,"agree_share":0.9849,"others":[["halla",2],["cuirt",1],["teampall",1],["loiste",1]]},"derry":{"label":"derry-","word":"doire","n":769,"agree":742,"agree_share":0.9649,"others":[["deargrath",5],["daraidh",4],["coimin",3],["darach",1]]},"carrick":{"label":"carrick- / carrig-","word":"carraig","n":434,"agree":407,"agree_share":0.9378,"others":[["cathracha",4],["moin",3],["cearach",2],["cnoc",2]]},"bel":{"label":"bel- / bella-","word":"beal","n":108,"agree":77,"agree_share":0.713,"others":[["baile",13],["biolrach",3],["belvidere",2],["pairc",2]]},"inis":{"label":"ennis- / inish-","word":"inis","n":258,"agree":236,"agree_share":0.9147,"others":[["hinsi",9],["oilean",4],["ath",2],["uinsinn",2]]},"knock":{"label":"knock-","word":"cnoc","n":1210,"agree":1193,"agree_share":0.986,"others":[["sliabh",4],["cnapog",2],["tigh",2],["droichead",1]]},"dun":{"label":"dun- / dum-","word":"dun","n":271,"agree":210,"agree_share":0.7749,"others":[["domhnach",35],["baile",7],["droim",3],["clochan",2]]},"glen":{"label":"glen-","word":"gleann","n":436,"agree":422,"agree_share":0.9679,"others":[["coill",5],["cluain",3],["cnoc",2],["baile",2]]},"kin":{"label":"kin- / ken-","word":"ceann","n":93,"agree":79,"agree_share":0.8495,"others":[["baile",7],["neidin",2],["conchro",1],["roinn",1]]},"auch":{"label":"auch- / agha-","word":"achadh","n":331,"agree":219,"agree_share":0.6616,"others":[["ath",54],["athan",19],["eachroim",12],["eachinis",6]]}},"n_with_irish":37175,"n_townlands_irish":35223,"kil":{"cill":1448,"coill":629,"other":43,"n":2120},"bal":{"baile":3480,"beal":184,"bealach":99,"buaile":31,"other":66,"n":3860},"dun":{"dun":210,"domhnach":35,"other":26,"n":271},"auch":{"achadh":219,"ath":75,"each":28,"other":9,"n":331},"kil_townlands":{"cill":1313,"coill":609,"n":1959,"counties":[["Monaghan",95,105,0.9048],["Cavan",35,42,0.8333],["Leitrim",51,67,0.7612],["Longford",31,45,0.6889],["Offaly",47,88,0.5341],["Laois",9,21,0.4286],["Mayo",25,71,0.3521],["Galway",65,191,0.3403],["Tipperary",59,183,0.3224],["Roscommon",8,30,0.2667],["Meath",6,27,0.2222],["Clare",23,108,0.213],["Cork",65,310,0.2097],["Dublin",7,38,0.1842],["Donegal",6,35,0.1714],["Limerick",18,111,0.1622],["Wicklow",7,45,0.1556],["Kildare",4,26,0.1538],["Westmeath",3,20,0.15],["Wexford",4,29,0.1379],["Kerry",16,122,0.1311],["Waterford",15,120,0.125],["Kilkenny",7,78,0.0897]]}},"ireland":{"counties":[["Ards and North Down",285,137,0.4807],["Belfast",70,31,0.4429],["Antrim and Newtownabbey",309,83,0.2686],["Lisburn and Castlereagh",264,67,0.2538],["Wicklow",1357,307,0.2262],["Wexford",2299,479,0.2084],["Newry, Mourne and Down",822,166,0.2019],["Limerick",1929,376,0.1949],["Carlow",560,108,0.1929],["Mid and East Antrim",480,88,0.1833],["Waterford",1572,273,0.1737],["Causeway Coast and Glens",1445,231,0.1599],["Offaly",1143,180,0.1575],["Cork",5326,700,0.1314],["Armagh City, Banbridge and Craigavon",969,127,0.1311],["Kilkenny",1573,201,0.1278],["Westmeath",1341,165,0.123],["Laois",1111,133,0.1197],["Tipperary",3140,375,0.1194],["Clare",2221,261,0.1175],["Kerry",2692,265,0.0984],["Dublin",883,79,0.0895],["Mid Ulster",1389,108,0.0778],["Meath",1599,123,0.0769],["Kildare",1210,93,0.0769],["Galway",4255,320,0.0752],["Longford",886,65,0.0734],["Sligo",1265,83,0.0656],["Derry City and Strabane",705,45,0.0638],["Mayo",3252,203,0.0624],["Louth",674,42,0.0623],["Donegal",2739,168,0.0613],["Roscommon",2045,113,0.0553],["Fermanagh and Omagh",2782,39,0.014],["Cavan",1977,21,0.0106],["Monaghan",1848,17,0.0092],["Leitrim",1483,10,0.0067]]}};
+const css = v => getComputedStyle(document.documentElement).getPropertyValue(v).trim();
+const esc = s => String(s).replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" })[c]);
+const fmt = n => Math.round(n).toLocaleString("en-GB");
+const pct = v => Math.round(v * 100) + "%";
+const isDark = () => { const t = document.documentElement.dataset.theme; return t ? t === "dark" : matchMedia("(prefers-color-scheme: dark)").matches; };
+document.getElementById("themeBtn").onclick = () => { document.documentElement.dataset.theme = isDark() ? "light" : "dark"; redrawAll(); };
+
+/* ===== families and elements ===== */
+const FAM = R.fam_order, FV = { english: "--en", norse: "--no", latin: "--la", brittonic: "--br", goidelic: "--ga" };
+const FLAB = { english: "English", norse: "Norse", latin: "Latin", brittonic: "Brittonic", goidelic: "Gaelic" };
+const fc = f => css(FV[f]);
+const EL = R.elements;             // [key, label, fam, meaning, n, n_townlands]
+const EK = Object.fromEntries(EL.map((e, i) => [e[0], i]));
+const NATS = ["England", "Wales", "Scotland", "Northern Ireland", "Republic of Ireland"];
+const hx = h => [1, 3, 5].map(k => parseInt(h.slice(k, k + 2), 16));
+const mix = (a, b, t) => { const A = hx(a), B = hx(b); return `rgb(${A.map((v, k) => Math.round(v + (B[k] - v) * t)).join(",")})`; };
+
+/* ===== state and data ===== */
+const S = { mode: "fam", el: "bal", ire: "towns", sel: null };
+const D = { st: null, tl: null, outline: null };
+let lmap, cellL = null, dotL = null, landL = null, borderL = null, nameL = null, baseL = null, hillL = null, pin = null, renderer;
+const msg = document.getElementById("msg");
+
+function pointsOf(src) {                       // unpack a columnar file into point objects
+  const P = []; for (let i = 0; i < src.n.length; i++) P.push({ i, nm: src.n[i], alt: src.a[i], la: src.la[i] / 1e4, lo: src.lo[i] / 1e4, k: src.kinds[src.k[i]], na: src.na[i], ar: src.areas[src.ar[i]], r: src.r[i], e: src.e[i], tl: src === D.tlRaw });
+  return P;
+}
+function active() {                            // Great Britain settlements plus the chosen Irish layer
+  const gb = D.st.filter(p => p.na <= 2);
+  if (S.ire === "townlands" && D.tl) return gb.concat(D.tl);
+  return gb.concat(D.st.filter(p => p.na > 2));
+}
+const famsOf = p => { const s = new Set(); for (const j of p.e) s.add(EL[j][2]); return FAM.filter(f => s.has(f)); };
+
+/* ===== grid squares, built in the browser ===== */
+const STEPS = { fine: [0.15, 0.25], coarse: [0.3, 0.5] };
+let CELLS = { fine: null, coarse: null }, ACT = [];
+function buildCells() {
+  ACT = active(); for (const p of ACT) p.f = p.f || famsOf(p);
+  for (const g of ["fine", "coarse"]) {
+    const [a, b] = STEPS[g], m = new Map();
+    for (const p of ACT) {
+      const ci = Math.floor(p.la / a), cj = Math.floor(p.lo / b), key = ci + "_" + cj;
+      let c = m.get(key); if (!c) { c = { key, ci, cj, g, n: 0, nt: 0, fam: [0, 0, 0, 0, 0], el: new Map(), tl: 0 }; m.set(key, c); }
+      c.n++; if (p.tl) c.tl++; if (p.e.length) c.nt++;
+      for (const f of p.f) c.fam[FAM.indexOf(f)]++;
+      for (const j of p.e) c.el.set(j, (c.el.get(j) || 0) + 1);
+    }
+    CELLS[g] = [...m.values()];
+  }
+}
+const ELR = ["#F4ECD8", "#EBD7A8", "#DDB66F", "#C98A3B", "#A1561F", "#5E2C10"];
+function elRamp(f) { const c = fc(f), base = isDark() ? "#2A272F" : "#F7F2E6"; return [.12, .3, .48, .66, .84, 1].map(t => mix(base, c.startsWith("#") ? c : "#888888", t)); }
+const ELB = [.02, .05, .1, .2, .4];
+function cellColour(c) {
+  const o = LY.colour / 100;
+  if (S.mode === "fam") {
+    if (c.nt < 2) return { fill: css("--none"), op: .45 * o };
+    let best = 0; for (let k = 1; k < 5; k++) if (c.fam[k] > c.fam[best]) best = k;
+    const sh = c.fam[best] / c.nt, base = isDark() ? "#2A272F" : "#F7F2E6";
+    return { fill: mix(base, fc(FAM[best]), .25 + .75 * Math.min(1, (sh - .3) / .6)), op: .9 * o };
+  }
+  const j = EK[S.el], v = (c.el.get(j) || 0) / c.n;
+  if (!v) return { fill: css("--none"), op: .4 * o };
+  let k = 0; while (k < ELB.length && v >= ELB[k]) k++;
+  return { fill: elRamp(EL[j][2])[k], op: .92 * o };
+}
+const gridOf = () => lmap.getZoom() < 6.75 ? "coarse" : "fine";
+const showDots = () => lmap.getZoom() >= 8.5;
+function drawCells() {
+  if (cellL) cellL.remove(); cellL = null;
+  if (!CELLS.fine || showDots()) return;
+  const g = gridOf(), [a, b] = STEPS[g], dk = isDark();
+  cellL = L.layerGroup();
+  for (const c of CELLS[g]) {
+    const col = cellColour(c), sel = S.sel && S.sel.key === c.key && S.sel.g === g;
+    const r = L.rectangle([[c.ci * a, c.cj * b], [(c.ci + 1) * a, (c.cj + 1) * b]], { renderer, weight: sel ? 2.5 : .4, color: sel ? css("--fg") : (dk ? "#17161A" : "#FFFFFF"), opacity: sel ? 1 : .6, fillColor: col.fill, fillOpacity: col.op });
+    r.on("click", ev => { L.DomEvent.stopPropagation(ev); S.sel = c; cellInfo(c); drawCells(); });
+    r.addTo(cellL);
+  }
+  cellL.addTo(lmap);
+}
+/* dots: drawn into canvas tiles, so tens of thousands of places stay quick */
+let IDX = null;
+function buildIndex() { IDX = new Map(); for (const p of ACT) { const k = Math.floor(p.la * 4) + "_" + Math.floor(p.lo * 4); let a = IDX.get(k); if (!a) IDX.set(k, a = []); a.push(p); } }
+function near(lat, lng, r) { const out = []; for (let i = Math.floor((lat - r) * 4); i <= Math.floor((lat + r) * 4); i++) for (let j = Math.floor((lng - r * 1.8) * 4); j <= Math.floor((lng + r * 1.8) * 4); j++) { const a = IDX.get(i + "_" + j); if (a) out.push(...a); } return out; }
+const DotLayer = L.GridLayer.extend({
+  createTile(co) {
+    const t = document.createElement("canvas"), sz = this.getTileSize(); t.width = sz.x; t.height = sz.y;
+    const g = t.getContext("2d"), nw = this._map.unproject([co.x * sz.x, co.y * sz.y], co.z), se = this._map.unproject([(co.x + 1) * sz.x, (co.y + 1) * sz.y], co.z);
+    const z = co.z, rad = z >= 11 ? 4.5 : z >= 10 ? 3.6 : 2.8, o = LY.colour / 100, grey = isDark() ? "rgba(200,195,190,.35)" : "rgba(90,80,70,.32)";
+    const pad = .05, list = near((nw.lat + se.lat) / 2, (nw.lng + se.lng) / 2, Math.max(nw.lat - se.lat, (se.lng - nw.lng) / 1.8) / 2 + pad);
+    const ink = isDark() ? "#17161A" : "#FFFFFF", j = EK[S.el];
+    const draw = (p, col, r) => { const pt = this._map.project([p.la, p.lo], z); const x = pt.x - co.x * sz.x, y = pt.y - co.y * sz.y; if (x < -6 || y < -6 || x > sz.x + 6 || y > sz.y + 6) return; g.beginPath(); g.arc(x, y, r, 0, 6.2832); g.fillStyle = col; g.fill(); g.lineWidth = .8; g.strokeStyle = ink; g.stroke(); };
+    g.globalAlpha = o;
+    const on = [], off = [];
+    for (const p of list) { if (S.mode === "fam" ? p.e.length : p.e.includes(j)) on.push(p); else off.push(p); }
+    for (const p of off) draw(p, grey, rad * .6);
+    for (const p of on) draw(p, S.mode === "fam" ? fc(p.f[0]) : fc(EL[j][2]), rad);
+    return t;
+  }
+});
+function drawDots() {
+  if (dotL) { dotL.remove(); dotL = null; }
+  if (!IDX || !showDots()) return;
+  dotL = new DotLayer({ pane: "dat", minZoom: 8.5, updateWhenZooming: false }).addTo(lmap);
+}
+function redrawData() { drawCells(); drawDots(); legend(); }
+
+/* ===== key and information panel ===== */
+function legend() {
+  const box = document.getElementById("legend"), kt = document.getElementById("keyTitle");
+  if (S.mode === "fam") {
+    kt.textContent = "Leading language family";
+    box.innerHTML = `<div class="lg">${FAM.map(f => `<span><i class="sw" style="background:${fc(f)}"></i>${FLAB[f]}</span>`).join("")}<span><i class="sw" style="background:${css("--none")}"></i>no element</span></div><div class="fig-sub" style="margin:6px 0 0">${showDots() ? "Each dot is a place, coloured by the first family in its name. Small grey dots: none of the elements." : "Each square takes the colour of the family found in most of its tagged names; paler means more mixed."}</div>`;
+  } else {
+    const e = EL[EK[S.el]], r = elRamp(e[2]);
+    kt.textContent = `${e[1]}: ${fmt(e[4])} settlements${e[5] ? ", " + fmt(e[5]) + " townlands" : ""}`;
+    const lab = ["under 2%", "2 to 5%", "5 to 10%", "10 to 20%", "20 to 40%", "over 40%"];
+    box.innerHTML = `<div class="fig-sub" style="margin:0 0 4px">${esc(e[3])}. ${showDots() ? "Coloured dots carry the element." : "Share of names in each square with it:"}</div>${showDots() ? "" : `<div class="lg">${r.map((c, k) => `<span><i class="sw" style="background:${c}"></i>${lab[k]}</span>`).join("")}<span><i class="sw" style="background:${css("--none")}"></i>none</span></div>`}`;
+  }
+}
+function famBar(c) { const t = c.fam.reduce((a, b) => a + b, 0) || 1; return `<div class="fambar">${c.fam.map((v, k) => v ? `<i style="flex:${v / t};background:${fc(FAM[k])}" title="${FLAB[FAM[k]]} ${v}"></i>` : "").join("")}</div>`; }
+function nearestTown(lat, lng) { let best = null, bd = 1e9; for (const p of D.st) { if (p.r < 1) continue; const d = (p.la - lat) ** 2 + ((p.lo - lng) * .6) ** 2; if (d < bd) { bd = d; best = p; } } return best && bd < .05 ? best.nm : ""; }
+function cellInfo(c) {
+  const [a, b] = STEPS[c.g], nt = nearestTown((c.ci + .5) * a, (c.cj + .5) * b);
+  const top = [...c.el.entries()].sort((x, y) => y[1] - x[1]).slice(0, 8);
+  let s = `<div class="big">${esc(nt ? "Around " + nt : "This square")}</div><div class="muted">${fmt(c.n)} ${c.tl === c.n ? "townlands" : c.tl ? "places and townlands" : "places"}, ${fmt(c.nt)} with an element (${pct(c.nt / c.n)})</div>${famBar(c)}`;
+  s += `<div class="lg">${c.fam.map((v, k) => v ? `<span><i class="sw" style="background:${fc(FAM[k])}"></i>${FLAB[FAM[k]]} ${v}</span>` : "").join("")}</div>`;
+  if (top.length) s += `<div style="margin-top:6px"><b>Commonest elements</b></div><ol>${top.map(([j, v]) => `<li><a href="#" data-e="${EL[j][0]}">${esc(EL[j][1])}</a> <span class="muted">${v}</span></li>`).join("")}</ol>`;
+  s += `<div class="muted">Zoom in to see each place.</div>`;
+  const box = document.getElementById("info"); box.innerHTML = s;
+  box.querySelectorAll("a[data-e]").forEach(x => x.onclick = ev => { ev.preventDefault(); showEl(x.dataset.e, false); });
+}
+const ALTL = { cym: "Welsh", gla: "Scottish Gaelic", gle: "Irish" };
+function placeInfo(p) {
+  const nat = NATS[p.na], kind = p.tl ? "Townland" : p.k;
+  let s = `<div class="big">${esc(p.nm)}</div>`;
+  if (p.alt) s += `<div class="alt">${esc(p.alt)} <span class="muted" style="font:400 12px var(--mono)">(${p.na === 4 ? "official Irish form" : p.na === 1 ? "Welsh" : p.na === 2 ? "Gaelic" : "other form"})</span></div>`;
+  s += `<div class="muted">${esc(kind)} · ${esc(p.ar || nat)}${p.ar && p.ar !== nat ? ", " + nat : ""}</div>`;
+  if (p.e.length) for (const j of p.e) { const e = EL[j]; s += `<div class="el" style="border-left-color:${fc(e[2])}"><b>${esc(e[1])}</b> <span class="muted">${FLAB[e[2]]}</span><br>${esc(e[3])}.</div>`; }
+  else s += `<p class="muted" style="margin:8px 0 0">None of the ${EL.length} elements on my list matched this spelling. That does not mean the name has no history: it may use a word not on the list, or be a newer name.</p>`;
+  if (p.e.length) s += `<div class="muted" style="margin-top:6px">A spelling match, not a verified etymology.</div>`;
+  document.getElementById("info").innerHTML = s;
+}
+function scrollToMap() { const el = document.getElementById("lmap"), r = el.getBoundingClientRect(); if (r.top < 0 || r.bottom > innerHeight) el.scrollIntoView({ behavior: "smooth", block: innerWidth < 700 ? "start" : "center" }); }
+
+/* ===== map layers: base map, hills, place names, borders, colour strength ===== */
+const LY = { base: "auto", hills: true, hillK: 35, names: true, nameLvl: 1, lines: true, lineK: 55, colour: 100 };
+const LYDEF = { ...LY };
+try { Object.assign(LY, JSON.parse(localStorage.getItem("pne_layers") || "{}")); } catch (e) {}
+const saveLY = () => { try { localStorage.setItem("pne_layers", JSON.stringify(LY)); } catch (e) {} };
+const ESRI = "https://server.arcgisonline.com/ArcGIS/rest/services/";
+function initLayers() {
+  const Ctl = L.Control.extend({ options: { position: "topright" }, onAdd() {
+    const d = L.DomUtil.create("div"); L.DomEvent.disableClickPropagation(d); L.DomEvent.disableScrollPropagation(d);
+    d.innerHTML = `<button class="lyrBtn" aria-expanded="false" aria-controls="lyrPanel">Map layers</button>
+<div class="lyrPanel" id="lyrPanel" hidden>
+ <div class="row"><label style="font-weight:600">Base map</label><span></span><div class="sub"><span>style</span><select id="lyBase" aria-label="Base map"><option value="auto">Match the theme</option><option value="light">Light grey</option><option value="dark">Dark grey</option><option value="none">None (plain land)</option></select></div></div>
+ <div class="row"><label><input type="checkbox" id="lyHills"> Hills</label><span></span><div class="sub"><span>strength</span><input type="range" id="lyHillK" min="10" max="100" step="5" aria-label="Hill shading strength"></div></div>
+ <div class="row"><label><input type="checkbox" id="lyNames"> Place names</label><span></span><div class="sub"><span>how many</span><select id="lyNameLvl" aria-label="How many place names"><option value="0">Cities only</option><option value="1">Cities and towns</option><option value="2">Down to villages</option></select></div></div>
+ <div class="row"><label><input type="checkbox" id="lyLines"> Coast and borders</label><span></span><div class="sub"><span>strength</span><input type="range" id="lyLineK" min="10" max="100" step="5" aria-label="Border line strength"></div></div>
+ <div class="row"><label style="font-weight:600">Colour</label><span></span><div class="sub"><span>strength</span><input type="range" id="lyColour" min="20" max="100" step="5" aria-label="Colour strength"></div></div>
+ <button class="reset" id="lyReset">Reset layers</button>
+</div>`;
+    return d; } });
+  lmap.addControl(new Ctl());
+  const q = id => document.getElementById(id), btn = lmap.getContainer().querySelector(".lyrBtn"), pan = q("lyrPanel");
+  btn.onclick = () => { const o = pan.hidden; pan.hidden = !o; btn.setAttribute("aria-expanded", o); };
+  const sync = () => { q("lyBase").value = LY.base; q("lyHills").checked = LY.hills; q("lyHillK").value = LY.hillK; q("lyNames").checked = LY.names; q("lyNameLvl").value = LY.nameLvl; q("lyLines").checked = LY.lines; q("lyLineK").value = LY.lineK; q("lyColour").value = LY.colour; };
+  const on = (id, ev, f) => q(id).addEventListener(ev, e => { f(e.target); saveLY(); applyLayers(); });
+  on("lyBase", "change", t => LY.base = t.value);
+  on("lyHills", "change", t => LY.hills = t.checked); on("lyHillK", "input", t => { LY.hillK = +t.value; LY.hills = true; q("lyHills").checked = true; });
+  on("lyNames", "change", t => LY.names = t.checked); on("lyNameLvl", "change", t => { LY.nameLvl = +t.value; LY.names = true; q("lyNames").checked = true; });
+  on("lyLines", "change", t => LY.lines = t.checked); on("lyLineK", "input", t => { LY.lineK = +t.value; LY.lines = true; q("lyLines").checked = true; });
+  on("lyColour", "change", t => { LY.colour = +t.value; });
+  q("lyReset").onclick = () => { Object.assign(LY, LYDEF); saveLY(); sync(); applyLayers(); };
+  sync();
+  lmap.on("zoomend moveend", placeNames);
+}
+let baseKey = null, lastColour = null;
+function applyLayers() {
+  if (!lmap) return;
+  const want = LY.base === "auto" ? (isDark() ? "dark" : "light") : LY.base;
+  if (want !== baseKey) {
+    if (baseL) baseL.remove(); baseL = null; baseKey = want;
+    if (want !== "none") baseL = L.tileLayer(ESRI + `Canvas/World_${want === "dark" ? "Dark" : "Light"}_Gray_Base/MapServer/tile/{z}/{y}/{x}`, { pane: "base", maxZoom: 16, attribution: "Tiles © Esri" }).addTo(lmap);
+  }
+  if (LY.hills) { if (!hillL) hillL = L.tileLayer(ESRI + "Elevation/World_Hillshade/MapServer/tile/{z}/{y}/{x}", { pane: "hills", maxZoom: 16, attribution: "Hillshade © Esri" }); hillL.addTo(lmap); hillL.setOpacity(.08 + LY.hillK / 100 * .5); }
+  else if (hillL) hillL.remove();
+  if (landL) landL.setStyle({ fillColor: css("--land"), color: css("--muted"), fillOpacity: want === "none" ? 1 : 0, opacity: .55 });
+  if (borderL) { if (LY.lines) { borderL.addTo(lmap); borderL.setStyle({ color: css("--fg"), opacity: .15 + LY.lineK / 100 * .85 }); } else borderL.remove(); }
+  if (CELLS.fine && lastColour !== LY.colour + S.mode) { lastColour = LY.colour + S.mode; redrawData(); }
+  placeNames();
+}
+function placeNames() {
+  if (!lmap || !nameL) return;
+  nameL.clearLayers(); if (!LY.names || !D.st) { nameL.remove(); return; } nameL.addTo(lmap);
+  const z = lmap.getZoom(), bb = lmap.getBounds().pad(.05), lvl = LY.nameLvl;
+  const minR = lvl === 0 ? (z >= 7 ? 4 : 5) : lvl === 1 ? (z >= 10.5 ? 1 : z >= 7 ? 3 : 4) : (z >= 8.5 ? 0 : z >= 7.5 ? 1 : z >= 6.5 ? 3 : 4);
+  const cand = [];
+  for (const p of D.st) if (p.r >= minR && bb.contains([p.la, p.lo])) cand.push(p);
+  cand.sort((a, b) => b.r - a.r);
+  const boxes = [], seen = new Set(); let n = 0;
+  for (const c of cand) {
+    if (seen.has(c.nm)) continue;
+    const pt = lmap.latLngToContainerPoint([c.la, c.lo]), fs = c.r >= 3 ? 11 : 10, bx = [pt.x - 4, pt.y - 8, pt.x + 10 + c.nm.length * fs * .62, pt.y + 7];
+    if (boxes.some(o => bx[0] < o[2] && bx[2] > o[0] && bx[1] < o[3] && bx[3] > o[1])) continue;
+    boxes.push(bx); seen.add(c.nm);
+    L.marker([c.la, c.lo], { pane: "labels", interactive: false, keyboard: false, icon: L.divIcon({ className: "city" + (c.r <= 1 ? " r1" : ""), html: `<i></i>${esc(c.nm)}`, iconSize: null, iconAnchor: [3, 6] }) }).addTo(nameL);
+    if (++n >= 220) break;
+  }
+}
+function initMap() {
+  if (!window.L) { document.getElementById("lmap").innerHTML = '<p style="padding:16px">The map library did not load.</p>'; return false; }
+  lmap = L.map("lmap", { zoomSnap: .25, zoomDelta: .5, minZoom: 4.5, maxZoom: 13, scrollWheelZoom: false, maxBounds: L.latLngBounds([47.5, -16], [62.5, 6.5]) });
+  lmap.fitBounds([[50.0, -10.3], [60.8, 1.8]], { padding: [4, 4] });
+  lmap.attributionControl.setPrefix('<a href="https://leafletjs.com">Leaflet</a>');
+  for (const [p, z] of [["landp", 150], ["base", 200], ["hills", 250], ["dat", 400], ["bord", 420], ["labels", 650]]) lmap.createPane(p).style.zIndex = z;
+  lmap.getPane("hills").style.pointerEvents = "none"; lmap.getPane("bord").style.pointerEvents = "none"; lmap.getPane("labels").style.pointerEvents = "none";
+  renderer = L.canvas({ pane: "dat", padding: .3, tolerance: 2 });
+  nameL = L.layerGroup();
+  lmap.attributionControl.addAttribution("Contains OS data © Crown copyright and database right 2026 | OSNI, OGL | © Tailte Éireann, CC BY 4.0");
+  lmap.on("click", () => lmap.scrollWheelZoom.enable());
+  lmap.on("click", ev => { if (!showDots()) return; const z = lmap.getZoom(), r = 12 * 360 / (256 * 2 ** z); let best = null, bd = 1e9;
+    for (const p of near(ev.latlng.lat, ev.latlng.lng, r)) { const d = (p.la - ev.latlng.lat) ** 2 + ((p.lo - ev.latlng.lng) * Math.cos(p.la * Math.PI / 180)) ** 2; if (d < bd) { bd = d; best = p; } }
+    if (best && Math.sqrt(bd) < r) { placeInfo(best); setPin(best); } });
+  let lastG = null, lastD = null;
+  lmap.on("zoomend", () => { const g = gridOf(), d = showDots(); if (g !== lastG || d !== lastD) { lastG = g; lastD = d; redrawData(); } });
+  initLayers();
+  return true;
+}
+function setPin(p) { if (pin) pin.remove(); pin = L.marker([p.la, p.lo], { interactive: false, icon: L.divIcon({ className: "", html: '<div class="pin"></div>', iconSize: [16, 16], iconAnchor: [8, 8] }) }).addTo(lmap); }
+
+/* ===== loading ===== */
+const J = u => fetch(u).then(r => { if (!r.ok) throw new Error(u); return r.json(); });
+async function load() {
+  if (!initMap()) return;
+  try { const [st, outline] = await Promise.all([J("data/page/settlements.json"), J("data/page/outline.json")]); D.stRaw = st; D.st = pointsOf(st); D.outline = outline; }
+  catch (e) { msg.textContent = "The map data did not load. Try reloading the page."; return; }
+  landL = L.geoJSON(D.outline.land, { pane: "landp", interactive: false, style: { weight: .6, color: css("--muted"), fillColor: css("--land"), fillOpacity: 0 } }).addTo(lmap);
+  borderL = L.geoJSON(D.outline.borders, { pane: "bord", interactive: false, style: { weight: 1.3, dashArray: "5 4", color: css("--fg"), opacity: .6 } });
+  msg.textContent = "";
+  buildCells(); buildIndex(); applyLayers(); redrawData();
+}
+async function loadTownlands() {
+  if (D.tl) return; msg.textContent = "Loading the townlands...";
+  try { const t = await J("data/page/townlands.json"); D.tlRaw = t; D.tl = pointsOf(t); msg.textContent = ""; } catch (e) { msg.textContent = "The townlands did not load."; }
+}
+function redrawAll() { if (!lmap) return; baseKey = null; applyLayers(); redrawData(); drawCharts(); }
+
+/* ===== controls ===== */
+function setPressed(id, attr, val) { document.querySelectorAll(`#${id} .btn`).forEach(b => b.setAttribute("aria-pressed", b.dataset[attr] === val)); }
+document.querySelectorAll("#modeBtns .btn").forEach(b => b.onclick = () => setMode(b.dataset.m));
+document.querySelectorAll("#ireBtns .btn").forEach(b => b.onclick = () => setIre(b.dataset.i));
+function setMode(m) { S.mode = m; setPressed("modeBtns", "m", m); document.getElementById("elRow").hidden = m !== "el"; if (CELLS.fine) redrawData(); if (S.sel) cellInfo(S.sel); }
+async function setIre(v) {
+  S.ire = v; setPressed("ireBtns", "i", v);
+  if (v === "townlands") await loadTownlands();
+  if (!D.st) return; S.sel = null; buildCells(); buildIndex(); redrawData();
+}
+const elSel = document.getElementById("elSel");
+for (const f of FAM) { const og = document.createElement("optgroup"); og.label = R.fam_labels[f]; for (const e of EL.filter(e => e[2] === f).sort((a, b) => (b[4] + b[5]) - (a[4] + a[5]))) { const o = document.createElement("option"); o.value = e[0]; o.textContent = `${e[1]} (${fmt(e[4] + e[5])})`; og.appendChild(o); } elSel.appendChild(og); }
+elSel.value = S.el;
+elSel.onchange = () => { S.el = elSel.value; redrawData(); if (S.sel) cellInfo(S.sel); };
+async function showEl(k, scroll) {
+  S.el = k; elSel.value = k; setMode("el");
+  if (EL[EK[k]][5] > EL[EK[k]][4] && S.ire !== "townlands") await setIre("townlands");
+  if (scroll) scrollToMap();
+}
+document.querySelectorAll(".card[data-e]").forEach(c => c.onclick = () => showEl(c.dataset.e, true));
+
+/* search: settlements, and townlands once loaded */
+const norm = s => s.toLowerCase().normalize("NFKD").replace(/[̀-ͯ]/g, "").replace(/[^a-z0-9 ]/g, "");
+function combo(inputId, listId, search, pick) {
+  const inp = document.getElementById(inputId), ul = document.getElementById(listId); let items = [], k = -1;
+  const close = () => { ul.style.display = "none"; inp.setAttribute("aria-expanded", "false"); k = -1; };
+  const render = () => { ul.innerHTML = items.map((it, j) => `<li role="option" aria-selected="${j === k}" data-j="${j}">${it.html}</li>`).join(""); ul.style.display = items.length ? "block" : "none"; inp.setAttribute("aria-expanded", items.length ? "true" : "false"); };
+  inp.addEventListener("input", async () => { items = await search(inp.value.trim()); k = -1; render(); });
+  inp.addEventListener("keydown", e => { if (e.key === "ArrowDown") { k = Math.min(items.length - 1, k + 1); render(); e.preventDefault(); } else if (e.key === "ArrowUp") { k = Math.max(0, k - 1); render(); e.preventDefault(); } else if (e.key === "Enter") { const it = items[k >= 0 ? k : 0]; if (it) { pick(it); inp.value = it.label; close(); } e.preventDefault(); } else if (e.key === "Escape") close(); });
+  ul.addEventListener("mousedown", e => { const li = e.target.closest("li"); if (!li) return; const it = items[+li.dataset.j]; pick(it); inp.value = it.label; close(); e.preventDefault(); });
+  inp.addEventListener("blur", () => setTimeout(close, 150));
+}
+document.getElementById("q").addEventListener("focus", () => { if (!D.tl) loadTownlands(); }, { once: true });
+combo("q", "sug", async v => {
+  if (!D.st || v.length < 2) return []; const n = norm(v), out = [];
+  for (const src of [D.st, D.tl || []]) for (const p of src) { const m = norm(p.nm); if (m.startsWith(n)) out.push([m === n ? 0 : 1, -p.r, p.tl ? 1 : 0, p]); else if (p.alt && norm(p.alt).startsWith(n)) out.push([2, -p.r, p.tl ? 1 : 0, p]); }
+  out.sort((a, b) => a[0] - b[0] || a[2] - b[2] || a[1] - b[1]);
+  return out.slice(0, 14).map(([, , , p]) => ({ label: p.nm, html: `${esc(p.nm)} <span>${esc(p.tl ? "townland, " + p.ar : p.ar || NATS[p.na])}</span>`, p }));
+}, async it => {
+  const p = it.p;
+  if (p.tl && S.ire !== "townlands") await setIre("townlands");
+  lmap.setView([p.la, p.lo], 10); setPin(p); placeInfo(p); scrollToMap();
+});
+
+/* ===== charts ===== */
+const cw = id => Math.max(320, Math.min(680, document.getElementById(id).clientWidth || 640));
+function svgEl(w, h, inner) { return `<svg viewBox="0 0 ${w} ${h}" role="img">${inner}</svg>`; }
+const grid = (x, H, ticks, lab) => ticks.map(g => `<line x1="${x(g)}" x2="${x(g)}" y1="0" y2="${H - 22}" stroke="${css("--rule")}"/><text x="${x(g)}" y="${H - 6}" text-anchor="middle" font-size="11" fill="${css("--muted")}">${lab(g)}</text>`).join("");
+function famChart() {
+  const rows = NATS.map(n => [n, R.families.settlements[n]]).concat([["N. Ireland townlands", R.families.townlands["Northern Ireland"]], ["Republic townlands", R.families.townlands["Republic of Ireland"]]]);
+  const W = cw("famChart"), sm = W < 520, L0 = sm ? 118 : 170, rh = 34, H = rows.length * rh + 54, x = v => L0 + v * (W - L0 - 12);
+  let s = grid(x, H - 26, [0, .2, .4, .6], pct);
+  rows.forEach(([n, f], j) => { const y = j * rh + 4; let x0 = 0;
+    s += `<text x="${L0 - 8}" y="${y + 19}" text-anchor="end" font-size="${sm ? 11 : 12.5}">${esc(sm ? n.replace("Republic of Ireland", "Rep. of Ireland").replace("Northern Ireland", "N. Ireland") : n)}</text>`;
+    FAM.forEach(k => { const v = f[k]; if (v > 0) s += `<rect x="${x(x0)}" y="${y + 4}" width="${Math.max(.5, x(x0 + v) - x(x0))}" height="${rh - 10}" fill="${fc(k)}"><title>${FLAB[k]} ${pct(v)}</title></rect>`; x0 += v; }); });
+  const ly = rows.length * rh + 24; let lx = 0;
+  FAM.forEach(k => { s += `<rect x="${L0 + lx}" y="${ly}" width="11" height="11" fill="${fc(k)}"/><text x="${L0 + lx + 15}" y="${ly + 10}" font-size="11">${FLAB[k]}</text>`; lx += FLAB[k].length * 7 + 30; });
+  document.getElementById("famChart").innerHTML = svgEl(W, H, s);
+  document.querySelector("#famChart svg").setAttribute("aria-label", "Stacked bars of language-family shares by nation");
+}
+function topChart() {
+  const rows = EL.slice().sort((a, b) => b[4] - a[4]).slice(0, 18), W = cw("topChart"), rh = 22, L0 = 150, H = rows.length * rh + 6, mx = rows[0][4], x = v => L0 + v / mx * (W - L0 - 56);
+  let s = ""; rows.forEach((e, j) => { const y = j * rh; s += `<g class="go" data-e="${e[0]}" style="cursor:pointer"><text x="${L0 - 8}" y="${y + 15}" text-anchor="end" font-size="12">${esc(e[1])}</text><rect x="${L0}" y="${y + 3}" width="${x(e[4]) - L0}" height="${rh - 6}" fill="${fc(e[2])}"/><text x="${x(e[4]) + 5}" y="${y + 15}" font-size="11.5">${fmt(e[4])}</text></g>`; });
+  const el = document.getElementById("topChart"); el.innerHTML = svgEl(W, H, s);
+  el.querySelectorAll("g.go").forEach(g => g.onclick = () => showEl(g.dataset.e, true));
+}
+function sizeChart() {
+  const pick = ["chester", "aber", "inver", "bury", "wick", "ham", "worth", "ford", "ing", "llan", "by", "ley", "ton", "thorpe", "cot", "tre", "thwaite"];
+  const rows = R.size.rows.filter(r => pick.includes(r[0])).sort((a, b) => b[3] - a[3]);
+  const W = cw("sizeChart"), rh = 22, L0 = 150, H = rows.length * rh + 30, x = v => L0 + v / .35 * (W - L0 - 50);
+  let s = grid(x, H, [0, .1, .2, .3], pct);
+  rows.forEach((r, j) => { const e = EL[EK[r[0]]], y = j * rh; s += `<text x="${L0 - 8}" y="${y + 15}" text-anchor="end" font-size="12">${esc(e[1])}</text><rect x="${L0}" y="${y + 3}" width="${Math.max(1, x(r[3]) - L0)}" height="${rh - 6}" fill="${fc(e[2])}"/><text x="${x(r[3]) + 5}" y="${y + 15}" font-size="11">${pct(r[3])} <tspan fill="${css("--muted")}">of ${fmt(r[1])}</tspan></text>`; });
+  s += `<line x1="${x(R.size.base_town_share)}" x2="${x(R.size.base_town_share)}" y1="0" y2="${H - 22}" stroke="${css("--fg")}" stroke-dasharray="4 3"/>`;
+  document.getElementById("sizeChart").innerHTML = svgEl(W, H, s);
+}
+function lineChart(id, rows, xk, series, xlab, xmarks, H0) {
+  const W = cw(id), H = H0 || 290, L0 = 44, B = 40, xs = rows.map(r => r[xk]), x0 = Math.min(...xs), x1 = Math.max(...xs) + (xs[1] - xs[0]);
+  const x = v => L0 + (v - x0) / (x1 - x0) * (W - L0 - 14), ymax = Math.max(...series.flatMap(sr => rows.map(r => r[sr.k]))) * 1.1, y = v => H - B - v / ymax * (H - B - 12);
+  let s = ""; for (let g = 0; g <= ymax; g += ymax > .4 ? .1 : .05) s += `<line x1="${L0}" x2="${W - 10}" y1="${y(g)}" y2="${y(g)}" stroke="${css("--rule")}"/><text x="${L0 - 6}" y="${y(g) + 4}" text-anchor="end" font-size="11" fill="${css("--muted")}">${pct(g)}</text>`;
+  for (const m of xmarks) s += `<line x1="${x(m[0])}" x2="${x(m[0])}" y1="8" y2="${H - B}" stroke="${css("--fg")}" stroke-dasharray="4 3"/><text x="${x(m[0]) + (m[2] || 5)}" y="20" font-size="11" text-anchor="${m[2] < 0 ? "end" : "start"}">${m[1]}</text>`;
+  const bw = (x(xs[1]) - x(xs[0]));
+  for (const sr of series) { if (sr.bar) rows.forEach(r => { s += `<rect x="${x(r[xk]) + 1}" y="${y(r[sr.k])}" width="${bw - 2}" height="${y(0) - y(r[sr.k])}" fill="${sr.c}" opacity=".9"><title>${r[sr.k] * 100 | 0}%</title></rect>`; });
+    else s += `<polyline fill="none" stroke="${sr.c}" stroke-width="3" points="${rows.map(r => `${x(r[xk]) + bw / 2},${y(r[sr.k])}`).join(" ")}"/>` + rows.map(r => `<circle cx="${x(r[xk]) + bw / 2}" cy="${y(r[sr.k])}" r="3.2" fill="${sr.c}"/>`).join(""); }
+  s += xlab(x, H);
+  document.getElementById(id).innerHTML = svgEl(W, H, s);
+}
+function borderChart() {
+  const rows = R.border.rows.map(r => ({ b: r[0], n: r[1], w: r[2], e: r[3] }));
+  lineChart("borderChart", rows, "b", [{ k: "w", c: fc("brittonic") }, { k: "e", c: fc("english") }], (x, H) => [-60, -40, -20, 0, 20, 40, 60].map(v => `<text x="${x(v)}" y="${H - 22}" text-anchor="middle" font-size="11" fill="${css("--muted")}">${Math.abs(v)} km</text>`).join("") + `<text x="${x(-60)}" y="${H - 4}" font-size="11.5">England</text><text x="${x(60)}" y="${H - 4}" text-anchor="end" font-size="11.5">Wales</text>`, [[0, "Border", 5]]);
+}
+function cornChart() {
+  const rows = R.cornwall.rows.map(r => ({ b: r[0], n: r[1], c: r[2] }));
+  lineChart("cornChart", rows, "b", [{ k: "c", c: fc("brittonic"), bar: true }], (x, H) => [-5.75, -5, -4.25, -3.5, -2.75].map(v => `<text x="${x(v)}" y="${H - 22}" text-anchor="middle" font-size="11" fill="${css("--muted")}">${(-v).toFixed(2)}°W</text>`).join("") + `<text x="${x(-5.75)}" y="${H - 4}" font-size="11.5">Land's End</text><text x="${x(-2.75)}" y="${H - 4}" text-anchor="end" font-size="11.5">East Devon</text>`, [[-4.2, "Tamar", 5]], 260);
+}
+function irishChart() {
+  const rows = Object.entries(R.irish_forms.rows).map(([k, v]) => [k, v]).sort((a, b) => b[1].agree_share - a[1].agree_share);
+  const W = cw("irishChart"), rh = 24, L0 = 158, H = rows.length * rh + 30, x = v => L0 + (v - .5) / .5 * (W - L0 - 96);
+  let s = grid(x, H, [.5, .6, .7, .8, .9, 1], pct);
+  rows.forEach(([k, v], j) => { const y = j * rh, low = v.agree_share < .85;
+    s += `<text x="${L0 - 8}" y="${y + 16}" text-anchor="end" font-size="12">${esc(v.label)}</text><rect x="${x(.5)}" y="${y + 4}" width="${x(v.agree_share) - x(.5)}" height="${rh - 8}" fill="${fc("goidelic")}" opacity="${low ? 1 : .55}"/><text x="${x(v.agree_share) + 5}" y="${y + 16}" font-size="11">${pct(v.agree_share)} ${esc(v.word)} <tspan fill="${css("--muted")}">of ${fmt(v.n)}</tspan></text>`; });
+  document.getElementById("irishChart").innerHTML = svgEl(W, H, s);
+}
+function ballyChart() {
+  const all = R.ireland.counties, rows = all.slice(0, 8).concat([null], all.slice(-6));
+  const W = cw("ballyChart"), rh = 22, L0 = W < 520 ? 150 : 210, H = rows.length * rh + 30, x = v => L0 + v / .5 * (W - L0 - 60);
+  let s = grid(x, H, [0, .1, .2, .3, .4, .5], pct);
+  rows.forEach((r, j) => { const y = j * rh; if (!r) { s += `<text x="${L0 - 8}" y="${y + 15}" text-anchor="end" font-size="12" fill="${css("--muted")}">...</text>`; return; }
+    const nm = r[0].replace("Armagh City, Banbridge and Craigavon", "Armagh, Banbridge, Craigavon");
+    s += `<text x="${L0 - 8}" y="${y + 15}" text-anchor="end" font-size="${W < 520 ? 10.5 : 12}">${esc(nm)}</text><rect x="${L0}" y="${y + 3}" width="${Math.max(1, x(r[3]) - L0)}" height="${rh - 6}" fill="${fc("goidelic")}"/><text x="${x(r[3]) + 5}" y="${y + 15}" font-size="11">${pct(r[3])}</text>`; });
+  document.getElementById("ballyChart").innerHTML = svgEl(W, H, s);
+}
+function drawCharts() { famChart(); topChart(); sizeChart(); borderChart(); cornChart(); irishChart(); ballyChart(); }
+drawCharts();
+let rsT = null; addEventListener("resize", () => { clearTimeout(rsT); rsT = setTimeout(drawCharts, 200); });
+load();
+</script>
+</body>
+</html>

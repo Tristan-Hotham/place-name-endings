@@ -180,6 +180,8 @@ footer p{margin:0 0 10px}
 <h2><span class="n">01 · The map</span>Where the old words live</h2>
 <div class="figure bleed" id="mapfig">
   <div class="controls scroll">
+    <label class="l">Style</label>
+    <div class="seg" role="group" aria-label="Map style" id="styleBtns"><button class="btn" data-s="squares" aria-pressed="true">Squares</button><button class="btn" data-s="dots" aria-pressed="false">Dots</button></div>
     <label class="l">Show</label>
     <div class="seg" role="group" aria-label="What the map shows" id="modeBtns"><button class="btn" data-m="fam" aria-pressed="true">Languages</button><button class="btn" data-m="el" aria-pressed="false">One element</button></div>
     <label class="l">Ireland</label>
@@ -201,7 +203,7 @@ footer p{margin:0 0 10px}
       <div id="info">Tap a square, or zoom in and tap a place, to see what its name is made of.</div>
     </div>
   </div>
-  <div class="src" id="mapNote">Zoomed out, squares of 0.3 by 0.5 degrees (about 33 km), then 0.15 by 0.25 degrees; zoom in further to see every place as a dot. In Ireland the map shows towns and villages by default; switch to townlands, the small land divisions that carry most Irish place names. Grey: names with none of the 67 elements.</div>
+  <div class="src" id="mapNote">Zoomed out, squares of 0.3 by 0.5 degrees (about 33 km), then 0.15 by 0.25 degrees; zoom in further, or switch the style to Dots, to see every place as a dot. In Ireland the map shows towns and villages by default; switch to townlands, the small land divisions that carry most Irish place names. Grey: names with none of the 67 elements.</div>
 </div>
 
 <h2><span class="n">02 · Five languages</span>One map, five layers</h2>
@@ -322,7 +324,7 @@ const hx = h => [1, 3, 5].map(k => parseInt(h.slice(k, k + 2), 16));
 const mix = (a, b, t) => { const A = hx(a), B = hx(b); return `rgb(${A.map((v, k) => Math.round(v + (B[k] - v) * t)).join(",")})`; };
 
 /* ===== state and data ===== */
-const S = { mode: "fam", el: "bal", ire: "towns", sel: null };
+const S = { mode: "fam", el: "bal", ire: "towns", sel: null, style: "squares" };
 const D = { st: null, tl: null, outline: null };
 let lmap, cellL = null, dotL = null, landL = null, borderL = null, nameL = null, baseL = null, hillL = null, pin = null, renderer;
 const msg = document.getElementById("msg");
@@ -372,7 +374,7 @@ function cellColour(c) {
   return { fill: elRamp(EL[j][2])[k], op: .92 * o };
 }
 const gridOf = () => lmap.getZoom() < 6.75 ? "coarse" : "fine";
-const showDots = () => lmap.getZoom() >= 8.5;
+const showDots = () => S.style === "dots" || lmap.getZoom() >= 8.5;
 function drawCells() {
   if (cellL) cellL.remove(); cellL = null;
   if (!CELLS.fine || showDots()) return;
@@ -394,22 +396,24 @@ const DotLayer = L.GridLayer.extend({
   createTile(co) {
     const t = document.createElement("canvas"), sz = this.getTileSize(); t.width = sz.x; t.height = sz.y;
     const g = t.getContext("2d"), nw = this._map.unproject([co.x * sz.x, co.y * sz.y], co.z), se = this._map.unproject([(co.x + 1) * sz.x, (co.y + 1) * sz.y], co.z);
-    const z = co.z, rad = z >= 11 ? 4.5 : z >= 10 ? 3.6 : 2.8, o = LY.colour / 100, grey = isDark() ? "rgba(200,195,190,.35)" : "rgba(90,80,70,.32)";
+    const z = co.z, close = z >= 8.5, rad = z >= 11 ? 4.5 : z >= 10 ? 3.6 : close ? 2.8 : z >= 7.5 ? 2.1 : z >= 6.5 ? 1.6 : z >= 5.5 ? 1.25 : 1, o = LY.colour / 100;
+    const grey = isDark() ? (close ? "rgba(200,195,190,.35)" : "rgba(200,195,190,.22)") : (close ? "rgba(90,80,70,.32)" : "rgba(120,115,100,.28)");
     const pad = .05, list = near((nw.lat + se.lat) / 2, (nw.lng + se.lng) / 2, Math.max(nw.lat - se.lat, (se.lng - nw.lng) / 1.8) / 2 + pad);
     const ink = isDark() ? "#17161A" : "#FFFFFF", j = EK[S.el];
-    const draw = (p, col, r) => { const pt = this._map.project([p.la, p.lo], z); const x = pt.x - co.x * sz.x, y = pt.y - co.y * sz.y; if (x < -6 || y < -6 || x > sz.x + 6 || y > sz.y + 6) return; g.beginPath(); g.arc(x, y, r, 0, 6.2832); g.fillStyle = col; g.fill(); g.lineWidth = .8; g.strokeStyle = ink; g.stroke(); };
-    g.globalAlpha = o;
+    const draw = (p, col, r) => { const pt = this._map.project([p.la, p.lo], z); const x = pt.x - co.x * sz.x, y = pt.y - co.y * sz.y; if (x < -6 || y < -6 || x > sz.x + 6 || y > sz.y + 6) return; g.beginPath(); g.arc(x, y, r, 0, 6.2832); g.fillStyle = col; g.fill(); if (close) { g.lineWidth = .8; g.strokeStyle = ink; g.stroke(); } };
+    g.globalAlpha = close ? o : .85 * o;   /* zoomed out: small dots without outlines, slightly see-through, as in the collage */
     const on = [], off = [];
     for (const p of list) { if (S.mode === "fam" ? p.e.length : p.e.includes(j)) on.push(p); else off.push(p); }
-    for (const p of off) draw(p, grey, rad * .6);
-    for (const p of on) draw(p, S.mode === "fam" ? fc(p.f[0]) : fc(EL[j][2]), rad);
+    const one = S.mode === "el" && !close;   /* one element, zoomed out: fainter grey, bigger coloured dots */
+    if (LY.grey) { if (one) g.globalAlpha = .55 * o; for (const p of off) draw(p, grey, rad * (close ? .6 : one ? .7 : .8)); g.globalAlpha = close ? o : .85 * o; }
+    for (const p of on) draw(p, S.mode === "fam" ? fc(p.f[0]) : fc(EL[j][2]), one ? Math.max(1.8, rad * 1.5) : rad);
     return t;
   }
 });
 function drawDots() {
   if (dotL) { dotL.remove(); dotL = null; }
   if (!IDX || !showDots()) return;
-  dotL = new DotLayer({ pane: "dat", minZoom: 8.5, updateWhenZooming: false }).addTo(lmap);
+  dotL = new DotLayer({ pane: "dat", updateWhenZooming: false }).addTo(lmap);
 }
 function redrawData() { drawCells(); drawDots(); legend(); }
 
@@ -418,7 +422,7 @@ function legend() {
   const box = document.getElementById("legend"), kt = document.getElementById("keyTitle");
   if (S.mode === "fam") {
     kt.textContent = "Leading language family";
-    box.innerHTML = `<div class="lg">${FAM.map(f => `<span><i class="sw" style="background:${fc(f)}"></i>${FLAB[f]}</span>`).join("")}<span><i class="sw" style="background:${css("--none")}"></i>no element</span></div><div class="fig-sub" style="margin:6px 0 0">${showDots() ? "Each dot is a place, coloured by the first family in its name. Small grey dots: none of the elements." : "Each square takes the colour of the family found in most of its tagged names; paler means more mixed."}</div>`;
+    box.innerHTML = `<div class="lg">${FAM.map(f => `<span><i class="sw" style="background:${fc(f)}"></i>${FLAB[f]}</span>`).join("")}<span><i class="sw" style="background:${css("--none")}"></i>no element</span></div><div class="fig-sub" style="margin:6px 0 0">${showDots() ? "Each dot is a place, coloured by the first family in its name. " + (LY.grey ? "Small grey dots: none of the elements." : "Places with none of the elements are hidden (Map layers).") : "Each square takes the colour of the family found in most of its tagged names; paler means more mixed."}</div>`;
   } else {
     const e = EL[EK[S.el]], r = elRamp(e[2]);
     kt.textContent = `${e[1]}: ${fmt(e[4])} settlements${e[5] ? ", " + fmt(e[5]) + " townlands" : ""}`;
@@ -452,7 +456,7 @@ function placeInfo(p) {
 function scrollToMap() { const el = document.getElementById("lmap"), r = el.getBoundingClientRect(); if (r.top < 0 || r.bottom > innerHeight) el.scrollIntoView({ behavior: "smooth", block: innerWidth < 700 ? "start" : "center" }); }
 
 /* ===== map layers: base map, hills, place names, borders, colour strength ===== */
-const LY = { base: "auto", hills: true, hillK: 35, names: true, nameLvl: 1, lines: true, lineK: 55, colour: 100 };
+const LY = { base: "auto", hills: true, hillK: 35, names: true, nameLvl: 1, lines: true, lineK: 55, colour: 100, grey: true };
 const LYDEF = { ...LY };
 try { Object.assign(LY, JSON.parse(localStorage.getItem("pne_layers") || "{}")); } catch (e) {}
 const saveLY = () => { try { localStorage.setItem("pne_layers", JSON.stringify(LY)); } catch (e) {} };
@@ -462,6 +466,7 @@ function initLayers() {
     const d = L.DomUtil.create("div"); L.DomEvent.disableClickPropagation(d); L.DomEvent.disableScrollPropagation(d);
     d.innerHTML = `<button class="lyrBtn" aria-expanded="false" aria-controls="lyrPanel">Map layers</button>
 <div class="lyrPanel" id="lyrPanel" hidden>
+ <div class="row"><label style="font-weight:600">Map style</label><span></span><div class="sub"><span>show</span><select id="lyStyle" aria-label="Map style: squares or dots"><option value="squares">Squares (grid)</option><option value="dots">Dots (every place)</option></select></div><div class="sub"><label style="font-weight:400"><input type="checkbox" id="lyGrey"> grey dots for places with no element</label></div></div>
  <div class="row"><label style="font-weight:600">Base map</label><span></span><div class="sub"><span>style</span><select id="lyBase" aria-label="Base map"><option value="auto">Match the theme</option><option value="light">Light grey</option><option value="dark">Dark grey</option><option value="none">None (plain land)</option></select></div></div>
  <div class="row"><label><input type="checkbox" id="lyHills"> Hills</label><span></span><div class="sub"><span>strength</span><input type="range" id="lyHillK" min="10" max="100" step="5" aria-label="Hill shading strength"></div></div>
  <div class="row"><label><input type="checkbox" id="lyNames"> Place names</label><span></span><div class="sub"><span>how many</span><select id="lyNameLvl" aria-label="How many place names"><option value="0">Cities only</option><option value="1">Cities and towns</option><option value="2">Down to villages</option></select></div></div>
@@ -473,13 +478,15 @@ function initLayers() {
   lmap.addControl(new Ctl());
   const q = id => document.getElementById(id), btn = lmap.getContainer().querySelector(".lyrBtn"), pan = q("lyrPanel");
   btn.onclick = () => { const o = pan.hidden; pan.hidden = !o; btn.setAttribute("aria-expanded", o); };
-  const sync = () => { q("lyBase").value = LY.base; q("lyHills").checked = LY.hills; q("lyHillK").value = LY.hillK; q("lyNames").checked = LY.names; q("lyNameLvl").value = LY.nameLvl; q("lyLines").checked = LY.lines; q("lyLineK").value = LY.lineK; q("lyColour").value = LY.colour; };
+  const sync = () => { q("lyBase").value = LY.base; q("lyHills").checked = LY.hills; q("lyHillK").value = LY.hillK; q("lyNames").checked = LY.names; q("lyNameLvl").value = LY.nameLvl; q("lyLines").checked = LY.lines; q("lyLineK").value = LY.lineK; q("lyColour").value = LY.colour; q("lyStyle").value = S.style; q("lyGrey").checked = LY.grey; };
   const on = (id, ev, f) => q(id).addEventListener(ev, e => { f(e.target); saveLY(); applyLayers(); });
   on("lyBase", "change", t => LY.base = t.value);
   on("lyHills", "change", t => LY.hills = t.checked); on("lyHillK", "input", t => { LY.hillK = +t.value; LY.hills = true; q("lyHills").checked = true; });
   on("lyNames", "change", t => LY.names = t.checked); on("lyNameLvl", "change", t => { LY.nameLvl = +t.value; LY.names = true; q("lyNames").checked = true; });
   on("lyLines", "change", t => LY.lines = t.checked); on("lyLineK", "input", t => { LY.lineK = +t.value; LY.lines = true; q("lyLines").checked = true; });
   on("lyColour", "change", t => { LY.colour = +t.value; });
+  on("lyGrey", "change", t => { LY.grey = t.checked; lastColour = null; });
+  q("lyStyle").addEventListener("change", e => setStyle(e.target.value));
   q("lyReset").onclick = () => { Object.assign(LY, LYDEF); saveLY(); sync(); applyLayers(); };
   sync();
   lmap.on("zoomend moveend", placeNames);
@@ -496,7 +503,7 @@ function applyLayers() {
   else if (hillL) hillL.remove();
   if (landL) landL.setStyle({ fillColor: css("--land"), color: css("--muted"), fillOpacity: want === "none" ? 1 : 0, opacity: .55 });
   if (borderL) { if (LY.lines) { borderL.addTo(lmap); borderL.setStyle({ color: css("--fg"), opacity: .15 + LY.lineK / 100 * .85 }); } else borderL.remove(); }
-  if (CELLS.fine && lastColour !== LY.colour + S.mode) { lastColour = LY.colour + S.mode; redrawData(); }
+  if (CELLS.fine && lastColour !== LY.colour + S.mode + LY.grey) { lastColour = LY.colour + S.mode + LY.grey; redrawData(); }
   placeNames();
 }
 function placeNames() {
@@ -559,6 +566,13 @@ function redrawAll() { if (!lmap) return; baseKey = null; applyLayers(); redrawD
 function setPressed(id, attr, val) { document.querySelectorAll(`#${id} .btn`).forEach(b => b.setAttribute("aria-pressed", b.dataset[attr] === val)); }
 document.querySelectorAll("#modeBtns .btn").forEach(b => b.onclick = () => setMode(b.dataset.m));
 document.querySelectorAll("#ireBtns .btn").forEach(b => b.onclick = () => setIre(b.dataset.i));
+document.querySelectorAll("#styleBtns .btn").forEach(b => b.onclick = () => setStyle(b.dataset.s));
+function setStyle(v) {
+  S.style = v; setPressed("styleBtns", "s", v);
+  const sel = document.getElementById("lyStyle"); if (sel) sel.value = v;
+  if (v === "dots") S.sel = null;
+  if (CELLS.fine) redrawData();
+}
 function setMode(m) { S.mode = m; setPressed("modeBtns", "m", m); document.getElementById("elRow").hidden = m !== "el"; if (CELLS.fine) redrawData(); if (S.sel) cellInfo(S.sel); }
 async function setIre(v) {
   S.ire = v; setPressed("ireBtns", "i", v);

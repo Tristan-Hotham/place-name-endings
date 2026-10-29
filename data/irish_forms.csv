@@ -1,0 +1,19 @@
+element,label,expected_irish_word,names_with_irish_form,matching,share,other_first_words
+bal,bally- / bal-,baile,3860,3480,0.9016,beal 184; bealach 99; buaile 31; coimin 7
+kil,kil- / kill-,cill,2120,1448,0.683,coill 487; coillidh 64; coillin 35; coillte 33
+knock,knock-,cnoc,1210,1193,0.986,sliabh 4; cnapog 2; tigh 2; droichead 1
+drum,drum- / drom-,droim,1171,1157,0.988,coill 3
+clon,clon- / cloon-,cluain,1063,1038,0.9765,conachlainn 3; cuil 3; fairche 2; raistin 2
+lis,lis-,lios,795,783,0.9849,halla 2; cuirt 1; teampall 1; loiste 1
+derry,derry-,doire,769,742,0.9649,deargrath 5; daraidh 4; coimin 3; darach 1
+rath,rath-,rath,454,438,0.9648,coill 3; cill 1; re 1; sliabh 1
+glen,glen-,gleann,436,422,0.9679,coill 5; cluain 3; cnoc 2; baile 2
+carrick,carrick- / carrig-,carraig,434,407,0.9378,cathracha 4; moin 3; cearach 2; cnoc 2
+ard,ard-,ard,371,356,0.9596,da 3
+tully,tully- / tulla-,tulach,340,335,0.9853,tamhnaigh 3; tinne 1
+auch,auch- / agha-,achadh,331,219,0.6616,ath 54; athan 19; eachroim 12; eachinis 6
+dun,dun- / dum-,dun,271,210,0.7749,domhnach 35; baile 7; droim 3; clochan 2
+inis,ennis- / inish-,inis,258,236,0.9147,hinsi 9; oilean 4; ath 2; uinsinn 2
+mullagh,mullagh-,mullach,196,166,0.8469,mullan 13; mullain 6; muileann 4; maol 2
+bel,bel- / bella-,beal,108,77,0.713,baile 13; biolrach 3; belvidere 2; pairc 2
+kin,kin- / ken-,ceann,93,79,0.8495,baile 7; neidin 2; conchro 1; roinn 1

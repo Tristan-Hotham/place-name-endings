@@ -1,0 +1,8048 @@
+{
+ "meta": {
+  "gb_n": 43274,
+  "roi_cop_n": 2022,
+  "roi_townlands_n": 50380,
+  "roi_townlands_irish": 35223,
+  "ni_places_n": 336,
+  "ni_townlands_n": 9520,
+  "ie_retrieved": "2026-10-29",
+  "ni_retrieved": "2026-10-29",
+  "gb_kinds": {
+   "Village": 15155,
+   "Hamlet": 12900,
+   "Suburban Area": 10876,
+   "Other Settlement": 2917,
+   "Town": 1355,
+   "City": 71
+  },
+  "n_settlements": 45632,
+  "n_townlands": 59900,
+  "n_rules": 67,
+  "n_names": 105532,
+  "n_settlements_gb": 43274,
+  "n_settlements_ie": 2358,
+  "n_nation": {
+   "England": 33426,
+   "Wales": 3766,
+   "Scotland": 6082,
+   "Northern Ireland": 336,
+   "Republic of Ireland": 2022
+  },
+  "n_townlands_nation": {
+   "Northern Ireland": 9520,
+   "Republic of Ireland": 50380
+  }
+ },
+ "coverage": {
+  "settlements_any": 0.4311,
+  "townlands_any": 0.4403,
+  "settlements_any_n": 19671,
+  "townlands_any_n": 26376,
+  "by_nation": {
+   "England": 0.4628,
+   "Wales": 0.3755,
+   "Scotland": 0.2945,
+   "Northern Ireland": 0.3512,
+   "Republic of Ireland": 0.4337
+  },
+  "townlands_by_nation": {
+   "Northern Ireland": 0.4517,
+   "Republic of Ireland": 0.4382
+  },
+  "multi": 1603
+ },
+ "families": {
+  "labels": {
+   "english": "English",
+   "norse": "Norse",
+   "latin": "Latin (via English or Welsh)",
+   "brittonic": "Brittonic (Welsh, Cornish, Cumbric, Pictish)",
+   "goidelic": "Gaelic (Irish and Scottish)"
+  },
+  "order": [
+   "english",
+   "norse",
+   "latin",
+   "brittonic",
+   "goidelic"
+  ],
+  "settlements": {
+   "England": {
+    "english": 0.4094,
+    "norse": 0.0422,
+    "latin": 0.0044,
+    "brittonic": 0.0119,
+    "goidelic": 0.0
+   },
+   "Wales": {
+    "english": 0.0791,
+    "norse": 0.0,
+    "latin": 0.0141,
+    "brittonic": 0.2847,
+    "goidelic": 0.0
+   },
+   "Scotland": {
+    "english": 0.1307,
+    "norse": 0.0286,
+    "latin": 0.0007,
+    "brittonic": 0.0077,
+    "goidelic": 0.134
+   },
+   "Northern Ireland": {
+    "english": 0.0863,
+    "norse": 0.0,
+    "latin": 0.0,
+    "brittonic": 0.0,
+    "goidelic": 0.2679
+   },
+   "Republic of Ireland": {
+    "english": 0.0707,
+    "norse": 0.0,
+    "latin": 0.0,
+    "brittonic": 0.0,
+    "goidelic": 0.3665
+   }
+  },
+  "townlands": {
+   "Northern Ireland": {
+    "english": 0.0197,
+    "norse": 0.0,
+    "latin": 0.0,
+    "brittonic": 0.0,
+    "goidelic": 0.4351
+   },
+   "Republic of Ireland": {
+    "english": 0.0597,
+    "norse": 0.0,
+    "latin": 0.0,
+    "brittonic": 0.0,
+    "goidelic": 0.3814
+   }
+  },
+  "counts": {
+   "english": 14951,
+   "norse": 1585,
+   "latin": 204,
+   "brittonic": 1516,
+   "goidelic": 1646
+  },
+  "counts_townlands": {
+   "english": 3198,
+   "norse": 0,
+   "latin": 0,
+   "brittonic": 0,
+   "goidelic": 23358
+  }
+ },
+ "elements": {
+  "ton": {
+   "label": "-ton",
+   "fam": "english",
+   "meaning": "farmstead, estate, later village (Old English tun). Some -ston names are stan, stone",
+   "n": 5949,
+   "n_townlands": 185,
+   "by_nation": {
+    "England": 5331,
+    "Wales": 168,
+    "Scotland": 432,
+    "Northern Ireland": 3,
+    "Republic of Ireland": 15
+   },
+   "townlands_by_nation": {
+    "Northern Ireland": 34,
+    "Republic of Ireland": 151
+   },
+   "top_areas": [
+    [
+     "North Yorkshire",
+     314
+    ],
+    [
+     "Shropshire",
+     255
+    ],
+    [
+     "Somerset",
+     207
+    ],
+    [
+     "Devon",
+     196
+    ],
+    [
+     "Lincolnshire",
+     189
+    ]
+   ],
+   "top_share_areas": [
+    [
+     "City of Peterborough",
+     24,
+     61,
+     0.3934
+    ],
+    [
+     "Hartlepool",
+     9,
+     23,
+     0.3913
+    ],
+    [
+     "Rutland",
+     21,
+     57,
+     0.3684
+    ],
+    [
+     "Torbay",
+     12,
+     36,
+     0.3333
+    ],
+    [
+     "North Northamptonshire",
+     46,
+     138,
+     0.3333
+    ]
+   ],
+   "town_share": 0.0289,
+   "towns": [
+    "Stevenston",
+    "Dumbarton",
+    "Galston",
+    "Stewarton",
+    "Hamilton",
+    "Uddingston",
+    "Livingston",
+    "East Linton"
+   ]
+  },
+  "town": {
+   "label": "-town",
+   "fam": "english",
+   "meaning": "town, farm or settlement (later English town, from Old English tun)",
+   "n": 783,
+   "n_townlands": 3013,
+   "by_nation": {
+    "England": 464,
+    "Wales": 47,
+    "Scotland": 118,
+    "Northern Ireland": 26,
+    "Republic of Ireland": 128
+   },
+   "townlands_by_nation": {
+    "Northern Ireland": 154,
+    "Republic of Ireland": 2859
+   },
+   "top_areas": [
+    [
+     "Meath",
+     561
+    ],
+    [
+     "Kildare",
+     306
+    ],
+    [
+     "Wexford",
+     296
+    ],
+    [
+     "Westmeath",
+     274
+    ],
+    [
+     "Dublin",
+     234
+    ]
+   ],
+   "top_share_areas": [
+    [
+     "Meath",
+     561,
+     1599,
+     0.3508
+    ],
+    [
+     "Dublin",
+     234,
+     883,
+     0.265
+    ],
+    [
+     "Kildare",
+     306,
+     1210,
+     0.2529
+    ],
+    [
+     "Louth",
+     154,
+     674,
+     0.2285
+    ],
+    [
+     "Westmeath",
+     274,
+     1341,
+     0.2043
+    ]
+   ],
+   "town_share": 0.0102,
+   "towns": [
+    "Grantown-on-Spey",
+    "Dufftown",
+    "Charlestown of Aberlour",
+    "Campbeltown",
+    "Wigtown",
+    "Longtown",
+    "Newtown",
+    "Hugh Town"
+   ]
+  },
+  "ham": {
+   "label": "-ham",
+   "fam": "english",
+   "meaning": "homestead, village (Old English ham); some are hamm, land in a river bend, which the spelling cannot separate",
+   "n": 1251,
+   "n_townlands": 0,
+   "by_nation": {
+    "England": 1230,
+    "Wales": 8,
+    "Scotland": 13,
+    "Northern Ireland": 0,
+    "Republic of Ireland": 0
+   },
+   "townlands_by_nation": {
+    "Northern Ireland": 0,
+    "Republic of Ireland": 0
+   },
+   "top_areas": [
+    [
+     "Norfolk",
+     187
+    ],
+    [
+     "Suffolk",
+     122
+    ],
+    [
+     "Kent",
+     73
+    ],
+    [
+     "Lincolnshire",
+     57
+    ],
+    [
+     "West Sussex",
+     46
+    ]
+   ],
+   "top_share_areas": [
+    [
+     "Reading",
+     3,
+     15,
+     0.2
+    ],
+    [
+     "Norfolk",
+     187,
+     1068,
+     0.1751
+    ],
+    [
+     "Rutland",
+     8,
+     57,
+     0.1404
+    ],
+    [
+     "Slough",
+     2,
+     15,
+     0.1333
+    ],
+    [
+     "Suffolk",
+     122,
+     922,
+     0.1323
+    ]
+   ],
+   "town_share": 0.0655,
+   "towns": [
+    "Hexham",
+    "Wolsingham",
+    "Durham",
+    "Whickham",
+    "Billingham",
+    "Seaham",
+    "Lytham St Anne's",
+    "Kirkham"
+   ]
+  },
+  "ing": {
+   "label": "-ing / -ings",
+   "fam": "english",
+   "meaning": "the people of, or place of (Old English -ingas, -ing)",
+   "n": 1724,
+   "n_townlands": 0,
+   "by_nation": {
+    "England": 1653,
+    "Wales": 8,
+    "Scotland": 63,
+    "Northern Ireland": 0,
+    "Republic of Ireland": 0
+   },
+   "townlands_by_nation": {
+    "Northern Ireland": 0,
+    "Republic of Ireland": 0
+   },
+   "top_areas": [
+    [
+     "Norfolk",
+     118
+    ],
+    [
+     "Lincolnshire",
+     81
+    ],
+    [
+     "Kent",
+     79
+    ],
+    [
+     "Essex",
+     75
+    ],
+    [
+     "Suffolk",
+     72
+    ]
+   ],
+   "top_share_areas": [
+    [
+     "North Northamptonshire",
+     20,
+     138,
+     0.1449
+    ],
+    [
+     "West Sussex",
+     58,
+     487,
+     0.1191
+    ],
+    [
+     "North Tyneside",
+     5,
+     44,
+     0.1136
+    ],
+    [
+     "Norfolk",
+     118,
+     1068,
+     0.1105
+    ],
+    [
+     "Thurrock",
+     3,
+     28,
+     0.1071
+    ]
+   ],
+   "town_share": 0.0406,
+   "towns": [
+    "Kilwinning",
+    "Stirling",
+    "Inverkeithing",
+    "Haddington",
+    "Workington",
+    "Willington",
+    "Wolsingham",
+    "Darlington"
+   ]
+  },
+  "ley": {
+   "label": "-ley / -leigh",
+   "fam": "english",
+   "meaning": "woodland clearing, later meadow (Old English leah)",
+   "n": 1902,
+   "n_townlands": 0,
+   "by_nation": {
+    "England": 1870,
+    "Wales": 16,
+    "Scotland": 16,
+    "Northern Ireland": 0,
+    "Republic of Ireland": 0
+   },
+   "townlands_by_nation": {
+    "Northern Ireland": 0,
+    "Republic of Ireland": 0
+   },
+   "top_areas": [
+    [
+     "Hampshire",
+     98
+    ],
+    [
+     "Staffordshire",
+     85
+    ],
+    [
+     "Derbyshire",
+     83
+    ],
+    [
+     "Shropshire",
+     83
+    ],
+    [
+     "Devon",
+     77
+    ]
+   ],
+   "top_share_areas": [
+    [
+     "Reading",
+     3,
+     15,
+     0.2
+    ],
+    [
+     "Coventry",
+     13,
+     77,
+     0.1688
+    ],
+    [
+     "Dudley",
+     13,
+     77,
+     0.1688
+    ],
+    [
+     "Wokingham",
+     8,
+     50,
+     0.16
+    ],
+    [
+     "Wigan",
+     18,
+     117,
+     0.1538
+    ]
+   ],
+   "town_share": 0.0347,
+   "towns": [
+    "Paisley",
+    "Stanley",
+    "Whitley Bay",
+    "Cleveleys",
+    "Chorley",
+    "Worsley",
+    "Hindley",
+    "Kearsley"
+   ]
+  },
+  "worth": {
+   "label": "-worth",
+   "fam": "english",
+   "meaning": "enclosure, enclosed farmstead (Old English worth)",
+   "n": 392,
+   "n_townlands": 0,
+   "by_nation": {
+    "England": 392,
+    "Wales": 0,
+    "Scotland": 0,
+    "Northern Ireland": 0,
+    "Republic of Ireland": 0
+   },
+   "townlands_by_nation": {
+    "Northern Ireland": 0,
+    "Republic of Ireland": 0
+   },
+   "top_areas": [
+    [
+     "Devon",
+     29
+    ],
+    [
+     "Gloucestershire",
+     22
+    ],
+    [
+     "Lincolnshire",
+     17
+    ],
+    [
+     "Cambridgeshire",
+     15
+    ],
+    [
+     "Hampshire",
+     13
+    ]
+   ],
+   "top_share_areas": [
+    [
+     "Darlington",
+     4,
+     54,
+     0.0741
+    ],
+    [
+     "North Tyneside",
+     3,
+     44,
+     0.0682
+    ],
+    [
+     "Gateshead",
+     5,
+     80,
+     0.0625
+    ],
+    [
+     "Barnsley",
+     7,
+     123,
+     0.0569
+    ],
+    [
+     "Rotherham",
+     5,
+     117,
+     0.0427
+    ]
+   ],
+   "town_share": 0.0536,
+   "towns": [
+    "Farnworth",
+    "Failsworth",
+    "Whitworth",
+    "Hemsworth",
+    "Epworth",
+    "Tamworth",
+    "Wirksworth",
+    "Market Bosworth"
+   ]
+  },
+  "bury": {
+   "label": "-bury / -borough",
+   "fam": "english",
+   "meaning": "fortified place, later manor or town (Old English burh); some -borough names are beorg, hill",
+   "n": 601,
+   "n_townlands": 0,
+   "by_nation": {
+    "England": 567,
+    "Wales": 7,
+    "Scotland": 27,
+    "Northern Ireland": 0,
+    "Republic of Ireland": 0
+   },
+   "townlands_by_nation": {
+    "Northern Ireland": 0,
+    "Republic of Ireland": 0
+   },
+   "top_areas": [
+    [
+     "Devon",
+     38
+    ],
+    [
+     "Dorset",
+     25
+    ],
+    [
+     "Somerset",
+     25
+    ],
+    [
+     "Norfolk",
+     24
+    ],
+    [
+     "Shropshire",
+     24
+    ]
+   ],
+   "top_share_areas": [
+    [
+     "Thurrock",
+     3,
+     28,
+     0.1071
+    ],
+    [
+     "South Gloucestershire",
+     13,
+     171,
+     0.076
+    ],
+    [
+     "Southend-on-Sea",
+     1,
+     15,
+     0.0667
+    ],
+    [
+     "North East Lincolnshire",
+     3,
+     45,
+     0.0667
+    ],
+    [
+     "Barnsley",
+     8,
+     123,
+     0.065
+    ]
+   ],
+   "town_share": 0.0915,
+   "towns": [
+    "Fraserburgh",
+    "Newburgh",
+    "Helensburgh",
+    "Musselburgh",
+    "Jedburgh",
+    "Rothbury",
+    "Middlesbrough",
+    "Guisborough"
+   ]
+  },
+  "field": {
+   "label": "-field",
+   "fam": "english",
+   "meaning": "open land, cleared country (Old English feld)",
+   "n": 819,
+   "n_townlands": 0,
+   "by_nation": {
+    "England": 705,
+    "Wales": 19,
+    "Scotland": 95,
+    "Northern Ireland": 0,
+    "Republic of Ireland": 0
+   },
+   "townlands_by_nation": {
+    "Northern Ireland": 0,
+    "Republic of Ireland": 0
+   },
+   "top_areas": [
+    [
+     "Suffolk",
+     47
+    ],
+    [
+     "Hampshire",
+     31
+    ],
+    [
+     "Essex",
+     25
+    ],
+    [
+     "Gloucestershire",
+     22
+    ],
+    [
+     "East Sussex",
+     21
+    ]
+   ],
+   "top_share_areas": [
+    [
+     "Bracknell Forest",
+     7,
+     48,
+     0.1458
+    ],
+    [
+     "Dundee City",
+     3,
+     25,
+     0.12
+    ],
+    [
+     "City of Wolverhampton",
+     8,
+     77,
+     0.1039
+    ],
+    [
+     "Wokingham",
+     5,
+     50,
+     0.1
+    ],
+    [
+     "Clackmannanshire",
+     2,
+     21,
+     0.0952
+    ]
+   ],
+   "town_share": 0.033,
+   "towns": [
+    "Annfield Plain",
+    "Sedgefield",
+    "Ince-in-Makerfield",
+    "Whitefield",
+    "Brierfield",
+    "Huddersfield",
+    "Mirfield",
+    "Wakefield"
+   ]
+  },
+  "ford": {
+   "label": "-ford",
+   "fam": "english",
+   "meaning": "ford, a river crossing (Old English ford)",
+   "n": 1020,
+   "n_townlands": 0,
+   "by_nation": {
+    "England": 959,
+    "Wales": 15,
+    "Scotland": 46,
+    "Northern Ireland": 0,
+    "Republic of Ireland": 0
+   },
+   "townlands_by_nation": {
+    "Northern Ireland": 0,
+    "Republic of Ireland": 0
+   },
+   "top_areas": [
+    [
+     "Devon",
+     90
+    ],
+    [
+     "Somerset",
+     82
+    ],
+    [
+     "Wiltshire",
+     46
+    ],
+    [
+     "Shropshire",
+     43
+    ],
+    [
+     "Oxfordshire",
+     39
+    ]
+   ],
+   "top_share_areas": [
+    [
+     "Thurrock",
+     5,
+     28,
+     0.1786
+    ],
+    [
+     "City of Nottingham",
+     4,
+     37,
+     0.1081
+    ],
+    [
+     "Trafford",
+     3,
+     34,
+     0.0882
+    ],
+    [
+     "Coventry",
+     6,
+     77,
+     0.0779
+    ],
+    [
+     "Devon",
+     90,
+     1228,
+     0.0733
+    ]
+   ],
+   "town_share": 0.05,
+   "towns": [
+    "Alford",
+    "Rainford",
+    "Barrowford",
+    "Bradford",
+    "Castleford",
+    "Telford",
+    "Winsford",
+    "Knutsford"
+   ]
+  },
+  "stead": {
+   "label": "-stead",
+   "fam": "english",
+   "meaning": "place, site, farm (Old English stede)",
+   "n": 168,
+   "n_townlands": 0,
+   "by_nation": {
+    "England": 168,
+    "Wales": 0,
+    "Scotland": 0,
+    "Northern Ireland": 0,
+    "Republic of Ireland": 0
+   },
+   "townlands_by_nation": {
+    "Northern Ireland": 0,
+    "Republic of Ireland": 0
+   },
+   "top_areas": [
+    [
+     "Kent",
+     23
+    ],
+    [
+     "Essex",
+     18
+    ],
+    [
+     "Norfolk",
+     15
+    ],
+    [
+     "Suffolk",
+     14
+    ],
+    [
+     "West Sussex",
+     13
+    ]
+   ],
+   "top_share_areas": [
+    [
+     "West Berkshire",
+     9,
+     170,
+     0.0529
+    ],
+    [
+     "West Sussex",
+     13,
+     487,
+     0.0267
+    ],
+    [
+     "Bracknell Forest",
+     1,
+     48,
+     0.0208
+    ],
+    [
+     "Essex",
+     18,
+     873,
+     0.0206
+    ],
+    [
+     "Wokingham",
+     1,
+     50,
+     0.02
+    ]
+   ],
+   "town_share": 0.0417,
+   "towns": [
+    "Berkhamsted",
+    "Moretonhampstead",
+    "Hemel Hempstead",
+    "Stansted Mountfitchet",
+    "Halstead",
+    "East Grinstead",
+    "Banstead"
+   ]
+  },
+  "hurst": {
+   "label": "-hurst",
+   "fam": "english",
+   "meaning": "wooded hill (Old English hyrst)",
+   "n": 120,
+   "n_townlands": 0,
+   "by_nation": {
+    "England": 120,
+    "Wales": 0,
+    "Scotland": 0,
+    "Northern Ireland": 0,
+    "Republic of Ireland": 0
+   },
+   "townlands_by_nation": {
+    "Northern Ireland": 0,
+    "Republic of Ireland": 0
+   },
+   "top_areas": [
+    [
+     "Kent",
+     25
+    ],
+    [
+     "West Sussex",
+     13
+    ],
+    [
+     "Hampshire",
+     9
+    ],
+    [
+     "East Sussex",
+     8
+    ],
+    [
+     "Shropshire",
+     5
+    ]
+   ],
+   "top_share_areas": [
+    [
+     "Reading",
+     1,
+     15,
+     0.0667
+    ],
+    [
+     "Bracknell Forest",
+     2,
+     48,
+     0.0417
+    ],
+    [
+     "Tameside",
+     3,
+     82,
+     0.0366
+    ],
+    [
+     "West Sussex",
+     13,
+     487,
+     0.0267
+    ],
+    [
+     "Kent",
+     25,
+     1207,
+     0.0207
+    ]
+   ],
+   "town_share": 0.025,
+   "towns": [
+    "Midhurst",
+    "Sandhurst",
+    "Wadhurst"
+   ]
+  },
+  "den": {
+   "label": "-den / -dean",
+   "fam": "english",
+   "meaning": "valley (denu) or woodland pasture for pigs (denn), Old English",
+   "n": 336,
+   "n_townlands": 0,
+   "by_nation": {
+    "England": 336,
+    "Wales": 0,
+    "Scotland": 0,
+    "Northern Ireland": 0,
+    "Republic of Ireland": 0
+   },
+   "townlands_by_nation": {
+    "Northern Ireland": 0,
+    "Republic of Ireland": 0
+   },
+   "top_areas": [
+    [
+     "Kent",
+     56
+    ],
+    [
+     "Hampshire",
+     17
+    ],
+    [
+     "Hertfordshire",
+     17
+    ],
+    [
+     "Lancashire",
+     16
+    ],
+    [
+     "Essex",
+     16
+    ]
+   ],
+   "top_share_areas": [
+    [
+     "The City of Brighton and Hove",
+     10,
+     32,
+     0.3125
+    ],
+    [
+     "Calderdale",
+     11,
+     148,
+     0.0743
+    ],
+    [
+     "Reading",
+     1,
+     15,
+     0.0667
+    ],
+    [
+     "Bedford",
+     7,
+     126,
+     0.0556
+    ],
+    [
+     "Kent",
+     56,
+     1207,
+     0.0464
+    ]
+   ],
+   "town_share": 0.0446,
+   "towns": [
+    "Walkden",
+    "Haslingden",
+    "Trawden",
+    "Hebden Bridge",
+    "Todmorden",
+    "Silsden",
+    "Howden",
+    "Droylsden"
+   ]
+  },
+  "don": {
+   "label": "-don",
+   "fam": "english",
+   "meaning": "hill (Old English dun)",
+   "n": 431,
+   "n_townlands": 0,
+   "by_nation": {
+    "England": 431,
+    "Wales": 0,
+    "Scotland": 0,
+    "Northern Ireland": 0,
+    "Republic of Ireland": 0
+   },
+   "townlands_by_nation": {
+    "Northern Ireland": 0,
+    "Republic of Ireland": 0
+   },
+   "top_areas": [
+    [
+     "Essex",
+     33
+    ],
+    [
+     "Devon",
+     24
+    ],
+    [
+     "Buckinghamshire",
+     20
+    ],
+    [
+     "Somerset",
+     20
+    ],
+    [
+     "Greater London",
+     18
+    ]
+   ],
+   "top_share_areas": [
+    [
+     "South Tyneside",
+     4,
+     31,
+     0.129
+    ],
+    [
+     "North Tyneside",
+     5,
+     44,
+     0.1136
+    ],
+    [
+     "Swindon",
+     7,
+     82,
+     0.0854
+    ],
+    [
+     "Torbay",
+     3,
+     36,
+     0.0833
+    ],
+    [
+     "Thurrock",
+     2,
+     28,
+     0.0714
+    ]
+   ],
+   "town_share": 0.0394,
+   "towns": [
+    "Blaydon",
+    "Shildon",
+    "Baildon",
+    "Yeadon",
+    "Clevedon",
+    "Swindon",
+    "Faringdon",
+    "Abingdon-on-Thames"
+   ]
+  },
+  "cot": {
+   "label": "-cote / -cott",
+   "fam": "english",
+   "meaning": "cottage, hut, shelter (Old English cot)",
+   "n": 374,
+   "n_townlands": 0,
+   "by_nation": {
+    "England": 365,
+    "Wales": 6,
+    "Scotland": 3,
+    "Northern Ireland": 0,
+    "Republic of Ireland": 0
+   },
+   "townlands_by_nation": {
+    "Northern Ireland": 0,
+    "Republic of Ireland": 0
+   },
+   "top_areas": [
+    [
+     "Devon",
+     47
+    ],
+    [
+     "Oxfordshire",
+     32
+    ],
+    [
+     "Shropshire",
+     28
+    ],
+    [
+     "Warwickshire",
+     26
+    ],
+    [
+     "Gloucestershire",
+     24
+    ]
+   ],
+   "top_share_areas": [
+    [
+     "Reading",
+     1,
+     15,
+     0.0667
+    ],
+    [
+     "West Northamptonshire",
+     15,
+     258,
+     0.0581
+    ],
+    [
+     "Warwickshire",
+     26,
+     474,
+     0.0549
+    ],
+    [
+     "Oxfordshire",
+     32,
+     596,
+     0.0537
+    ],
+    [
+     "Rutland",
+     3,
+     57,
+     0.0526
+    ]
+   ],
+   "town_share": 0.0134,
+   "towns": [
+    "Saltcoats",
+    "Prescot",
+    "Swadlincote",
+    "Caldicot",
+    "Didcot"
+   ]
+  },
+  "stow": {
+   "label": "-stow",
+   "fam": "english",
+   "meaning": "place, often a holy place or meeting place (Old English stow)",
+   "n": 82,
+   "n_townlands": 0,
+   "by_nation": {
+    "England": 77,
+    "Wales": 4,
+    "Scotland": 1,
+    "Northern Ireland": 0,
+    "Republic of Ireland": 0
+   },
+   "townlands_by_nation": {
+    "Northern Ireland": 0,
+    "Republic of Ireland": 0
+   },
+   "top_areas": [
+    [
+     "Devon",
+     9
+    ],
+    [
+     "Lincolnshire",
+     8
+    ],
+    [
+     "Cornwall",
+     6
+    ],
+    [
+     "Cambridgeshire",
+     5
+    ],
+    [
+     "Greater London",
+     5
+    ]
+   ],
+   "top_share_areas": [
+    [
+     "Bracknell Forest",
+     1,
+     48,
+     0.0208
+    ],
+    [
+     "North Lincolnshire",
+     2,
+     108,
+     0.0185
+    ],
+    [
+     "Medway",
+     1,
+     58,
+     0.0172
+    ],
+    [
+     "City of Peterborough",
+     1,
+     61,
+     0.0164
+    ],
+    [
+     "Monmouthshire",
+     3,
+     210,
+     0.0143
+    ]
+   ],
+   "town_share": 0.0488,
+   "towns": [
+    "Stow-on-the-Wold",
+    "Chepstow",
+    "Padstow",
+    "Felixstowe"
+   ]
+  },
+  "minster": {
+   "label": "-minster",
+   "fam": "english",
+   "meaning": "monastery or major church (Old English mynster)",
+   "n": 33,
+   "n_townlands": 0,
+   "by_nation": {
+    "England": 33,
+    "Wales": 0,
+    "Scotland": 0,
+    "Northern Ireland": 0,
+    "Republic of Ireland": 0
+   },
+   "townlands_by_nation": {
+    "Northern Ireland": 0,
+    "Republic of Ireland": 0
+   },
+   "top_areas": [
+    [
+     "Dorset",
+     8
+    ],
+    [
+     "Somerset",
+     3
+    ],
+    [
+     "Kent",
+     3
+    ],
+    [
+     "Worcestershire",
+     2
+    ],
+    [
+     "City of Bristol",
+     2
+    ]
+   ],
+   "top_share_areas": [
+    [
+     "City of Bristol",
+     2,
+     90,
+     0.0222
+    ],
+    [
+     "Dorset",
+     8,
+     710,
+     0.0113
+    ],
+    [
+     "Bournemouth, Christchurch and Poole",
+     1,
+     98,
+     0.0102
+    ],
+    [
+     "Cheshire West and Chester",
+     1,
+     265,
+     0.0038
+    ],
+    [
+     "Oxfordshire",
+     2,
+     596,
+     0.0034
+    ]
+   ],
+   "town_share": 0.3333,
+   "towns": [
+    "Leominster",
+    "Kidderminster",
+    "Ilminster",
+    "Beaminster",
+    "Sturminster Newton",
+    "Warminster",
+    "Axminster",
+    "Wimborne Minster"
+   ]
+  },
+  "wick": {
+   "label": "-wick / -wich",
+   "fam": "english",
+   "meaning": "specialised farm (often a dairy farm) or trading place (Old English wic, from Latin vicus)",
+   "n": 308,
+   "n_townlands": 0,
+   "by_nation": {
+    "England": 293,
+    "Wales": 5,
+    "Scotland": 10,
+    "Northern Ireland": 0,
+    "Republic of Ireland": 0
+   },
+   "townlands_by_nation": {
+    "Northern Ireland": 0,
+    "Republic of Ireland": 0
+   },
+   "top_areas": [
+    [
+     "Northumberland",
+     18
+    ],
+    [
+     "Norfolk",
+     18
+    ],
+    [
+     "North Yorkshire",
+     14
+    ],
+    [
+     "East Riding of Yorkshire",
+     14
+    ],
+    [
+     "Worcestershire",
+     13
+    ]
+   ],
+   "top_share_areas": [
+    [
+     "Solihull",
+     4,
+     68,
+     0.0588
+    ],
+    [
+     "Manchester",
+     3,
+     51,
+     0.0588
+    ],
+    [
+     "York",
+     3,
+     52,
+     0.0577
+    ],
+    [
+     "Walsall",
+     3,
+     64,
+     0.0469
+    ],
+    [
+     "Middlesbrough",
+     1,
+     22,
+     0.0455
+    ]
+   ],
+   "town_share": 0.0812,
+   "towns": [
+    "Prestwick",
+    "Hawick",
+    "North Berwick",
+    "Berwick-upon-Tweed",
+    "Alnwick",
+    "Keswick",
+    "Horwich",
+    "Barnoldswick"
+   ]
+  },
+  "chester": {
+   "label": "-chester / -caster",
+   "fam": "latin",
+   "meaning": "Old English ceaster, a Roman fort or town (from Latin castra)",
+   "n": 67,
+   "n_townlands": 0,
+   "by_nation": {
+    "England": 65,
+    "Wales": 0,
+    "Scotland": 2,
+    "Northern Ireland": 0,
+    "Republic of Ireland": 0
+   },
+   "townlands_by_nation": {
+    "Northern Ireland": 0,
+    "Republic of Ireland": 0
+   },
+   "top_areas": [
+    [
+     "Gloucestershire",
+     6
+    ],
+    [
+     "County Durham",
+     5
+    ],
+    [
+     "Norfolk",
+     4
+    ],
+    [
+     "Hampshire",
+     3
+    ],
+    [
+     "Dorset",
+     3
+    ]
+   ],
+   "top_share_areas": [
+    [
+     "City of Derby",
+     1,
+     28,
+     0.0357
+    ],
+    [
+     "City of Leicester",
+     1,
+     32,
+     0.0312
+    ],
+    [
+     "Manchester",
+     1,
+     51,
+     0.0196
+    ],
+    [
+     "York",
+     1,
+     52,
+     0.0192
+    ],
+    [
+     "Medway",
+     1,
+     58,
+     0.0172
+    ]
+   ],
+   "town_share": 0.3284,
+   "towns": [
+    "Chester-le-Street",
+    "Lancaster",
+    "Doncaster",
+    "Tadcaster",
+    "Chester",
+    "Manchester",
+    "Uttoxeter",
+    "Leicester"
+   ]
+  },
+  "strat": {
+   "label": "strat- / stret-",
+   "fam": "latin",
+   "meaning": "Old English straet, a paved road, often Roman (from Latin strata)",
+   "n": 65,
+   "n_townlands": 0,
+   "by_nation": {
+    "England": 64,
+    "Wales": 1,
+    "Scotland": 0,
+    "Northern Ireland": 0,
+    "Republic of Ireland": 0
+   },
+   "townlands_by_nation": {
+    "Northern Ireland": 0,
+    "Republic of Ireland": 0
+   },
+   "top_areas": [
+    [
+     "Shropshire",
+     6
+    ],
+    [
+     "Somerset",
+     5
+    ],
+    [
+     "County of Herefordshire",
+     4
+    ],
+    [
+     "Warwickshire",
+     4
+    ],
+    [
+     "Hampshire",
+     4
+    ]
+   ],
+   "top_share_areas": [
+    [
+     "Swindon",
+     3,
+     82,
+     0.0366
+    ],
+    [
+     "Trafford",
+     1,
+     34,
+     0.0294
+    ],
+    [
+     "Warrington",
+     2,
+     84,
+     0.0238
+    ],
+    [
+     "Rutland",
+     1,
+     57,
+     0.0175
+    ],
+    [
+     "Milton Keynes",
+     2,
+     157,
+     0.0127
+    ]
+   ],
+   "town_share": 0.0615,
+   "towns": [
+    "Stretford",
+    "Church Stretton",
+    "Stratford-upon-Avon",
+    "Stratton"
+   ]
+  },
+  "eccles": {
+   "label": "eccles-",
+   "fam": "latin",
+   "meaning": "church, from Brittonic, from Latin ecclesia",
+   "n": 20,
+   "n_townlands": 0,
+   "by_nation": {
+    "England": 18,
+    "Wales": 0,
+    "Scotland": 2,
+    "Northern Ireland": 0,
+    "Republic of Ireland": 0
+   },
+   "townlands_by_nation": {
+    "Northern Ireland": 0,
+    "Republic of Ireland": 0
+   },
+   "top_areas": [
+    [
+     "Lancashire",
+     3
+    ],
+    [
+     "St. Helens",
+     3
+    ],
+    [
+     "Sheffield",
+     2
+    ],
+    [
+     "Norfolk",
+     2
+    ],
+    [
+     "County Durham",
+     2
+    ]
+   ],
+   "top_share_areas": [
+    [
+     "St. Helens",
+     3,
+     66,
+     0.0455
+    ],
+    [
+     "Salford",
+     1,
+     61,
+     0.0164
+    ],
+    [
+     "Blackburn with Darwen",
+     1,
+     85,
+     0.0118
+    ],
+    [
+     "West Lothian",
+     1,
+     90,
+     0.0111
+    ],
+    [
+     "Sheffield",
+     2,
+     239,
+     0.0084
+    ]
+   ],
+   "town_share": 0.1,
+   "towns": [
+    "Eccles",
+    "Eccleshall"
+   ]
+  },
+  "pont": {
+   "label": "pont-",
+   "fam": "latin",
+   "meaning": "bridge (Welsh pont, from Latin pons)",
+   "n": 52,
+   "n_townlands": 0,
+   "by_nation": {
+    "England": 0,
+    "Wales": 52,
+    "Scotland": 0,
+    "Northern Ireland": 0,
+    "Republic of Ireland": 0
+   },
+   "townlands_by_nation": {
+    "Northern Ireland": 0,
+    "Republic of Ireland": 0
+   },
+   "top_areas": [
+    [
+     "Torfaen",
+     8
+    ],
+    [
+     "Carmarthenshire",
+     6
+    ],
+    [
+     "Powys",
+     6
+    ],
+    [
+     "Rhondda Cynon Taf",
+     5
+    ],
+    [
+     "Pembrokeshire",
+     4
+    ]
+   ],
+   "top_share_areas": [
+    [
+     "Torfaen",
+     8,
+     73,
+     0.1096
+    ],
+    [
+     "Rhondda Cynon Taf",
+     5,
+     139,
+     0.036
+    ],
+    [
+     "Caerphilly",
+     4,
+     116,
+     0.0345
+    ],
+    [
+     "Neath Port Talbot",
+     3,
+     95,
+     0.0316
+    ],
+    [
+     "Cardiff",
+     2,
+     67,
+     0.0299
+    ]
+   ],
+   "town_share": 0.1154,
+   "towns": [
+    "Pontarddulais",
+    "Pontardawe",
+    "Pontypool",
+    "Pontycymer",
+    "Pontypridd",
+    "Pontllanfraith"
+   ]
+  },
+  "by": {
+   "label": "-by",
+   "fam": "norse",
+   "meaning": "farmstead, village (Old Norse byr)",
+   "n": 719,
+   "n_townlands": 0,
+   "by_nation": {
+    "England": 697,
+    "Wales": 0,
+    "Scotland": 22,
+    "Northern Ireland": 0,
+    "Republic of Ireland": 0
+   },
+   "townlands_by_nation": {
+    "Northern Ireland": 0,
+    "Republic of Ireland": 0
+   },
+   "top_areas": [
+    [
+     "Lincolnshire",
+     205
+    ],
+    [
+     "North Yorkshire",
+     130
+    ],
+    [
+     "Leicestershire",
+     63
+    ],
+    [
+     "Cumberland",
+     42
+    ],
+    [
+     "Westmorland and Furness",
+     32
+    ]
+   ],
+   "top_share_areas": [
+    [
+     "North East Lincolnshire",
+     12,
+     45,
+     0.2667
+    ],
+    [
+     "North Lincolnshire",
+     25,
+     108,
+     0.2315
+    ],
+    [
+     "Lincolnshire",
+     205,
+     926,
+     0.2214
+    ],
+    [
+     "Leicestershire",
+     63,
+     390,
+     0.1615
+    ],
+    [
+     "Redcar and Cleveland",
+     7,
+     52,
+     0.1346
+    ]
+   ],
+   "town_share": 0.0348,
+   "towns": [
+    "Lockerbie",
+    "Kirkby Stephen",
+    "Appleby-in-Westmorland",
+    "Thornaby-on-Tees",
+    "Whitby",
+    "Formby",
+    "Kirkby Lonsdale",
+    "Earby"
+   ]
+  },
+  "thorpe": {
+   "label": "-thorpe",
+   "fam": "norse",
+   "meaning": "outlying farm (Old Norse thorp; a few are Old English throp)",
+   "n": 389,
+   "n_townlands": 0,
+   "by_nation": {
+    "England": 389,
+    "Wales": 0,
+    "Scotland": 0,
+    "Northern Ireland": 0,
+    "Republic of Ireland": 0
+   },
+   "townlands_by_nation": {
+    "Northern Ireland": 0,
+    "Republic of Ireland": 0
+   },
+   "top_areas": [
+    [
+     "Lincolnshire",
+     73
+    ],
+    [
+     "Norfolk",
+     39
+    ],
+    [
+     "North Yorkshire",
+     34
+    ],
+    [
+     "Nottinghamshire",
+     26
+    ],
+    [
+     "East Riding of Yorkshire",
+     25
+    ]
+   ],
+   "top_share_areas": [
+    [
+     "York",
+     7,
+     52,
+     0.1346
+    ],
+    [
+     "City of Peterborough",
+     6,
+     61,
+     0.0984
+    ],
+    [
+     "Middlesbrough",
+     2,
+     22,
+     0.0909
+    ],
+    [
+     "Rutland",
+     5,
+     57,
+     0.0877
+    ],
+    [
+     "Lincolnshire",
+     73,
+     926,
+     0.0788
+    ]
+   ],
+   "town_share": 0.0103,
+   "towns": [
+    "Goldthorpe",
+    "Scunthorpe",
+    "Cleethorpes",
+    "Mablethorpe"
+   ]
+  },
+  "thwaite": {
+   "label": "-thwaite",
+   "fam": "norse",
+   "meaning": "clearing, meadow (Old Norse thveit)",
+   "n": 85,
+   "n_townlands": 0,
+   "by_nation": {
+    "England": 85,
+    "Wales": 0,
+    "Scotland": 0,
+    "Northern Ireland": 0,
+    "Republic of Ireland": 0
+   },
+   "townlands_by_nation": {
+    "Northern Ireland": 0,
+    "Republic of Ireland": 0
+   },
+   "top_areas": [
+    [
+     "Cumberland",
+     28
+    ],
+    [
+     "Westmorland and Furness",
+     25
+    ],
+    [
+     "North Yorkshire",
+     13
+    ],
+    [
+     "Bradford",
+     6
+    ],
+    [
+     "County Durham",
+     2
+    ]
+   ],
+   "top_share_areas": [
+    [
+     "Cumberland",
+     28,
+     538,
+     0.052
+    ],
+    [
+     "Westmorland and Furness",
+     25,
+     541,
+     0.0462
+    ],
+    [
+     "Bradford",
+     6,
+     253,
+     0.0237
+    ],
+    [
+     "North Yorkshire",
+     13,
+     1155,
+     0.0113
+    ],
+    [
+     "Wigan",
+     1,
+     117,
+     0.0085
+    ]
+   ],
+   "town_share": 0.0,
+   "towns": []
+  },
+  "toft": {
+   "label": "-toft",
+   "fam": "norse",
+   "meaning": "site of a house, homestead (Old Norse topt)",
+   "n": 45,
+   "n_townlands": 0,
+   "by_nation": {
+    "England": 41,
+    "Wales": 0,
+    "Scotland": 4,
+    "Northern Ireland": 0,
+    "Republic of Ireland": 0
+   },
+   "townlands_by_nation": {
+    "Northern Ireland": 0,
+    "Republic of Ireland": 0
+   },
+   "top_areas": [
+    [
+     "Lincolnshire",
+     17
+    ],
+    [
+     "Norfolk",
+     4
+    ],
+    [
+     "East Riding of Yorkshire",
+     3
+    ],
+    [
+     "North Lincolnshire",
+     3
+    ],
+    [
+     "West Northamptonshire",
+     2
+    ]
+   ],
+   "top_share_areas": [
+    [
+     "North Lincolnshire",
+     3,
+     108,
+     0.0278
+    ],
+    [
+     "Lincolnshire",
+     17,
+     926,
+     0.0184
+    ],
+    [
+     "Orkney Islands",
+     2,
+     168,
+     0.0119
+    ],
+    [
+     "Wakefield",
+     2,
+     181,
+     0.011
+    ],
+    [
+     "East Riding of Yorkshire",
+     3,
+     353,
+     0.0085
+    ]
+   ],
+   "town_share": 0.0222,
+   "towns": [
+    "Lowestoft"
+   ]
+  },
+  "holme": {
+   "label": "-holme / -holm",
+   "fam": "norse",
+   "meaning": "island, dry ground in marsh, water meadow (Old Norse holmr)",
+   "n": 162,
+   "n_townlands": 0,
+   "by_nation": {
+    "England": 139,
+    "Wales": 0,
+    "Scotland": 23,
+    "Northern Ireland": 0,
+    "Republic of Ireland": 0
+   },
+   "townlands_by_nation": {
+    "Northern Ireland": 0,
+    "Republic of Ireland": 0
+   },
+   "top_areas": [
+    [
+     "Lancashire",
+     16
+    ],
+    [
+     "North Yorkshire",
+     15
+    ],
+    [
+     "Lincolnshire",
+     14
+    ],
+    [
+     "East Riding of Yorkshire",
+     10
+    ],
+    [
+     "Scottish Borders",
+     10
+    ]
+   ],
+   "top_share_areas": [
+    [
+     "Manchester",
+     3,
+     51,
+     0.0588
+    ],
+    [
+     "Scottish Borders",
+     10,
+     214,
+     0.0467
+    ],
+    [
+     "Blackpool",
+     1,
+     23,
+     0.0435
+    ],
+    [
+     "Doncaster",
+     5,
+     119,
+     0.042
+    ],
+    [
+     "City of Kingston upon Hull",
+     1,
+     28,
+     0.0357
+    ]
+   ],
+   "town_share": 0.0123,
+   "towns": [
+    "Langholm",
+    "Cheadle Hulme"
+   ]
+  },
+  "kirk": {
+   "label": "kirk-",
+   "fam": "norse",
+   "meaning": "church (Old Norse kirkja). Counted in England only, because Scots kirk is an everyday word",
+   "n": 84,
+   "n_townlands": 0,
+   "by_nation": {
+    "England": 84,
+    "Wales": 0,
+    "Scotland": 0,
+    "Northern Ireland": 0,
+    "Republic of Ireland": 0
+   },
+   "townlands_by_nation": {
+    "Northern Ireland": 0,
+    "Republic of Ireland": 0
+   },
+   "top_areas": [
+    [
+     "North Yorkshire",
+     16
+    ],
+    [
+     "Cumberland",
+     10
+    ],
+    [
+     "Lincolnshire",
+     9
+    ],
+    [
+     "Westmorland and Furness",
+     7
+    ],
+    [
+     "Northumberland",
+     5
+    ]
+   ],
+   "top_share_areas": [
+    [
+     "Knowsley",
+     2,
+     30,
+     0.0667
+    ],
+    [
+     "Doncaster",
+     3,
+     119,
+     0.0252
+    ],
+    [
+     "Stockton-on-Tees",
+     1,
+     51,
+     0.0196
+    ],
+    [
+     "Redcar and Cleveland",
+     1,
+     52,
+     0.0192
+    ],
+    [
+     "Cumberland",
+     10,
+     538,
+     0.0186
+    ]
+   ],
+   "town_share": 0.0952,
+   "towns": [
+    "Kirkby Stephen",
+    "Ormskirk",
+    "Kirkham",
+    "Kirkby Lonsdale",
+    "South Kirkby",
+    "Kirkbymoorside",
+    "Kirkby",
+    "Kirkby-in-Ashfield"
+   ]
+  },
+  "scale": {
+   "label": "-scale(s)",
+   "fam": "norse",
+   "meaning": "hut, shieling (Old Norse skali)",
+   "n": 6,
+   "n_townlands": 0,
+   "by_nation": {
+    "England": 6,
+    "Wales": 0,
+    "Scotland": 0,
+    "Northern Ireland": 0,
+    "Republic of Ireland": 0
+   },
+   "townlands_by_nation": {
+    "Northern Ireland": 0,
+    "Republic of Ireland": 0
+   },
+   "top_areas": [
+    [
+     "Cumberland",
+     4
+    ],
+    [
+     "North Yorkshire",
+     1
+    ],
+    [
+     "Westmorland and Furness",
+     1
+    ]
+   ],
+   "top_share_areas": [
+    [
+     "Cumberland",
+     4,
+     538,
+     0.0074
+    ],
+    [
+     "Westmorland and Furness",
+     1,
+     541,
+     0.0018
+    ],
+    [
+     "North Yorkshire",
+     1,
+     1155,
+     0.0009
+    ],
+    [
+     "Antrim and Newtownabbey",
+     0,
+     18,
+     0.0
+    ],
+    [
+     "Angus",
+     0,
+     171,
+     0.0
+    ]
+   ],
+   "town_share": 0.0,
+   "towns": []
+  },
+  "setter": {
+   "label": "-setter / -bister",
+   "fam": "norse",
+   "meaning": "dwelling, farm (Old Norse setr, bolstadr)",
+   "n": 75,
+   "n_townlands": 0,
+   "by_nation": {
+    "England": 0,
+    "Wales": 0,
+    "Scotland": 75,
+    "Northern Ireland": 0,
+    "Republic of Ireland": 0
+   },
+   "townlands_by_nation": {
+    "Northern Ireland": 0,
+    "Republic of Ireland": 0
+   },
+   "top_areas": [
+    [
+     "Shetland Islands",
+     36
+    ],
+    [
+     "Highland",
+     22
+    ],
+    [
+     "Orkney Islands",
+     17
+    ]
+   ],
+   "top_share_areas": [
+    [
+     "Shetland Islands",
+     36,
+     266,
+     0.1353
+    ],
+    [
+     "Orkney Islands",
+     17,
+     168,
+     0.1012
+    ],
+    [
+     "Highland",
+     22,
+     1330,
+     0.0165
+    ],
+    [
+     "Angus",
+     0,
+     171,
+     0.0
+    ],
+    [
+     "Ards and North Down",
+     0,
+     24,
+     0.0
+    ]
+   ],
+   "town_share": 0.0,
+   "towns": []
+  },
+  "vik": {
+   "label": "-wick (bay)",
+   "fam": "norse",
+   "meaning": "bay (Old Norse vik)",
+   "n": 50,
+   "n_townlands": 0,
+   "by_nation": {
+    "England": 0,
+    "Wales": 0,
+    "Scotland": 50,
+    "Northern Ireland": 0,
+    "Republic of Ireland": 0
+   },
+   "townlands_by_nation": {
+    "Northern Ireland": 0,
+    "Republic of Ireland": 0
+   },
+   "top_areas": [
+    [
+     "Shetland Islands",
+     27
+    ],
+    [
+     "Highland",
+     11
+    ],
+    [
+     "Orkney Islands",
+     8
+    ],
+    [
+     "Na h-Eileanan an Iar",
+     4
+    ]
+   ],
+   "top_share_areas": [
+    [
+     "Shetland Islands",
+     27,
+     266,
+     0.1015
+    ],
+    [
+     "Orkney Islands",
+     8,
+     168,
+     0.0476
+    ],
+    [
+     "Na h-Eileanan an Iar",
+     4,
+     323,
+     0.0124
+    ],
+    [
+     "Highland",
+     11,
+     1330,
+     0.0083
+    ],
+    [
+     "Ards and North Down",
+     0,
+     24,
+     0.0
+    ]
+   ],
+   "town_share": 0.02,
+   "towns": [
+    "Lerwick"
+   ]
+  },
+  "aber": {
+   "label": "aber-",
+   "fam": "brittonic",
+   "meaning": "river mouth or confluence (Brittonic aber)",
+   "n": 87,
+   "n_townlands": 0,
+   "by_nation": {
+    "England": 1,
+    "Wales": 64,
+    "Scotland": 22,
+    "Northern Ireland": 0,
+    "Republic of Ireland": 0
+   },
+   "townlands_by_nation": {
+    "Northern Ireland": 0,
+    "Republic of Ireland": 0
+   },
+   "top_areas": [
+    [
+     "Powys",
+     11
+    ],
+    [
+     "Gwynedd",
+     10
+    ],
+    [
+     "Perth and Kinross",
+     7
+    ],
+    [
+     "Ceredigion",
+     7
+    ],
+    [
+     "Neath Port Talbot",
+     5
+    ]
+   ],
+   "top_share_areas": [
+    [
+     "Merthyr Tydfil",
+     4,
+     51,
+     0.0784
+    ],
+    [
+     "Neath Port Talbot",
+     5,
+     95,
+     0.0526
+    ],
+    [
+     "Aberdeen City",
+     2,
+     53,
+     0.0377
+    ],
+    [
+     "Blaenau Gwent",
+     2,
+     55,
+     0.0364
+    ],
+    [
+     "Rhondda Cynon Taf",
+     5,
+     139,
+     0.036
+    ]
+   ],
+   "town_share": 0.1494,
+   "towns": [
+    "Charlestown of Aberlour",
+    "Aberchirder",
+    "Aberdeen",
+    "Aberfeldy",
+    "Abergele",
+    "Aberaeron",
+    "Aberystwyth",
+    "Aberdare"
+   ]
+  },
+  "llan": {
+   "label": "llan-",
+   "fam": "brittonic",
+   "meaning": "church enclosure, church (Welsh llan)",
+   "n": 394,
+   "n_townlands": 0,
+   "by_nation": {
+    "England": 10,
+    "Wales": 384,
+    "Scotland": 0,
+    "Northern Ireland": 0,
+    "Republic of Ireland": 0
+   },
+   "townlands_by_nation": {
+    "Northern Ireland": 0,
+    "Republic of Ireland": 0
+   },
+   "top_areas": [
+    [
+     "Powys",
+     80
+    ],
+    [
+     "Carmarthenshire",
+     47
+    ],
+    [
+     "Gwynedd",
+     42
+    ],
+    [
+     "Monmouthshire",
+     42
+    ],
+    [
+     "Isle of Anglesey",
+     36
+    ]
+   ],
+   "top_share_areas": [
+    [
+     "Isle of Anglesey",
+     36,
+     148,
+     0.2432
+    ],
+    [
+     "Monmouthshire",
+     42,
+     210,
+     0.2
+    ],
+    [
+     "Powys",
+     80,
+     504,
+     0.1587
+    ],
+    [
+     "Conwy",
+     19,
+     127,
+     0.1496
+    ],
+    [
+     "Carmarthenshire",
+     47,
+     339,
+     0.1386
+    ]
+   ],
+   "town_share": 0.0431,
+   "towns": [
+    "Llangefni",
+    "Llanrwst",
+    "Llanfairfechan",
+    "Llandudno",
+    "Llanfair Caereinion",
+    "Llanfyllin",
+    "Llangollen",
+    "Llanelli"
+   ]
+  },
+  "pen": {
+   "label": "pen-",
+   "fam": "brittonic",
+   "meaning": "head, top, end (Brittonic penn)",
+   "n": 336,
+   "n_townlands": 0,
+   "by_nation": {
+    "England": 103,
+    "Wales": 233,
+    "Scotland": 0,
+    "Northern Ireland": 0,
+    "Republic of Ireland": 0
+   },
+   "townlands_by_nation": {
+    "Northern Ireland": 0,
+    "Republic of Ireland": 0
+   },
+   "top_areas": [
+    [
+     "Cornwall",
+     36
+    ],
+    [
+     "Powys",
+     35
+    ],
+    [
+     "Gwynedd",
+     25
+    ],
+    [
+     "Ceredigion",
+     20
+    ],
+    [
+     "Carmarthenshire",
+     18
+    ]
+   ],
+   "top_share_areas": [
+    [
+     "Conwy",
+     17,
+     127,
+     0.1339
+    ],
+    [
+     "Cardiff",
+     7,
+     67,
+     0.1045
+    ],
+    [
+     "Isle of Anglesey",
+     14,
+     148,
+     0.0946
+    ],
+    [
+     "Ceredigion",
+     20,
+     247,
+     0.081
+    ],
+    [
+     "Merthyr Tydfil",
+     4,
+     51,
+     0.0784
+    ]
+   ],
+   "town_share": 0.0238,
+   "towns": [
+    "Penrith",
+    "Penistone",
+    "Penmaenmawr",
+    "Penkridge",
+    "Pencoed",
+    "Penarth",
+    "Penzance",
+    "Penryn"
+   ]
+  },
+  "tre": {
+   "label": "tre- / tref-",
+   "fam": "brittonic",
+   "meaning": "farmstead, settlement (Welsh tref, Cornish tre)",
+   "n": 279,
+   "n_townlands": 0,
+   "by_nation": {
+    "England": 184,
+    "Wales": 95,
+    "Scotland": 0,
+    "Northern Ireland": 0,
+    "Republic of Ireland": 0
+   },
+   "townlands_by_nation": {
+    "Northern Ireland": 0,
+    "Republic of Ireland": 0
+   },
+   "top_areas": [
+    [
+     "Cornwall",
+     183
+    ],
+    [
+     "Powys",
+     16
+    ],
+    [
+     "Pembrokeshire",
+     13
+    ],
+    [
+     "Rhondda Cynon Taf",
+     7
+    ],
+    [
+     "Ceredigion",
+     7
+    ]
+   ],
+   "top_share_areas": [
+    [
+     "Cornwall",
+     183,
+     1122,
+     0.1631
+    ],
+    [
+     "Merthyr Tydfil",
+     3,
+     51,
+     0.0588
+    ],
+    [
+     "Caerphilly",
+     6,
+     116,
+     0.0517
+    ],
+    [
+     "Rhondda Cynon Taf",
+     7,
+     139,
+     0.0504
+    ],
+    [
+     "Blaenau Gwent",
+     2,
+     55,
+     0.0364
+    ]
+   ],
+   "town_share": 0.0179,
+   "towns": [
+    "Tregaron",
+    "Tredegar",
+    "Treherbert",
+    "Treorchy",
+    "Treharris"
+   ]
+  },
+  "caer": {
+   "label": "caer- / car-",
+   "fam": "brittonic",
+   "meaning": "fort (Brittonic caer)",
+   "n": 23,
+   "n_townlands": 0,
+   "by_nation": {
+    "England": 0,
+    "Wales": 23,
+    "Scotland": 0,
+    "Northern Ireland": 0,
+    "Republic of Ireland": 0
+   },
+   "townlands_by_nation": {
+    "Northern Ireland": 0,
+    "Republic of Ireland": 0
+   },
+   "top_areas": [
+    [
+     "Powys",
+     5
+    ],
+    [
+     "Newport",
+     3
+    ],
+    [
+     "Flintshire",
+     2
+    ],
+    [
+     "Gwynedd",
+     2
+    ],
+    [
+     "Cardiff",
+     2
+    ]
+   ],
+   "top_share_areas": [
+    [
+     "Newport",
+     3,
+     76,
+     0.0395
+    ],
+    [
+     "Cardiff",
+     2,
+     67,
+     0.0299
+    ],
+    [
+     "Flintshire",
+     2,
+     165,
+     0.0121
+    ],
+    [
+     "Bridgend",
+     1,
+     85,
+     0.0118
+    ],
+    [
+     "Neath Port Talbot",
+     1,
+     95,
+     0.0105
+    ]
+   ],
+   "town_share": 0.2609,
+   "towns": [
+    "Caernarfon",
+    "Llanfair Caereinion",
+    "Caerwys",
+    "Cardiff",
+    "Caerphilly",
+    "Caerleon"
+   ]
+  },
+  "cwm": {
+   "label": "cwm-",
+   "fam": "brittonic",
+   "meaning": "valley (Welsh cwm)",
+   "n": 97,
+   "n_townlands": 0,
+   "by_nation": {
+    "England": 0,
+    "Wales": 97,
+    "Scotland": 0,
+    "Northern Ireland": 0,
+    "Republic of Ireland": 0
+   },
+   "townlands_by_nation": {
+    "Northern Ireland": 0,
+    "Republic of Ireland": 0
+   },
+   "top_areas": [
+    [
+     "Carmarthenshire",
+     21
+    ],
+    [
+     "Powys",
+     16
+    ],
+    [
+     "Swansea",
+     9
+    ],
+    [
+     "Ceredigion",
+     8
+    ],
+    [
+     "Rhondda Cynon Taf",
+     7
+    ]
+   ],
+   "top_share_areas": [
+    [
+     "Torfaen",
+     7,
+     73,
+     0.0959
+    ],
+    [
+     "Carmarthenshire",
+     21,
+     339,
+     0.0619
+    ],
+    [
+     "Blaenau Gwent",
+     3,
+     55,
+     0.0545
+    ],
+    [
+     "Neath Port Talbot",
+     5,
+     95,
+     0.0526
+    ],
+    [
+     "Swansea",
+     9,
+     173,
+     0.052
+    ]
+   ],
+   "town_share": 0.0103,
+   "towns": [
+    "Cwmbrân"
+   ]
+  },
+  "bryn": {
+   "label": "bryn-",
+   "fam": "brittonic",
+   "meaning": "hill (Welsh bryn)",
+   "n": 82,
+   "n_townlands": 0,
+   "by_nation": {
+    "England": 0,
+    "Wales": 82,
+    "Scotland": 0,
+    "Northern Ireland": 0,
+    "Republic of Ireland": 0
+   },
+   "townlands_by_nation": {
+    "Northern Ireland": 0,
+    "Republic of Ireland": 0
+   },
+   "top_areas": [
+    [
+     "Gwynedd",
+     12
+    ],
+    [
+     "Rhondda Cynon Taf",
+     10
+    ],
+    [
+     "Carmarthenshire",
+     7
+    ],
+    [
+     "Bridgend",
+     6
+    ],
+    [
+     "Neath Port Talbot",
+     5
+    ]
+   ],
+   "top_share_areas": [
+    [
+     "Rhondda Cynon Taf",
+     10,
+     139,
+     0.0719
+    ],
+    [
+     "Bridgend",
+     6,
+     85,
+     0.0706
+    ],
+    [
+     "Neath Port Talbot",
+     5,
+     95,
+     0.0526
+    ],
+    [
+     "Gwynedd",
+     12,
+     325,
+     0.0369
+    ],
+    [
+     "Blaenau Gwent",
+     2,
+     55,
+     0.0364
+    ]
+   ],
+   "town_share": 0.0122,
+   "towns": [
+    "Brynmawr"
+   ]
+  },
+  "nant": {
+   "label": "nant-",
+   "fam": "brittonic",
+   "meaning": "stream, stream valley (Welsh nant)",
+   "n": 40,
+   "n_townlands": 0,
+   "by_nation": {
+    "England": 0,
+    "Wales": 40,
+    "Scotland": 0,
+    "Northern Ireland": 0,
+    "Republic of Ireland": 0
+   },
+   "townlands_by_nation": {
+    "Northern Ireland": 0,
+    "Republic of Ireland": 0
+   },
+   "top_areas": [
+    [
+     "Powys",
+     8
+    ],
+    [
+     "Conwy",
+     5
+    ],
+    [
+     "Gwynedd",
+     4
+    ],
+    [
+     "Carmarthenshire",
+     3
+    ],
+    [
+     "Flintshire",
+     3
+    ]
+   ],
+   "top_share_areas": [
+    [
+     "Conwy",
+     5,
+     127,
+     0.0394
+    ],
+    [
+     "Blaenau Gwent",
+     2,
+     55,
+     0.0364
+    ],
+    [
+     "Bridgend",
+     2,
+     85,
+     0.0235
+    ],
+    [
+     "Flintshire",
+     3,
+     165,
+     0.0182
+    ],
+    [
+     "Caerphilly",
+     2,
+     116,
+     0.0172
+    ]
+   ],
+   "town_share": 0.025,
+   "towns": [
+    "Nantyglo"
+   ]
+  },
+  "rhyd": {
+   "label": "rhyd-",
+   "fam": "brittonic",
+   "meaning": "ford (Welsh rhyd)",
+   "n": 42,
+   "n_townlands": 0,
+   "by_nation": {
+    "England": 0,
+    "Wales": 42,
+    "Scotland": 0,
+    "Northern Ireland": 0,
+    "Republic of Ireland": 0
+   },
+   "townlands_by_nation": {
+    "Northern Ireland": 0,
+    "Republic of Ireland": 0
+   },
+   "top_areas": [
+    [
+     "Ceredigion",
+     8
+    ],
+    [
+     "Gwynedd",
+     7
+    ],
+    [
+     "Carmarthenshire",
+     5
+    ],
+    [
+     "Conwy",
+     4
+    ],
+    [
+     "Powys",
+     4
+    ]
+   ],
+   "top_share_areas": [
+    [
+     "Ceredigion",
+     8,
+     247,
+     0.0324
+    ],
+    [
+     "Conwy",
+     4,
+     127,
+     0.0315
+    ],
+    [
+     "Gwynedd",
+     7,
+     325,
+     0.0215
+    ],
+    [
+     "Neath Port Talbot",
+     2,
+     95,
+     0.0211
+    ],
+    [
+     "Merthyr Tydfil",
+     1,
+     51,
+     0.0196
+    ]
+   ],
+   "town_share": 0.0,
+   "towns": []
+  },
+  "maes": {
+   "label": "maes-",
+   "fam": "brittonic",
+   "meaning": "open field (Welsh maes)",
+   "n": 21,
+   "n_townlands": 0,
+   "by_nation": {
+    "England": 0,
+    "Wales": 21,
+    "Scotland": 0,
+    "Northern Ireland": 0,
+    "Republic of Ireland": 0
+   },
+   "townlands_by_nation": {
+    "Northern Ireland": 0,
+    "Republic of Ireland": 0
+   },
+   "top_areas": [
+    [
+     "Flintshire",
+     4
+    ],
+    [
+     "Ceredigion",
+     3
+    ],
+    [
+     "Carmarthenshire",
+     2
+    ],
+    [
+     "Gwynedd",
+     2
+    ],
+    [
+     "Powys",
+     2
+    ]
+   ],
+   "top_share_areas": [
+    [
+     "Flintshire",
+     4,
+     165,
+     0.0242
+    ],
+    [
+     "Newport",
+     1,
+     76,
+     0.0132
+    ],
+    [
+     "Ceredigion",
+     3,
+     247,
+     0.0121
+    ],
+    [
+     "Bridgend",
+     1,
+     85,
+     0.0118
+    ],
+    [
+     "Caerphilly",
+     1,
+     116,
+     0.0086
+    ]
+   ],
+   "town_share": 0.0476,
+   "towns": [
+    "Maesteg"
+   ]
+  },
+  "betws": {
+   "label": "betws",
+   "fam": "brittonic",
+   "meaning": "chapel, prayer house (Welsh betws, from Old English bedhus)",
+   "n": 8,
+   "n_townlands": 0,
+   "by_nation": {
+    "England": 0,
+    "Wales": 8,
+    "Scotland": 0,
+    "Northern Ireland": 0,
+    "Republic of Ireland": 0
+   },
+   "townlands_by_nation": {
+    "Northern Ireland": 0,
+    "Republic of Ireland": 0
+   },
+   "top_areas": [
+    [
+     "Ceredigion",
+     3
+    ],
+    [
+     "Conwy",
+     2
+    ],
+    [
+     "Carmarthenshire",
+     1
+    ],
+    [
+     "Gwynedd",
+     1
+    ],
+    [
+     "Isle of Anglesey",
+     1
+    ]
+   ],
+   "top_share_areas": [
+    [
+     "Conwy",
+     2,
+     127,
+     0.0157
+    ],
+    [
+     "Ceredigion",
+     3,
+     247,
+     0.0121
+    ],
+    [
+     "Isle of Anglesey",
+     1,
+     148,
+     0.0068
+    ],
+    [
+     "Gwynedd",
+     1,
+     325,
+     0.0031
+    ],
+    [
+     "Carmarthenshire",
+     1,
+     339,
+     0.0029
+    ]
+   ],
+   "town_share": 0.125,
+   "towns": [
+    "Betws-y-coed"
+   ]
+  },
+  "pol": {
+   "label": "pol-",
+   "fam": "brittonic",
+   "meaning": "pool, cove (Cornish pol)",
+   "n": 18,
+   "n_townlands": 0,
+   "by_nation": {
+    "England": 18,
+    "Wales": 0,
+    "Scotland": 0,
+    "Northern Ireland": 0,
+    "Republic of Ireland": 0
+   },
+   "townlands_by_nation": {
+    "Northern Ireland": 0,
+    "Republic of Ireland": 0
+   },
+   "top_areas": [
+    [
+     "Cornwall",
+     14
+    ],
+    [
+     "Devon",
+     4
+    ]
+   ],
+   "top_share_areas": [
+    [
+     "Cornwall",
+     14,
+     1122,
+     0.0125
+    ],
+    [
+     "Devon",
+     4,
+     1228,
+     0.0033
+    ],
+    [
+     "Angus",
+     0,
+     171,
+     0.0
+    ],
+    [
+     "Antrim and Newtownabbey",
+     0,
+     18,
+     0.0
+    ],
+    [
+     "Ards and North Down",
+     0,
+     24,
+     0.0
+    ]
+   ],
+   "town_share": 0.0,
+   "towns": []
+  },
+  "porth": {
+   "label": "porth-",
+   "fam": "brittonic",
+   "meaning": "cove, landing place (Cornish porth)",
+   "n": 28,
+   "n_townlands": 0,
+   "by_nation": {
+    "England": 28,
+    "Wales": 0,
+    "Scotland": 0,
+    "Northern Ireland": 0,
+    "Republic of Ireland": 0
+   },
+   "townlands_by_nation": {
+    "Northern Ireland": 0,
+    "Republic of Ireland": 0
+   },
+   "top_areas": [
+    [
+     "Cornwall",
+     24
+    ],
+    [
+     "Devon",
+     3
+    ],
+    [
+     "Isles of Scilly",
+     1
+    ]
+   ],
+   "top_share_areas": [
+    [
+     "Cornwall",
+     24,
+     1122,
+     0.0214
+    ],
+    [
+     "Devon",
+     3,
+     1228,
+     0.0024
+    ],
+    [
+     "Angus",
+     0,
+     171,
+     0.0
+    ],
+    [
+     "Antrim and Newtownabbey",
+     0,
+     18,
+     0.0
+    ],
+    [
+     "Ards and North Down",
+     0,
+     24,
+     0.0
+    ]
+   ],
+   "town_share": 0.0,
+   "towns": []
+  },
+  "bos": {
+   "label": "bos-",
+   "fam": "brittonic",
+   "meaning": "dwelling (Cornish bod, bos)",
+   "n": 17,
+   "n_townlands": 0,
+   "by_nation": {
+    "England": 17,
+    "Wales": 0,
+    "Scotland": 0,
+    "Northern Ireland": 0,
+    "Republic of Ireland": 0
+   },
+   "townlands_by_nation": {
+    "Northern Ireland": 0,
+    "Republic of Ireland": 0
+   },
+   "top_areas": [
+    [
+     "Cornwall",
+     17
+    ]
+   ],
+   "top_share_areas": [
+    [
+     "Cornwall",
+     17,
+     1122,
+     0.0152
+    ],
+    [
+     "Aberdeen City",
+     0,
+     53,
+     0.0
+    ],
+    [
+     "Angus",
+     0,
+     171,
+     0.0
+    ],
+    [
+     "Antrim and Newtownabbey",
+     0,
+     18,
+     0.0
+    ],
+    [
+     "Ards and North Down",
+     0,
+     24,
+     0.0
+    ]
+   ],
+   "town_share": 0.0,
+   "towns": []
+  },
+  "lan": {
+   "label": "lan-",
+   "fam": "brittonic",
+   "meaning": "church enclosure (Cornish lann)",
+   "n": 19,
+   "n_townlands": 0,
+   "by_nation": {
+    "England": 19,
+    "Wales": 0,
+    "Scotland": 0,
+    "Northern Ireland": 0,
+    "Republic of Ireland": 0
+   },
+   "townlands_by_nation": {
+    "Northern Ireland": 0,
+    "Republic of Ireland": 0
+   },
+   "top_areas": [
+    [
+     "Cornwall",
+     15
+    ],
+    [
+     "Devon",
+     4
+    ]
+   ],
+   "top_share_areas": [
+    [
+     "Cornwall",
+     15,
+     1122,
+     0.0134
+    ],
+    [
+     "Devon",
+     4,
+     1228,
+     0.0033
+    ],
+    [
+     "Angus",
+     0,
+     171,
+     0.0
+    ],
+    [
+     "Antrim and Newtownabbey",
+     0,
+     18,
+     0.0
+    ],
+    [
+     "Ards and North Down",
+     0,
+     24,
+     0.0
+    ]
+   ],
+   "town_share": 0.0,
+   "towns": []
+  },
+  "ros": {
+   "label": "ros-",
+   "fam": "brittonic",
+   "meaning": "heath, promontory (Cornish ros)",
+   "n": 17,
+   "n_townlands": 0,
+   "by_nation": {
+    "England": 17,
+    "Wales": 0,
+    "Scotland": 0,
+    "Northern Ireland": 0,
+    "Republic of Ireland": 0
+   },
+   "townlands_by_nation": {
+    "Northern Ireland": 0,
+    "Republic of Ireland": 0
+   },
+   "top_areas": [
+    [
+     "Cornwall",
+     16
+    ],
+    [
+     "Devon",
+     1
+    ]
+   ],
+   "top_share_areas": [
+    [
+     "Cornwall",
+     16,
+     1122,
+     0.0143
+    ],
+    [
+     "Devon",
+     1,
+     1228,
+     0.0008
+    ],
+    [
+     "Angus",
+     0,
+     171,
+     0.0
+    ],
+    [
+     "Antrim and Newtownabbey",
+     0,
+     18,
+     0.0
+    ],
+    [
+     "Ards and North Down",
+     0,
+     24,
+     0.0
+    ]
+   ],
+   "town_share": 0.0,
+   "towns": []
+  },
+  "pit": {
+   "label": "pit-",
+   "fam": "brittonic",
+   "meaning": "a portion of land, farm (Pictish pett)",
+   "n": 25,
+   "n_townlands": 0,
+   "by_nation": {
+    "England": 0,
+    "Wales": 0,
+    "Scotland": 25,
+    "Northern Ireland": 0,
+    "Republic of Ireland": 0
+   },
+   "townlands_by_nation": {
+    "Northern Ireland": 0,
+    "Republic of Ireland": 0
+   },
+   "top_areas": [
+    [
+     "Aberdeenshire",
+     7
+    ],
+    [
+     "Fife",
+     7
+    ],
+    [
+     "Perth and Kinross",
+     5
+    ],
+    [
+     "Highland",
+     4
+    ],
+    [
+     "East Lothian",
+     1
+    ]
+   ],
+   "top_share_areas": [
+    [
+     "Fife",
+     7,
+     267,
+     0.0262
+    ],
+    [
+     "Perth and Kinross",
+     5,
+     285,
+     0.0175
+    ],
+    [
+     "Aberdeenshire",
+     7,
+     494,
+     0.0142
+    ],
+    [
+     "East Lothian",
+     1,
+     99,
+     0.0101
+    ],
+    [
+     "Moray",
+     1,
+     174,
+     0.0057
+    ]
+   ],
+   "town_share": 0.08,
+   "towns": [
+    "Pitlochry",
+    "Pittenweem"
+   ]
+  },
+  "bal": {
+   "label": "bally- / bal-",
+   "fam": "goidelic",
+   "meaning": "baile: farm, homestead, settlement. In Irish names Bally- can also be beal atha, ford mouth",
+   "n": 343,
+   "n_townlands": 6282,
+   "by_nation": {
+    "England": 0,
+    "Wales": 0,
+    "Scotland": 127,
+    "Northern Ireland": 24,
+    "Republic of Ireland": 192
+   },
+   "townlands_by_nation": {
+    "Northern Ireland": 1122,
+    "Republic of Ireland": 5160
+   },
+   "top_areas": [
+    [
+     "Cork",
+     700
+    ],
+    [
+     "Wexford",
+     479
+    ],
+    [
+     "Limerick",
+     376
+    ],
+    [
+     "Tipperary",
+     375
+    ],
+    [
+     "Galway",
+     320
+    ]
+   ],
+   "top_share_areas": [
+    [
+     "Ards and North Down",
+     137,
+     285,
+     0.4807
+    ],
+    [
+     "Belfast",
+     31,
+     70,
+     0.4429
+    ],
+    [
+     "Antrim and Newtownabbey",
+     83,
+     309,
+     0.2686
+    ],
+    [
+     "Lisburn and Castlereagh",
+     67,
+     264,
+     0.2538
+    ],
+    [
+     "Wicklow",
+     307,
+     1357,
+     0.2262
+    ]
+   ],
+   "town_share": 0.0029,
+   "towns": [
+    "Ballater"
+   ]
+  },
+  "kil": {
+   "label": "kil- / kill-",
+   "fam": "goidelic",
+   "meaning": "cill: church. Kil- can also be coill, wood, and other words",
+   "n": 267,
+   "n_townlands": 3054,
+   "by_nation": {
+    "England": 0,
+    "Wales": 0,
+    "Scotland": 90,
+    "Northern Ireland": 12,
+    "Republic of Ireland": 165
+   },
+   "townlands_by_nation": {
+    "Northern Ireland": 398,
+    "Republic of Ireland": 2656
+   },
+   "top_areas": [
+    [
+     "Cork",
+     310
+    ],
+    [
+     "Galway",
+     196
+    ],
+    [
+     "Tipperary",
+     184
+    ],
+    [
+     "Kerry",
+     162
+    ],
+    [
+     "Clare",
+     136
+    ]
+   ],
+   "top_share_areas": [
+    [
+     "Offaly",
+     88,
+     1143,
+     0.077
+    ],
+    [
+     "Waterford",
+     120,
+     1572,
+     0.0763
+    ],
+    [
+     "Carlow",
+     41,
+     560,
+     0.0732
+    ],
+    [
+     "Westmeath",
+     96,
+     1341,
+     0.0716
+    ],
+    [
+     "Wicklow",
+     97,
+     1357,
+     0.0715
+    ]
+   ],
+   "town_share": 0.015,
+   "towns": [
+    "Kilwinning",
+    "Kilmarnock",
+    "East Kilbride",
+    "Kilsyth"
+   ]
+  },
+  "inver": {
+   "label": "inver-",
+   "fam": "goidelic",
+   "meaning": "inbhir: river mouth or confluence",
+   "n": 55,
+   "n_townlands": 1,
+   "by_nation": {
+    "England": 0,
+    "Wales": 0,
+    "Scotland": 54,
+    "Northern Ireland": 0,
+    "Republic of Ireland": 1
+   },
+   "townlands_by_nation": {
+    "Northern Ireland": 0,
+    "Republic of Ireland": 1
+   },
+   "top_areas": [
+    [
+     "Highland",
+     19
+    ],
+    [
+     "Aberdeenshire",
+     8
+    ],
+    [
+     "Argyll and Bute",
+     7
+    ],
+    [
+     "Perth and Kinross",
+     4
+    ],
+    [
+     "Angus",
+     3
+    ]
+   ],
+   "top_share_areas": [
+    [
+     "Stirling",
+     2,
+     92,
+     0.0217
+    ],
+    [
+     "Argyll and Bute",
+     7,
+     331,
+     0.0211
+    ],
+    [
+     "East Lothian",
+     2,
+     99,
+     0.0202
+    ],
+    [
+     "Angus",
+     3,
+     171,
+     0.0175
+    ],
+    [
+     "Inverclyde",
+     1,
+     58,
+     0.0172
+    ]
+   ],
+   "town_share": 0.1273,
+   "towns": [
+    "Inverness",
+    "Invergordon",
+    "Inverurie",
+    "Inveraray",
+    "Inverbervie",
+    "Inverkeithing",
+    "Innerleithen"
+   ]
+  },
+  "dun": {
+   "label": "dun- / dum-",
+   "fam": "goidelic",
+   "meaning": "dun: fort, stronghold. Irish Don- is often domhnach, church",
+   "n": 121,
+   "n_townlands": 437,
+   "by_nation": {
+    "England": 0,
+    "Wales": 0,
+    "Scotland": 65,
+    "Northern Ireland": 15,
+    "Republic of Ireland": 41
+   },
+   "townlands_by_nation": {
+    "Northern Ireland": 121,
+    "Republic of Ireland": 316
+   },
+   "top_areas": [
+    [
+     "Cork",
+     49
+    ],
+    [
+     "Donegal",
+     27
+    ],
+    [
+     "Monaghan",
+     24
+    ],
+    [
+     "Kilkenny",
+     23
+    ],
+    [
+     "Mid Ulster",
+     23
+    ]
+   ],
+   "top_share_areas": [
+    [
+     "Antrim and Newtownabbey",
+     10,
+     309,
+     0.0324
+    ],
+    [
+     "Belfast",
+     2,
+     70,
+     0.0286
+    ],
+    [
+     "Mid and East Antrim",
+     12,
+     480,
+     0.025
+    ],
+    [
+     "Mid Ulster",
+     23,
+     1389,
+     0.0166
+    ],
+    [
+     "Kildare",
+     18,
+     1210,
+     0.0149
+    ]
+   ],
+   "town_share": 0.0579,
+   "towns": [
+    "Dunblane",
+    "Dundee",
+    "Dunoon",
+    "Dumbarton",
+    "Dunfermline",
+    "Dunbar",
+    "Dumfries"
+   ]
+  },
+  "strath": {
+   "label": "strath-",
+   "fam": "goidelic",
+   "meaning": "srath: broad river valley",
+   "n": 28,
+   "n_townlands": 0,
+   "by_nation": {
+    "England": 0,
+    "Wales": 0,
+    "Scotland": 28,
+    "Northern Ireland": 0,
+    "Republic of Ireland": 0
+   },
+   "townlands_by_nation": {
+    "Northern Ireland": 0,
+    "Republic of Ireland": 0
+   },
+   "top_areas": [
+    [
+     "Highland",
+     14
+    ],
+    [
+     "Fife",
+     3
+    ],
+    [
+     "Stirling",
+     2
+    ],
+    [
+     "Perth and Kinross",
+     2
+    ],
+    [
+     "Argyll and Bute",
+     1
+    ]
+   ],
+   "top_share_areas": [
+    [
+     "Stirling",
+     2,
+     92,
+     0.0217
+    ],
+    [
+     "Fife",
+     3,
+     267,
+     0.0112
+    ],
+    [
+     "West Lothian",
+     1,
+     90,
+     0.0111
+    ],
+    [
+     "Highland",
+     14,
+     1330,
+     0.0105
+    ],
+    [
+     "North Ayrshire",
+     1,
+     107,
+     0.0093
+    ]
+   ],
+   "town_share": 0.0,
+   "towns": []
+  },
+  "auch": {
+   "label": "auch- / agha-",
+   "fam": "goidelic",
+   "meaning": "achadh: field",
+   "n": 147,
+   "n_townlands": 629,
+   "by_nation": {
+    "England": 0,
+    "Wales": 0,
+    "Scotland": 126,
+    "Northern Ireland": 4,
+    "Republic of Ireland": 17
+   },
+   "townlands_by_nation": {
+    "Northern Ireland": 158,
+    "Republic of Ireland": 471
+   },
+   "top_areas": [
+    [
+     "Fermanagh and Omagh",
+     60
+    ],
+    [
+     "Leitrim",
+     51
+    ],
+    [
+     "Cavan",
+     46
+    ],
+    [
+     "Monaghan",
+     41
+    ],
+    [
+     "Longford",
+     39
+    ]
+   ],
+   "top_share_areas": [
+    [
+     "Lisburn and Castlereagh",
+     12,
+     264,
+     0.0455
+    ],
+    [
+     "Longford",
+     39,
+     886,
+     0.044
+    ],
+    [
+     "Leitrim",
+     51,
+     1483,
+     0.0344
+    ],
+    [
+     "Cavan",
+     46,
+     1977,
+     0.0233
+    ],
+    [
+     "Monaghan",
+     41,
+     1848,
+     0.0222
+    ]
+   ],
+   "town_share": 0.0136,
+   "towns": [
+    "Auchterarder",
+    "Auchtermuchty"
+   ]
+  },
+  "glen": {
+   "label": "glen-",
+   "fam": "goidelic",
+   "meaning": "gleann: glen, valley",
+   "n": 103,
+   "n_townlands": 617,
+   "by_nation": {
+    "England": 0,
+    "Wales": 0,
+    "Scotland": 73,
+    "Northern Ireland": 4,
+    "Republic of Ireland": 26
+   },
+   "townlands_by_nation": {
+    "Northern Ireland": 98,
+    "Republic of Ireland": 519
+   },
+   "top_areas": [
+    [
+     "Cork",
+     69
+    ],
+    [
+     "Donegal",
+     53
+    ],
+    [
+     "Waterford",
+     52
+    ],
+    [
+     "Tipperary",
+     48
+    ],
+    [
+     "Galway",
+     46
+    ]
+   ],
+   "top_share_areas": [
+    [
+     "Waterford",
+     52,
+     1572,
+     0.0331
+    ],
+    [
+     "Derry City and Strabane",
+     16,
+     705,
+     0.0227
+    ],
+    [
+     "Limerick",
+     40,
+     1929,
+     0.0207
+    ],
+    [
+     "Donegal",
+     53,
+     2739,
+     0.0194
+    ],
+    [
+     "Causeway Coast and Glens",
+     25,
+     1445,
+     0.0173
+    ]
+   ],
+   "town_share": 0.0097,
+   "towns": [
+    "Glenrothes"
+   ]
+  },
+  "knock": {
+   "label": "knock-",
+   "fam": "goidelic",
+   "meaning": "cnoc: hill",
+   "n": 56,
+   "n_townlands": 1781,
+   "by_nation": {
+    "England": 0,
+    "Wales": 0,
+    "Scotland": 26,
+    "Northern Ireland": 1,
+    "Republic of Ireland": 29
+   },
+   "townlands_by_nation": {
+    "Northern Ireland": 116,
+    "Republic of Ireland": 1665
+   },
+   "top_areas": [
+    [
+     "Cork",
+     291
+    ],
+    [
+     "Mayo",
+     154
+    ],
+    [
+     "Tipperary",
+     138
+    ],
+    [
+     "Kerry",
+     136
+    ],
+    [
+     "Waterford",
+     128
+    ]
+   ],
+   "top_share_areas": [
+    [
+     "Waterford",
+     128,
+     1572,
+     0.0814
+    ],
+    [
+     "Cork",
+     291,
+     5326,
+     0.0546
+    ],
+    [
+     "Kerry",
+     136,
+     2692,
+     0.0505
+    ],
+    [
+     "Clare",
+     111,
+     2221,
+     0.05
+    ],
+    [
+     "Mayo",
+     154,
+     3252,
+     0.0474
+    ]
+   ],
+   "town_share": 0.0,
+   "towns": []
+  },
+  "drum": {
+   "label": "drum- / drom-",
+   "fam": "goidelic",
+   "meaning": "druim: ridge",
+   "n": 102,
+   "n_townlands": 2389,
+   "by_nation": {
+    "England": 0,
+    "Wales": 0,
+    "Scotland": 51,
+    "Northern Ireland": 9,
+    "Republic of Ireland": 42
+   },
+   "townlands_by_nation": {
+    "Northern Ireland": 743,
+    "Republic of Ireland": 1646
+   },
+   "top_areas": [
+    [
+     "Fermanagh and Omagh",
+     322
+    ],
+    [
+     "Cavan",
+     279
+    ],
+    [
+     "Monaghan",
+     220
+    ],
+    [
+     "Donegal",
+     201
+    ],
+    [
+     "Leitrim",
+     198
+    ]
+   ],
+   "top_share_areas": [
+    [
+     "Cavan",
+     279,
+     1977,
+     0.1411
+    ],
+    [
+     "Leitrim",
+     198,
+     1483,
+     0.1335
+    ],
+    [
+     "Monaghan",
+     220,
+     1848,
+     0.119
+    ],
+    [
+     "Fermanagh and Omagh",
+     322,
+     2782,
+     0.1157
+    ],
+    [
+     "Armagh City, Banbridge and Craigavon",
+     107,
+     969,
+     0.1104
+    ]
+   ],
+   "town_share": 0.0,
+   "towns": []
+  },
+  "ard": {
+   "label": "ard-",
+   "fam": "goidelic",
+   "meaning": "ard: height, high place, promontory",
+   "n": 83,
+   "n_townlands": 608,
+   "by_nation": {
+    "England": 0,
+    "Wales": 0,
+    "Scotland": 66,
+    "Northern Ireland": 1,
+    "Republic of Ireland": 16
+   },
+   "townlands_by_nation": {
+    "Northern Ireland": 70,
+    "Republic of Ireland": 538
+   },
+   "top_areas": [
+    [
+     "Cork",
+     84
+    ],
+    [
+     "Donegal",
+     49
+    ],
+    [
+     "Galway",
+     44
+    ],
+    [
+     "Roscommon",
+     43
+    ],
+    [
+     "Kerry",
+     38
+    ]
+   ],
+   "top_share_areas": [
+    [
+     "Sligo",
+     34,
+     1265,
+     0.0269
+    ],
+    [
+     "Roscommon",
+     43,
+     2045,
+     0.021
+    ],
+    [
+     "Donegal",
+     49,
+     2739,
+     0.0179
+    ],
+    [
+     "Derry City and Strabane",
+     12,
+     705,
+     0.017
+    ],
+    [
+     "Cork",
+     84,
+     5326,
+     0.0158
+    ]
+   ],
+   "town_share": 0.012,
+   "towns": [
+    "Ardrossan"
+   ]
+  },
+  "kin": {
+   "label": "kin- / ken-",
+   "fam": "goidelic",
+   "meaning": "ceann: head, end",
+   "n": 98,
+   "n_townlands": 150,
+   "by_nation": {
+    "England": 0,
+    "Wales": 0,
+    "Scotland": 84,
+    "Northern Ireland": 1,
+    "Republic of Ireland": 13
+   },
+   "townlands_by_nation": {
+    "Northern Ireland": 38,
+    "Republic of Ireland": 112
+   },
+   "top_areas": [
+    [
+     "Donegal",
+     18
+    ],
+    [
+     "Galway",
+     14
+    ],
+    [
+     "Fermanagh and Omagh",
+     13
+    ],
+    [
+     "Mayo",
+     12
+    ],
+    [
+     "Monaghan",
+     8
+    ]
+   ],
+   "top_share_areas": [
+    [
+     "Armagh City, Banbridge and Craigavon",
+     7,
+     969,
+     0.0072
+    ],
+    [
+     "Donegal",
+     18,
+     2739,
+     0.0066
+    ],
+    [
+     "Mid and East Antrim",
+     3,
+     480,
+     0.0063
+    ],
+    [
+     "Fermanagh and Omagh",
+     13,
+     2782,
+     0.0047
+    ],
+    [
+     "Wicklow",
+     6,
+     1357,
+     0.0044
+    ]
+   ],
+   "town_share": 0.0408,
+   "towns": [
+    "Kingussie",
+    "Kintore",
+    "Kinross",
+    "Kinghorn"
+   ]
+  },
+  "carrick": {
+   "label": "carrick- / carrig-",
+   "fam": "goidelic",
+   "meaning": "carraig: rock",
+   "n": 35,
+   "n_townlands": 642,
+   "by_nation": {
+    "England": 0,
+    "Wales": 0,
+    "Scotland": 5,
+    "Northern Ireland": 3,
+    "Republic of Ireland": 27
+   },
+   "townlands_by_nation": {
+    "Northern Ireland": 79,
+    "Republic of Ireland": 563
+   },
+   "top_areas": [
+    [
+     "Cork",
+     115
+    ],
+    [
+     "Donegal",
+     44
+    ],
+    [
+     "Waterford",
+     40
+    ],
+    [
+     "Tipperary",
+     39
+    ],
+    [
+     "Cavan",
+     33
+    ]
+   ],
+   "top_share_areas": [
+    [
+     "Newry, Mourne and Down",
+     21,
+     822,
+     0.0255
+    ],
+    [
+     "Waterford",
+     40,
+     1572,
+     0.0254
+    ],
+    [
+     "Cork",
+     115,
+     5326,
+     0.0216
+    ],
+    [
+     "Louth",
+     14,
+     674,
+     0.0208
+    ],
+    [
+     "Sligo",
+     24,
+     1265,
+     0.019
+    ]
+   ],
+   "town_share": 0.0,
+   "towns": []
+  },
+  "clon": {
+   "label": "clon- / cloon-",
+   "fam": "goidelic",
+   "meaning": "cluain: meadow, pasture",
+   "n": 48,
+   "n_townlands": 1703,
+   "by_nation": {
+    "England": 0,
+    "Wales": 0,
+    "Scotland": 0,
+    "Northern Ireland": 1,
+    "Republic of Ireland": 47
+   },
+   "townlands_by_nation": {
+    "Northern Ireland": 95,
+    "Republic of Ireland": 1608
+   },
+   "top_areas": [
+    [
+     "Roscommon",
+     201
+    ],
+    [
+     "Galway",
+     194
+    ],
+    [
+     "Mayo",
+     173
+    ],
+    [
+     "Clare",
+     106
+    ],
+    [
+     "Offaly",
+     94
+    ]
+   ],
+   "top_share_areas": [
+    [
+     "Roscommon",
+     201,
+     2045,
+     0.0983
+    ],
+    [
+     "Offaly",
+     94,
+     1143,
+     0.0822
+    ],
+    [
+     "Longford",
+     70,
+     886,
+     0.079
+    ],
+    [
+     "Laois",
+     71,
+     1111,
+     0.0639
+    ],
+    [
+     "Mayo",
+     173,
+     3252,
+     0.0532
+    ]
+   ],
+   "town_share": 0.0,
+   "towns": []
+  },
+  "rath": {
+   "label": "rath-",
+   "fam": "goidelic",
+   "meaning": "rath: ringfort",
+   "n": 33,
+   "n_townlands": 698,
+   "by_nation": {
+    "England": 0,
+    "Wales": 0,
+    "Scotland": 0,
+    "Northern Ireland": 1,
+    "Republic of Ireland": 32
+   },
+   "townlands_by_nation": {
+    "Northern Ireland": 27,
+    "Republic of Ireland": 671
+   },
+   "top_areas": [
+    [
+     "Cork",
+     64
+    ],
+    [
+     "Tipperary",
+     58
+    ],
+    [
+     "Mayo",
+     49
+    ],
+    [
+     "Meath",
+     45
+    ],
+    [
+     "Westmeath",
+     45
+    ]
+   ],
+   "top_share_areas": [
+    [
+     "Carlow",
+     26,
+     560,
+     0.0464
+    ],
+    [
+     "Louth",
+     27,
+     674,
+     0.0401
+    ],
+    [
+     "Westmeath",
+     45,
+     1341,
+     0.0336
+    ],
+    [
+     "Sligo",
+     36,
+     1265,
+     0.0285
+    ],
+    [
+     "Meath",
+     45,
+     1599,
+     0.0281
+    ]
+   ],
+   "town_share": 0.0,
+   "towns": []
+  },
+  "lis": {
+   "label": "lis-",
+   "fam": "goidelic",
+   "meaning": "lios: ringfort, enclosure",
+   "n": 31,
+   "n_townlands": 1394,
+   "by_nation": {
+    "England": 0,
+    "Wales": 0,
+    "Scotland": 0,
+    "Northern Ireland": 3,
+    "Republic of Ireland": 28
+   },
+   "townlands_by_nation": {
+    "Northern Ireland": 311,
+    "Republic of Ireland": 1083
+   },
+   "top_areas": [
+    [
+     "Cork",
+     121
+    ],
+    [
+     "Galway",
+     120
+    ],
+    [
+     "Tipperary",
+     91
+    ],
+    [
+     "Monaghan",
+     87
+    ],
+    [
+     "Roscommon",
+     84
+    ]
+   ],
+   "top_share_areas": [
+    [
+     "Longford",
+     53,
+     886,
+     0.0598
+    ],
+    [
+     "Lisburn and Castlereagh",
+     15,
+     264,
+     0.0568
+    ],
+    [
+     "Armagh City, Banbridge and Craigavon",
+     50,
+     969,
+     0.0516
+    ],
+    [
+     "Monaghan",
+     87,
+     1848,
+     0.0471
+    ],
+    [
+     "Derry City and Strabane",
+     30,
+     705,
+     0.0426
+    ]
+   ],
+   "town_share": 0.0,
+   "towns": []
+  },
+  "tully": {
+   "label": "tully- / tulla-",
+   "fam": "goidelic",
+   "meaning": "tulach: low hill, mound",
+   "n": 13,
+   "n_townlands": 797,
+   "by_nation": {
+    "England": 0,
+    "Wales": 0,
+    "Scotland": 0,
+    "Northern Ireland": 0,
+    "Republic of Ireland": 13
+   },
+   "townlands_by_nation": {
+    "Northern Ireland": 293,
+    "Republic of Ireland": 504
+   },
+   "top_areas": [
+    [
+     "Fermanagh and Omagh",
+     76
+    ],
+    [
+     "Donegal",
+     70
+    ],
+    [
+     "Monaghan",
+     63
+    ],
+    [
+     "Mid Ulster",
+     56
+    ],
+    [
+     "Armagh City, Banbridge and Craigavon",
+     55
+    ]
+   ],
+   "top_share_areas": [
+    [
+     "Armagh City, Banbridge and Craigavon",
+     55,
+     969,
+     0.0568
+    ],
+    [
+     "Newry, Mourne and Down",
+     36,
+     822,
+     0.0438
+    ],
+    [
+     "Ards and North Down",
+     12,
+     285,
+     0.0421
+    ],
+    [
+     "Mid Ulster",
+     56,
+     1389,
+     0.0403
+    ],
+    [
+     "Monaghan",
+     63,
+     1848,
+     0.0341
+    ]
+   ],
+   "town_share": 0.0,
+   "towns": []
+  },
+  "derry": {
+   "label": "derry-",
+   "fam": "goidelic",
+   "meaning": "doire: oak wood",
+   "n": 13,
+   "n_townlands": 1281,
+   "by_nation": {
+    "England": 0,
+    "Wales": 0,
+    "Scotland": 0,
+    "Northern Ireland": 2,
+    "Republic of Ireland": 11
+   },
+   "townlands_by_nation": {
+    "Northern Ireland": 258,
+    "Republic of Ireland": 1023
+   },
+   "top_areas": [
+    [
+     "Mayo",
+     142
+    ],
+    [
+     "Cork",
+     123
+    ],
+    [
+     "Fermanagh and Omagh",
+     122
+    ],
+    [
+     "Galway",
+     104
+    ],
+    [
+     "Kerry",
+     74
+    ]
+   ],
+   "top_share_areas": [
+    [
+     "Armagh City, Banbridge and Craigavon",
+     59,
+     969,
+     0.0609
+    ],
+    [
+     "Offaly",
+     53,
+     1143,
+     0.0464
+    ],
+    [
+     "Fermanagh and Omagh",
+     122,
+     2782,
+     0.0439
+    ],
+    [
+     "Mayo",
+     142,
+     3252,
+     0.0437
+    ],
+    [
+     "Longford",
+     33,
+     886,
+     0.0372
+    ]
+   ],
+   "town_share": 0.0,
+   "towns": []
+  },
+  "inis": {
+   "label": "ennis- / inish-",
+   "fam": "goidelic",
+   "meaning": "inis: island, river meadow",
+   "n": 46,
+   "n_townlands": 310,
+   "by_nation": {
+    "England": 0,
+    "Wales": 0,
+    "Scotland": 21,
+    "Northern Ireland": 1,
+    "Republic of Ireland": 24
+   },
+   "townlands_by_nation": {
+    "Northern Ireland": 31,
+    "Republic of Ireland": 279
+   },
+   "top_areas": [
+    [
+     "Cork",
+     59
+    ],
+    [
+     "Kerry",
+     42
+    ],
+    [
+     "Galway",
+     39
+    ],
+    [
+     "Donegal",
+     29
+    ],
+    [
+     "Fermanagh and Omagh",
+     15
+    ]
+   ],
+   "top_share_areas": [
+    [
+     "Kerry",
+     42,
+     2692,
+     0.0156
+    ],
+    [
+     "Cork",
+     59,
+     5326,
+     0.0111
+    ],
+    [
+     "Donegal",
+     29,
+     2739,
+     0.0106
+    ],
+    [
+     "Galway",
+     39,
+     4255,
+     0.0092
+    ],
+    [
+     "Kilkenny",
+     11,
+     1573,
+     0.007
+    ]
+   ],
+   "town_share": 0.0,
+   "towns": []
+  },
+  "mullagh": {
+   "label": "mullagh-",
+   "fam": "goidelic",
+   "meaning": "mullach: summit",
+   "n": 4,
+   "n_townlands": 455,
+   "by_nation": {
+    "England": 0,
+    "Wales": 0,
+    "Scotland": 0,
+    "Northern Ireland": 1,
+    "Republic of Ireland": 3
+   },
+   "townlands_by_nation": {
+    "Northern Ireland": 162,
+    "Republic of Ireland": 293
+   },
+   "top_areas": [
+    [
+     "Monaghan",
+     67
+    ],
+    [
+     "Fermanagh and Omagh",
+     65
+    ],
+    [
+     "Mid Ulster",
+     39
+    ],
+    [
+     "Cavan",
+     33
+    ],
+    [
+     "Leitrim",
+     27
+    ]
+   ],
+   "top_share_areas": [
+    [
+     "Monaghan",
+     67,
+     1848,
+     0.0363
+    ],
+    [
+     "Mid Ulster",
+     39,
+     1389,
+     0.0281
+    ],
+    [
+     "Louth",
+     16,
+     674,
+     0.0237
+    ],
+    [
+     "Fermanagh and Omagh",
+     65,
+     2782,
+     0.0234
+    ],
+    [
+     "Armagh City, Banbridge and Craigavon",
+     22,
+     969,
+     0.0227
+    ]
+   ],
+   "town_share": 0.0,
+   "towns": []
+  },
+  "bel": {
+   "label": "bel- / bella-",
+   "fam": "goidelic",
+   "meaning": "beal: mouth, approach (often to a ford)",
+   "n": 21,
+   "n_townlands": 176,
+   "by_nation": {
+    "England": 0,
+    "Wales": 0,
+    "Scotland": 0,
+    "Northern Ireland": 7,
+    "Republic of Ireland": 14
+   },
+   "townlands_by_nation": {
+    "Northern Ireland": 34,
+    "Republic of Ireland": 142
+   },
+   "top_areas": [
+    [
+     "Mayo",
+     33
+    ],
+    [
+     "Sligo",
+     14
+    ],
+    [
+     "Donegal",
+     13
+    ],
+    [
+     "Causeway Coast and Glens",
+     12
+    ],
+    [
+     "Galway",
+     11
+    ]
+   ],
+   "top_share_areas": [
+    [
+     "Sligo",
+     14,
+     1265,
+     0.0111
+    ],
+    [
+     "Mayo",
+     33,
+     3252,
+     0.0101
+    ],
+    [
+     "Dublin",
+     8,
+     883,
+     0.0091
+    ],
+    [
+     "Causeway Coast and Glens",
+     12,
+     1445,
+     0.0083
+    ],
+    [
+     "Lisburn and Castlereagh",
+     2,
+     264,
+     0.0076
+    ]
+   ],
+   "town_share": 0.0,
+   "towns": []
+  }
+ },
+ "element_order": [
+  "bal",
+  "ton",
+  "town",
+  "kil",
+  "drum",
+  "ley",
+  "knock",
+  "clon",
+  "ing",
+  "lis",
+  "derry",
+  "ham",
+  "ford",
+  "field",
+  "tully",
+  "auch",
+  "rath",
+  "glen",
+  "by",
+  "ard",
+  "carrick",
+  "bury",
+  "dun",
+  "mullagh",
+  "don",
+  "llan",
+  "worth",
+  "thorpe",
+  "cot",
+  "inis",
+  "den",
+  "pen",
+  "wick",
+  "tre",
+  "kin",
+  "bel",
+  "stead",
+  "holme",
+  "hurst",
+  "cwm",
+  "aber",
+  "thwaite",
+  "kirk",
+  "stow",
+  "bryn",
+  "setter",
+  "chester",
+  "strat",
+  "inver",
+  "pont",
+  "vik",
+  "toft",
+  "rhyd",
+  "nant",
+  "minster",
+  "porth",
+  "strath",
+  "pit",
+  "caer",
+  "maes",
+  "eccles",
+  "lan",
+  "pol",
+  "bos",
+  "ros",
+  "betws",
+  "scale"
+ ],
+ "top_by_nation": {
+  "England": [
+   [
+    "ton",
+    5331
+   ],
+   [
+    "ley",
+    1870
+   ],
+   [
+    "ing",
+    1653
+   ],
+   [
+    "ham",
+    1230
+   ],
+   [
+    "ford",
+    959
+   ],
+   [
+    "field",
+    705
+   ],
+   [
+    "by",
+    697
+   ],
+   [
+    "bury",
+    567
+   ]
+  ],
+  "Wales": [
+   [
+    "llan",
+    384
+   ],
+   [
+    "pen",
+    233
+   ],
+   [
+    "ton",
+    168
+   ],
+   [
+    "cwm",
+    97
+   ],
+   [
+    "tre",
+    95
+   ],
+   [
+    "bryn",
+    82
+   ],
+   [
+    "aber",
+    64
+   ],
+   [
+    "pont",
+    52
+   ]
+  ],
+  "Scotland": [
+   [
+    "ton",
+    432
+   ],
+   [
+    "bal",
+    127
+   ],
+   [
+    "auch",
+    126
+   ],
+   [
+    "town",
+    118
+   ],
+   [
+    "field",
+    95
+   ],
+   [
+    "kil",
+    90
+   ],
+   [
+    "kin",
+    84
+   ],
+   [
+    "setter",
+    75
+   ]
+  ],
+  "Northern Ireland": [
+   [
+    "town",
+    26
+   ],
+   [
+    "bal",
+    24
+   ],
+   [
+    "dun",
+    15
+   ],
+   [
+    "kil",
+    12
+   ],
+   [
+    "drum",
+    9
+   ],
+   [
+    "bel",
+    7
+   ],
+   [
+    "auch",
+    4
+   ],
+   [
+    "glen",
+    4
+   ]
+  ],
+  "Republic of Ireland": [
+   [
+    "bal",
+    192
+   ],
+   [
+    "kil",
+    165
+   ],
+   [
+    "town",
+    128
+   ],
+   [
+    "clon",
+    47
+   ],
+   [
+    "drum",
+    42
+   ],
+   [
+    "dun",
+    41
+   ],
+   [
+    "rath",
+    32
+   ],
+   [
+    "knock",
+    29
+   ]
+  ]
+ },
+ "top_townlands": [
+  [
+   "bal",
+   6282
+  ],
+  [
+   "kil",
+   3054
+  ],
+  [
+   "town",
+   3013
+  ],
+  [
+   "drum",
+   2389
+  ],
+  [
+   "knock",
+   1781
+  ],
+  [
+   "clon",
+   1703
+  ],
+  [
+   "lis",
+   1394
+  ],
+  [
+   "derry",
+   1281
+  ],
+  [
+   "tully",
+   797
+  ],
+  [
+   "rath",
+   698
+  ]
+ ],
+ "ton_share_england": 0.1595,
+ "size": {
+  "base_town_share": 0.033,
+  "base_hamlet_share": 0.2981,
+  "rows": [
+   [
+    "chester",
+    67,
+    22,
+    0.3284,
+    0.0896
+   ],
+   [
+    "aber",
+    87,
+    13,
+    0.1494,
+    0.2069
+   ],
+   [
+    "inver",
+    54,
+    7,
+    0.1296,
+    0.2963
+   ],
+   [
+    "pont",
+    52,
+    6,
+    0.1154,
+    0.1923
+   ],
+   [
+    "dun",
+    65,
+    7,
+    0.1077,
+    0.3231
+   ],
+   [
+    "kirk",
+    84,
+    8,
+    0.0952,
+    0.1548
+   ],
+   [
+    "bury",
+    601,
+    55,
+    0.0915,
+    0.2013
+   ],
+   [
+    "wick",
+    308,
+    25,
+    0.0812,
+    0.2955
+   ],
+   [
+    "ham",
+    1251,
+    82,
+    0.0655,
+    0.2182
+   ],
+   [
+    "strat",
+    65,
+    4,
+    0.0615,
+    0.2308
+   ],
+   [
+    "worth",
+    392,
+    21,
+    0.0536,
+    0.2577
+   ],
+   [
+    "ford",
+    1020,
+    51,
+    0.05,
+    0.3078
+   ],
+   [
+    "stow",
+    82,
+    4,
+    0.0488,
+    0.2317
+   ],
+   [
+    "kin",
+    84,
+    4,
+    0.0476,
+    0.25
+   ],
+   [
+    "den",
+    336,
+    15,
+    0.0446,
+    0.3363
+   ],
+   [
+    "kil",
+    90,
+    4,
+    0.0444,
+    0.3111
+   ],
+   [
+    "llan",
+    394,
+    17,
+    0.0431,
+    0.2792
+   ],
+   [
+    "stead",
+    168,
+    7,
+    0.0417,
+    0.3274
+   ],
+   [
+    "ing",
+    1724,
+    70,
+    0.0406,
+    0.2517
+   ],
+   [
+    "don",
+    431,
+    17,
+    0.0394,
+    0.2691
+   ],
+   [
+    "by",
+    719,
+    25,
+    0.0348,
+    0.2684
+   ],
+   [
+    "ley",
+    1902,
+    66,
+    0.0347,
+    0.2823
+   ],
+   [
+    "field",
+    819,
+    27,
+    0.033,
+    0.1734
+   ],
+   [
+    "ton",
+    5931,
+    172,
+    0.029,
+    0.2718
+   ],
+   [
+    "hurst",
+    120,
+    3,
+    0.025,
+    0.3417
+   ],
+   [
+    "nant",
+    40,
+    1,
+    0.025,
+    0.45
+   ],
+   [
+    "pen",
+    336,
+    8,
+    0.0238,
+    0.3423
+   ],
+   [
+    "toft",
+    45,
+    1,
+    0.0222,
+    0.3111
+   ],
+   [
+    "vik",
+    50,
+    1,
+    0.02,
+    0.3
+   ],
+   [
+    "tre",
+    279,
+    5,
+    0.0179,
+    0.4982
+   ],
+   [
+    "auch",
+    126,
+    2,
+    0.0159,
+    0.4365
+   ],
+   [
+    "ard",
+    66,
+    1,
+    0.0152,
+    0.3485
+   ],
+   [
+    "glen",
+    73,
+    1,
+    0.0137,
+    0.3699
+   ],
+   [
+    "cot",
+    374,
+    5,
+    0.0134,
+    0.4893
+   ],
+   [
+    "town",
+    629,
+    8,
+    0.0127,
+    0.2496
+   ],
+   [
+    "holme",
+    162,
+    2,
+    0.0123,
+    0.3457
+   ],
+   [
+    "bryn",
+    82,
+    1,
+    0.0122,
+    0.2683
+   ],
+   [
+    "thorpe",
+    389,
+    4,
+    0.0103,
+    0.2931
+   ],
+   [
+    "cwm",
+    97,
+    1,
+    0.0103,
+    0.3814
+   ],
+   [
+    "bal",
+    127,
+    1,
+    0.0079,
+    0.3622
+   ],
+   [
+    "thwaite",
+    85,
+    0,
+    0.0,
+    0.4118
+   ],
+   [
+    "setter",
+    75,
+    0,
+    0.0,
+    0.3733
+   ],
+   [
+    "rhyd",
+    42,
+    0,
+    0.0,
+    0.381
+   ],
+   [
+    "drum",
+    51,
+    0,
+    0.0,
+    0.3725
+   ]
+  ],
+  "gb_kinds": {
+   "Village": 15155,
+   "Hamlet": 12900,
+   "Suburban Area": 10876,
+   "Other Settlement": 2917,
+   "Town": 1355,
+   "City": 71
+  }
+ },
+ "irish_forms": {
+  "rows": {
+   "bal": {
+    "label": "bally- / bal-",
+    "word": "baile",
+    "n": 3860,
+    "agree": 3480,
+    "agree_share": 0.9016,
+    "others": [
+     [
+      "beal",
+      184
+     ],
+     [
+      "bealach",
+      99
+     ],
+     [
+      "buaile",
+      31
+     ],
+     [
+      "coimin",
+      7
+     ]
+    ]
+   },
+   "kil": {
+    "label": "kil- / kill-",
+    "word": "cill",
+    "n": 2120,
+    "agree": 1448,
+    "agree_share": 0.683,
+    "others": [
+     [
+      "coill",
+      487
+     ],
+     [
+      "coillidh",
+      64
+     ],
+     [
+      "coillin",
+      35
+     ],
+     [
+      "coillte",
+      33
+     ]
+    ]
+   },
+   "rath": {
+    "label": "rath-",
+    "word": "rath",
+    "n": 454,
+    "agree": 438,
+    "agree_share": 0.9648,
+    "others": [
+     [
+      "coill",
+      3
+     ],
+     [
+      "cill",
+      1
+     ],
+     [
+      "re",
+      1
+     ],
+     [
+      "sliabh",
+      1
+     ]
+    ]
+   },
+   "tully": {
+    "label": "tully- / tulla-",
+    "word": "tulach",
+    "n": 340,
+    "agree": 335,
+    "agree_share": 0.9853,
+    "others": [
+     [
+      "tamhnaigh",
+      3
+     ],
+     [
+      "tinne",
+      1
+     ]
+    ]
+   },
+   "ard": {
+    "label": "ard-",
+    "word": "ard",
+    "n": 371,
+    "agree": 356,
+    "agree_share": 0.9596,
+    "others": [
+     [
+      "da",
+      3
+     ]
+    ]
+   },
+   "clon": {
+    "label": "clon- / cloon-",
+    "word": "cluain",
+    "n": 1063,
+    "agree": 1038,
+    "agree_share": 0.9765,
+    "others": [
+     [
+      "conachlainn",
+      3
+     ],
+     [
+      "cuil",
+      3
+     ],
+     [
+      "fairche",
+      2
+     ],
+     [
+      "raistin",
+      2
+     ]
+    ]
+   },
+   "drum": {
+    "label": "drum- / drom-",
+    "word": "droim",
+    "n": 1171,
+    "agree": 1157,
+    "agree_share": 0.988,
+    "others": [
+     [
+      "coill",
+      3
+     ]
+    ]
+   },
+   "mullagh": {
+    "label": "mullagh-",
+    "word": "mullach",
+    "n": 196,
+    "agree": 166,
+    "agree_share": 0.8469,
+    "others": [
+     [
+      "mullan",
+      13
+     ],
+     [
+      "mullain",
+      6
+     ],
+     [
+      "muileann",
+      4
+     ],
+     [
+      "maol",
+      2
+     ]
+    ]
+   },
+   "lis": {
+    "label": "lis-",
+    "word": "lios",
+    "n": 795,
+    "agree": 783,
+    "agree_share": 0.9849,
+    "others": [
+     [
+      "halla",
+      2
+     ],
+     [
+      "cuirt",
+      1
+     ],
+     [
+      "teampall",
+      1
+     ],
+     [
+      "loiste",
+      1
+     ]
+    ]
+   },
+   "derry": {
+    "label": "derry-",
+    "word": "doire",
+    "n": 769,
+    "agree": 742,
+    "agree_share": 0.9649,
+    "others": [
+     [
+      "deargrath",
+      5
+     ],
+     [
+      "daraidh",
+      4
+     ],
+     [
+      "coimin",
+      3
+     ],
+     [
+      "darach",
+      1
+     ]
+    ]
+   },
+   "carrick": {
+    "label": "carrick- / carrig-",
+    "word": "carraig",
+    "n": 434,
+    "agree": 407,
+    "agree_share": 0.9378,
+    "others": [
+     [
+      "cathracha",
+      4
+     ],
+     [
+      "moin",
+      3
+     ],
+     [
+      "cearach",
+      2
+     ],
+     [
+      "cnoc",
+      2
+     ]
+    ]
+   },
+   "bel": {
+    "label": "bel- / bella-",
+    "word": "beal",
+    "n": 108,
+    "agree": 77,
+    "agree_share": 0.713,
+    "others": [
+     [
+      "baile",
+      13
+     ],
+     [
+      "biolrach",
+      3
+     ],
+     [
+      "belvidere",
+      2
+     ],
+     [
+      "pairc",
+      2
+     ]
+    ]
+   },
+   "inis": {
+    "label": "ennis- / inish-",
+    "word": "inis",
+    "n": 258,
+    "agree": 236,
+    "agree_share": 0.9147,
+    "others": [
+     [
+      "hinsi",
+      9
+     ],
+     [
+      "oilean",
+      4
+     ],
+     [
+      "ath",
+      2
+     ],
+     [
+      "uinsinn",
+      2
+     ]
+    ]
+   },
+   "knock": {
+    "label": "knock-",
+    "word": "cnoc",
+    "n": 1210,
+    "agree": 1193,
+    "agree_share": 0.986,
+    "others": [
+     [
+      "sliabh",
+      4
+     ],
+     [
+      "cnapog",
+      2
+     ],
+     [
+      "tigh",
+      2
+     ],
+     [
+      "droichead",
+      1
+     ]
+    ]
+   },
+   "dun": {
+    "label": "dun- / dum-",
+    "word": "dun",
+    "n": 271,
+    "agree": 210,
+    "agree_share": 0.7749,
+    "others": [
+     [
+      "domhnach",
+      35
+     ],
+     [
+      "baile",
+      7
+     ],
+     [
+      "droim",
+      3
+     ],
+     [
+      "clochan",
+      2
+     ]
+    ]
+   },
+   "glen": {
+    "label": "glen-",
+    "word": "gleann",
+    "n": 436,
+    "agree": 422,
+    "agree_share": 0.9679,
+    "others": [
+     [
+      "coill",
+      5
+     ],
+     [
+      "cluain",
+      3
+     ],
+     [
+      "cnoc",
+      2
+     ],
+     [
+      "baile",
+      2
+     ]
+    ]
+   },
+   "kin": {
+    "label": "kin- / ken-",
+    "word": "ceann",
+    "n": 93,
+    "agree": 79,
+    "agree_share": 0.8495,
+    "others": [
+     [
+      "baile",
+      7
+     ],
+     [
+      "neidin",
+      2
+     ],
+     [
+      "conchro",
+      1
+     ],
+     [
+      "roinn",
+      1
+     ]
+    ]
+   },
+   "auch": {
+    "label": "auch- / agha-",
+    "word": "achadh",
+    "n": 331,
+    "agree": 219,
+    "agree_share": 0.6616,
+    "others": [
+     [
+      "ath",
+      54
+     ],
+     [
+      "athan",
+      19
+     ],
+     [
+      "eachroim",
+      12
+     ],
+     [
+      "eachinis",
+      6
+     ]
+    ]
+   }
+  },
+  "n_with_irish": 37175,
+  "n_townlands_irish": 35223,
+  "kil": {
+   "cill": 1448,
+   "coill": 629,
+   "other": 43,
+   "n": 2120
+  },
+  "bal": {
+   "baile": 3480,
+   "beal": 184,
+   "bealach": 99,
+   "buaile": 31,
+   "other": 66,
+   "n": 3860
+  },
+  "dun": {
+   "dun": 210,
+   "domhnach": 35,
+   "other": 26,
+   "n": 271
+  },
+  "auch": {
+   "achadh": 219,
+   "ath": 75,
+   "each": 28,
+   "other": 9,
+   "n": 331
+  },
+  "kil_townlands": {
+   "cill": 1313,
+   "coill": 609,
+   "n": 1959,
+   "counties": [
+    [
+     "Monaghan",
+     95,
+     105,
+     0.9048
+    ],
+    [
+     "Cavan",
+     35,
+     42,
+     0.8333
+    ],
+    [
+     "Leitrim",
+     51,
+     67,
+     0.7612
+    ],
+    [
+     "Longford",
+     31,
+     45,
+     0.6889
+    ],
+    [
+     "Offaly",
+     47,
+     88,
+     0.5341
+    ],
+    [
+     "Laois",
+     9,
+     21,
+     0.4286
+    ],
+    [
+     "Mayo",
+     25,
+     71,
+     0.3521
+    ],
+    [
+     "Galway",
+     65,
+     191,
+     0.3403
+    ],
+    [
+     "Tipperary",
+     59,
+     183,
+     0.3224
+    ],
+    [
+     "Roscommon",
+     8,
+     30,
+     0.2667
+    ],
+    [
+     "Meath",
+     6,
+     27,
+     0.2222
+    ],
+    [
+     "Clare",
+     23,
+     108,
+     0.213
+    ],
+    [
+     "Cork",
+     65,
+     310,
+     0.2097
+    ],
+    [
+     "Dublin",
+     7,
+     38,
+     0.1842
+    ],
+    [
+     "Donegal",
+     6,
+     35,
+     0.1714
+    ],
+    [
+     "Limerick",
+     18,
+     111,
+     0.1622
+    ],
+    [
+     "Wicklow",
+     7,
+     45,
+     0.1556
+    ],
+    [
+     "Kildare",
+     4,
+     26,
+     0.1538
+    ],
+    [
+     "Westmeath",
+     3,
+     20,
+     0.15
+    ],
+    [
+     "Wexford",
+     4,
+     29,
+     0.1379
+    ],
+    [
+     "Kerry",
+     16,
+     122,
+     0.1311
+    ],
+    [
+     "Waterford",
+     15,
+     120,
+     0.125
+    ],
+    [
+     "Kilkenny",
+     7,
+     78,
+     0.0897
+    ]
+   ]
+  }
+ },
+ "ireland": {
+  "bal_townlands": 6282,
+  "bal_townland_share": 0.1049,
+  "bal_share_roi": 0.1024,
+  "bal_share_ni": 0.1179,
+  "bal_settlements": 216,
+  "bal_settlement_share": 0.0916,
+  "goidelic_townlands": 0.3899,
+  "english_townlands": 0.0534,
+  "town_settlements_ie": 154,
+  "town_share_ie": 0.0653,
+  "town_share_townlands": 0.0503,
+  "counties": [
+   [
+    "Ards and North Down",
+    285,
+    137,
+    0.4807
+   ],
+   [
+    "Belfast",
+    70,
+    31,
+    0.4429
+   ],
+   [
+    "Antrim and Newtownabbey",
+    309,
+    83,
+    0.2686
+   ],
+   [
+    "Lisburn and Castlereagh",
+    264,
+    67,
+    0.2538
+   ],
+   [
+    "Wicklow",
+    1357,
+    307,
+    0.2262
+   ],
+   [
+    "Wexford",
+    2299,
+    479,
+    0.2084
+   ],
+   [
+    "Newry, Mourne and Down",
+    822,
+    166,
+    0.2019
+   ],
+   [
+    "Limerick",
+    1929,
+    376,
+    0.1949
+   ],
+   [
+    "Carlow",
+    560,
+    108,
+    0.1929
+   ],
+   [
+    "Mid and East Antrim",
+    480,
+    88,
+    0.1833
+   ],
+   [
+    "Waterford",
+    1572,
+    273,
+    0.1737
+   ],
+   [
+    "Causeway Coast and Glens",
+    1445,
+    231,
+    0.1599
+   ],
+   [
+    "Offaly",
+    1143,
+    180,
+    0.1575
+   ],
+   [
+    "Cork",
+    5326,
+    700,
+    0.1314
+   ],
+   [
+    "Armagh City, Banbridge and Craigavon",
+    969,
+    127,
+    0.1311
+   ],
+   [
+    "Kilkenny",
+    1573,
+    201,
+    0.1278
+   ],
+   [
+    "Westmeath",
+    1341,
+    165,
+    0.123
+   ],
+   [
+    "Laois",
+    1111,
+    133,
+    0.1197
+   ],
+   [
+    "Tipperary",
+    3140,
+    375,
+    0.1194
+   ],
+   [
+    "Clare",
+    2221,
+    261,
+    0.1175
+   ],
+   [
+    "Kerry",
+    2692,
+    265,
+    0.0984
+   ],
+   [
+    "Dublin",
+    883,
+    79,
+    0.0895
+   ],
+   [
+    "Mid Ulster",
+    1389,
+    108,
+    0.0778
+   ],
+   [
+    "Meath",
+    1599,
+    123,
+    0.0769
+   ],
+   [
+    "Kildare",
+    1210,
+    93,
+    0.0769
+   ],
+   [
+    "Galway",
+    4255,
+    320,
+    0.0752
+   ],
+   [
+    "Longford",
+    886,
+    65,
+    0.0734
+   ],
+   [
+    "Sligo",
+    1265,
+    83,
+    0.0656
+   ],
+   [
+    "Derry City and Strabane",
+    705,
+    45,
+    0.0638
+   ],
+   [
+    "Mayo",
+    3252,
+    203,
+    0.0624
+   ],
+   [
+    "Louth",
+    674,
+    42,
+    0.0623
+   ],
+   [
+    "Donegal",
+    2739,
+    168,
+    0.0613
+   ],
+   [
+    "Roscommon",
+    2045,
+    113,
+    0.0553
+   ],
+   [
+    "Fermanagh and Omagh",
+    2782,
+    39,
+    0.014
+   ],
+   [
+    "Cavan",
+    1977,
+    21,
+    0.0106
+   ],
+   [
+    "Monaghan",
+    1848,
+    17,
+    0.0092
+   ],
+   [
+    "Leitrim",
+    1483,
+    10,
+    0.0067
+   ]
+  ],
+  "gaeltacht_cop": 132
+ },
+ "scotland": {
+  "aber": 22,
+  "inver": 54,
+  "pit": 25,
+  "aber_mean_lon": -3.2148,
+  "inver_mean_lon": -4.1059,
+  "aber_east_of_4w": 20,
+  "inver_west_of_4w": 33,
+  "aber_areas": [
+   [
+    "Perth and Kinross",
+    7
+   ],
+   [
+    "Fife",
+    4
+   ],
+   [
+    "Aberdeenshire",
+    3
+   ],
+   [
+    "Aberdeen City",
+    2
+   ],
+   [
+    "Highland",
+    1
+   ],
+   [
+    "Moray",
+    1
+   ]
+  ],
+  "inver_areas": [
+   [
+    "Highland",
+    19
+   ],
+   [
+    "Aberdeenshire",
+    8
+   ],
+   [
+    "Argyll and Bute",
+    7
+   ],
+   [
+    "Perth and Kinross",
+    4
+   ],
+   [
+    "Fife",
+    3
+   ],
+   [
+    "Angus",
+    3
+   ]
+  ],
+  "pit_areas": [
+   [
+    "Aberdeenshire",
+    7
+   ],
+   [
+    "Fife",
+    7
+   ],
+   [
+    "Perth and Kinross",
+    5
+   ],
+   [
+    "Highland",
+    4
+   ],
+   [
+    "Moray",
+    1
+   ],
+   [
+    "East Lothian",
+    1
+   ]
+  ],
+  "pit_east_of_4w": 21,
+  "families": {
+   "Aberdeen City": {
+    "english": 0.2642,
+    "norse": 0.0,
+    "latin": 0.0,
+    "brittonic": 0.0377,
+    "goidelic": 0.0189,
+    "n": 53
+   },
+   "Aberdeenshire": {
+    "english": 0.1336,
+    "norse": 0.002,
+    "latin": 0.0,
+    "brittonic": 0.0202,
+    "goidelic": 0.1336,
+    "n": 494
+   },
+   "Angus": {
+    "english": 0.1813,
+    "norse": 0.0058,
+    "latin": 0.0,
+    "brittonic": 0.0058,
+    "goidelic": 0.1637,
+    "n": 171
+   },
+   "Argyll and Bute": {
+    "english": 0.0393,
+    "norse": 0.003,
+    "latin": 0.0,
+    "brittonic": 0.0,
+    "goidelic": 0.2689,
+    "n": 331
+   },
+   "City of Edinburgh": {
+    "english": 0.2715,
+    "norse": 0.0,
+    "latin": 0.0,
+    "brittonic": 0.0,
+    "goidelic": 0.0464,
+    "n": 151
+   },
+   "Dumfries and Galloway": {
+    "english": 0.1536,
+    "norse": 0.0376,
+    "latin": 0.0,
+    "brittonic": 0.0,
+    "goidelic": 0.094,
+    "n": 319
+   },
+   "East Ayrshire": {
+    "english": 0.1935,
+    "norse": 0.0215,
+    "latin": 0.0,
+    "brittonic": 0.0,
+    "goidelic": 0.086,
+    "n": 93
+   },
+   "East Dunbartonshire": {
+    "english": 0.119,
+    "norse": 0.0,
+    "latin": 0.0,
+    "brittonic": 0.0,
+    "goidelic": 0.119,
+    "n": 42
+   },
+   "East Lothian": {
+    "english": 0.3434,
+    "norse": 0.0101,
+    "latin": 0.0,
+    "brittonic": 0.0202,
+    "goidelic": 0.0505,
+    "n": 99
+   },
+   "East Renfrewshire": {
+    "english": 0.1707,
+    "norse": 0.0244,
+    "latin": 0.0,
+    "brittonic": 0.0,
+    "goidelic": 0.0488,
+    "n": 41
+   },
+   "Falkirk": {
+    "english": 0.1633,
+    "norse": 0.0,
+    "latin": 0.0,
+    "brittonic": 0.0,
+    "goidelic": 0.0612,
+    "n": 98
+   },
+   "Fife": {
+    "english": 0.1685,
+    "norse": 0.0075,
+    "latin": 0.0,
+    "brittonic": 0.0412,
+    "goidelic": 0.161,
+    "n": 267
+   },
+   "Glasgow City": {
+    "english": 0.195,
+    "norse": 0.0063,
+    "latin": 0.0,
+    "brittonic": 0.0,
+    "goidelic": 0.0755,
+    "n": 159
+   },
+   "Highland": {
+    "english": 0.0564,
+    "norse": 0.0278,
+    "latin": 0.0,
+    "brittonic": 0.0038,
+    "goidelic": 0.2143,
+    "n": 1330
+   },
+   "Inverclyde": {
+    "english": 0.1552,
+    "norse": 0.0,
+    "latin": 0.0,
+    "brittonic": 0.0,
+    "goidelic": 0.1034,
+    "n": 58
+   },
+   "Midlothian": {
+    "english": 0.2468,
+    "norse": 0.0,
+    "latin": 0.0,
+    "brittonic": 0.0,
+    "goidelic": 0.026,
+    "n": 77
+   },
+   "Moray": {
+    "english": 0.1839,
+    "norse": 0.0,
+    "latin": 0.0,
+    "brittonic": 0.0115,
+    "goidelic": 0.1034,
+    "n": 174
+   },
+   "Na h-Eileanan an Iar": {
+    "english": 0.0217,
+    "norse": 0.0155,
+    "latin": 0.0,
+    "brittonic": 0.0,
+    "goidelic": 0.0898,
+    "n": 323
+   },
+   "North Ayrshire": {
+    "english": 0.1028,
+    "norse": 0.0,
+    "latin": 0.0,
+    "brittonic": 0.0,
+    "goidelic": 0.2056,
+    "n": 107
+   },
+   "North Lanarkshire": {
+    "english": 0.1243,
+    "norse": 0.0,
+    "latin": 0.0,
+    "brittonic": 0.0,
+    "goidelic": 0.0947,
+    "n": 169
+   },
+   "Orkney Islands": {
+    "english": 0.1429,
+    "norse": 0.1845,
+    "latin": 0.0,
+    "brittonic": 0.0,
+    "goidelic": 0.0119,
+    "n": 168
+   },
+   "Perth and Kinross": {
+    "english": 0.1474,
+    "norse": 0.0035,
+    "latin": 0.0,
+    "brittonic": 0.0421,
+    "goidelic": 0.2281,
+    "n": 285
+   },
+   "Renfrewshire": {
+    "english": 0.2319,
+    "norse": 0.0,
+    "latin": 0.0,
+    "brittonic": 0.0,
+    "goidelic": 0.0435,
+    "n": 69
+   },
+   "Scottish Borders": {
+    "english": 0.2477,
+    "norse": 0.0467,
+    "latin": 0.014,
+    "brittonic": 0.0,
+    "goidelic": 0.028,
+    "n": 214
+   },
+   "Shetland Islands": {
+    "english": 0.0714,
+    "norse": 0.2481,
+    "latin": 0.0,
+    "brittonic": 0.0,
+    "goidelic": 0.0113,
+    "n": 266
+   },
+   "South Ayrshire": {
+    "english": 0.2593,
+    "norse": 0.0,
+    "latin": 0.0,
+    "brittonic": 0.0,
+    "goidelic": 0.0988,
+    "n": 81
+   },
+   "South Lanarkshire": {
+    "english": 0.209,
+    "norse": 0.0,
+    "latin": 0.0,
+    "brittonic": 0.0,
+    "goidelic": 0.0508,
+    "n": 177
+   },
+   "Stirling": {
+    "english": 0.1087,
+    "norse": 0.0,
+    "latin": 0.0,
+    "brittonic": 0.0109,
+    "goidelic": 0.25,
+    "n": 92
+   },
+   "West Lothian": {
+    "english": 0.1556,
+    "norse": 0.0111,
+    "latin": 0.0111,
+    "brittonic": 0.0111,
+    "goidelic": 0.0333,
+    "n": 90
+   }
+  },
+  "norse_isles": {
+   "Shetland Islands": 0.2481,
+   "Orkney Islands": 0.1845
+  },
+  "gaelic_share": 0.134,
+  "english_share": 0.1307
+ },
+ "border": {
+  "rows": [
+   [
+    -60,
+    414,
+    0.0024,
+    0.372
+   ],
+   [
+    -55,
+    374,
+    0.0053,
+    0.4011
+   ],
+   [
+    -50,
+    397,
+    0.0076,
+    0.461
+   ],
+   [
+    -45,
+    412,
+    0.0049,
+    0.4854
+   ],
+   [
+    -40,
+    442,
+    0.009,
+    0.4321
+   ],
+   [
+    -35,
+    461,
+    0.0,
+    0.397
+   ],
+   [
+    -30,
+    426,
+    0.0094,
+    0.4577
+   ],
+   [
+    -25,
+    495,
+    0.002,
+    0.4626
+   ],
+   [
+    -20,
+    511,
+    0.002,
+    0.4697
+   ],
+   [
+    -15,
+    488,
+    0.0082,
+    0.4775
+   ],
+   [
+    -10,
+    467,
+    0.0364,
+    0.4604
+   ],
+   [
+    -5,
+    470,
+    0.0723,
+    0.3681
+   ],
+   [
+    0,
+    334,
+    0.1497,
+    0.1916
+   ],
+   [
+    5,
+    274,
+    0.3321,
+    0.1131
+   ],
+   [
+    10,
+    204,
+    0.3627,
+    0.0294
+   ],
+   [
+    15,
+    189,
+    0.381,
+    0.0212
+   ],
+   [
+    20,
+    232,
+    0.2759,
+    0.0517
+   ],
+   [
+    25,
+    131,
+    0.2672,
+    0.0534
+   ],
+   [
+    30,
+    149,
+    0.349,
+    0.0403
+   ],
+   [
+    35,
+    130,
+    0.3538,
+    0.0769
+   ],
+   [
+    40,
+    135,
+    0.3407,
+    0.0593
+   ],
+   [
+    45,
+    158,
+    0.3291,
+    0.0443
+   ],
+   [
+    50,
+    147,
+    0.3061,
+    0.0272
+   ],
+   [
+    55,
+    155,
+    0.4065,
+    0.0258
+   ]
+  ],
+  "welsh_within5_w": 0.1497,
+  "welsh_within5_e": 0.0723,
+  "welsh_20_40_w": 0.3069,
+  "welsh_20_40_e": 0.0049,
+  "english_within5_w": 0.1916,
+  "english_20_40_w": 0.0545,
+  "english_within5_e": 0.3681,
+  "welsh_in_england_n": 73,
+  "welsh_in_england_examples": [
+   "Pontrilas",
+   "Pentre-cefn",
+   "Ponthen",
+   "Pentre",
+   "Llanyblodwel",
+   "Pen-y-bryn",
+   "Bryn",
+   "Llanrothal",
+   "Rhydspence",
+   "Llanfair Waterdine",
+   "Rhydycroesau",
+   "Pentreheyling"
+  ],
+  "welsh_rules": [
+   "aber",
+   "betws",
+   "bryn",
+   "caer",
+   "cwm",
+   "llan",
+   "maes",
+   "nant",
+   "pen",
+   "pont",
+   "rhyd",
+   "tre"
+  ]
+ },
+ "wales": {
+  "any_welsh": 0.2982,
+  "english_share": 0.0791,
+  "llan": 384,
+  "top": [
+   [
+    "llan",
+    384
+   ],
+   [
+    "pen",
+    233
+   ],
+   [
+    "ton",
+    168
+   ],
+   [
+    "cwm",
+    97
+   ],
+   [
+    "tre",
+    95
+   ],
+   [
+    "bryn",
+    82
+   ],
+   [
+    "aber",
+    64
+   ],
+   [
+    "pont",
+    52
+   ]
+  ],
+  "west_counties": {
+   "Blaenau Gwent": 0.2364,
+   "Bridgend": 0.2588,
+   "Caerphilly": 0.319,
+   "Cardiff": 0.2985,
+   "Carmarthenshire": 0.3451,
+   "Ceredigion": 0.3725,
+   "Conwy": 0.4173,
+   "Denbighshire": 0.3171,
+   "Flintshire": 0.2121,
+   "Gwynedd": 0.3508,
+   "Isle of Anglesey": 0.4324,
+   "Merthyr Tydfil": 0.2745,
+   "Monmouthshire": 0.3,
+   "Neath Port Talbot": 0.3053,
+   "Newport": 0.1579,
+   "Pembrokeshire": 0.1518,
+   "Powys": 0.3571,
+   "Rhondda Cynon Taf": 0.3813,
+   "Swansea": 0.2139,
+   "Torfaen": 0.3151,
+   "Vale of Glamorgan": 0.2119,
+   "Wrexham": 0.1553
+  }
+ },
+ "cornwall": {
+  "rows": [
+   [
+    -5.75,
+    85,
+    0.4706
+   ],
+   [
+    -5.5,
+    117,
+    0.1538
+   ],
+   [
+    -5.25,
+    242,
+    0.2314
+   ],
+   [
+    -5.0,
+    220,
+    0.3818
+   ],
+   [
+    -4.75,
+    213,
+    0.2817
+   ],
+   [
+    -4.5,
+    316,
+    0.1361
+   ],
+   [
+    -4.25,
+    328,
+    0.0305
+   ],
+   [
+    -4.0,
+    274,
+    0.0109
+   ],
+   [
+    -3.75,
+    275,
+    0.0182
+   ],
+   [
+    -3.5,
+    174,
+    0.0115
+   ],
+   [
+    -3.25,
+    83,
+    0.012
+   ],
+   [
+    -3.0,
+    23,
+    0.0
+   ]
+  ],
+  "cornwall_share": 0.2718,
+  "devon_share": 0.0138,
+  "cornwall_n": 1122,
+  "devon_n": 1228,
+  "tre_cornwall": 183,
+  "tre_devon": 1,
+  "west_share": 0.2568,
+  "east_share": 0.2061,
+  "devon_examples": [
+   "Landcross",
+   "Landkey Newland",
+   "Landkey",
+   "Landkey Town",
+   "Penstone",
+   "Trentishoe",
+   "Penstone",
+   "Pennymoor",
+   "Rosemary Lane",
+   "Portington",
+   "Portgate",
+   "East Portlemouth"
+  ]
+ },
+ "norse": {
+  "n": 1585,
+  "england": 0.0422,
+  "top_areas": [
+   [
+    "North Lincolnshire",
+    38,
+    108,
+    0.3519
+   ],
+   [
+    "North East Lincolnshire",
+    15,
+    45,
+    0.3333
+   ],
+   [
+    "Lincolnshire",
+    308,
+    926,
+    0.3326
+   ],
+   [
+    "Shetland Islands",
+    66,
+    266,
+    0.2481
+   ],
+   [
+    "Leicestershire",
+    88,
+    390,
+    0.2256
+   ],
+   [
+    "Redcar and Cleveland",
+    11,
+    52,
+    0.2115
+   ],
+   [
+    "York",
+    10,
+    52,
+    0.1923
+   ],
+   [
+    "Orkney Islands",
+    31,
+    168,
+    0.1845
+   ]
+  ]
+ },
+ "grid": {
+  "steps": {
+   "fine": [
+    0.15,
+    0.25
+   ],
+   "coarse": [
+    0.3,
+    0.5
+   ]
+  },
+  "fine_cells": 1425,
+  "dominant_counts": {
+   "english": 591,
+   "norse": 43,
+   "latin": 0,
+   "brittonic": 91,
+   "goidelic": 251
+  },
+  "dominant_n": 976
+ },
+ "common_names": {
+  "England": [
+   [
+    "Newtown",
+    85
+   ],
+   [
+    "West End",
+    56
+   ],
+   [
+    "Newton",
+    42
+   ],
+   [
+    "New Town",
+    42
+   ],
+   [
+    "Church End",
+    36
+   ],
+   [
+    "Upton",
+    33
+   ]
+  ],
+  "Wales": [
+   [
+    "Pentre",
+    17
+   ],
+   [
+    "Felindre",
+    11
+   ],
+   [
+    "Mount Pleasant",
+    9
+   ],
+   [
+    "Pant",
+    7
+   ],
+   [
+    "Garth",
+    6
+   ],
+   [
+    "Cwm",
+    6
+   ]
+  ],
+  "Scotland": [
+   [
+    "Milton",
+    16
+   ],
+   [
+    "Kirkton",
+    16
+   ],
+   [
+    "Bridgend",
+    16
+   ],
+   [
+    "Newton",
+    12
+   ],
+   [
+    "Woodside",
+    7
+   ],
+   [
+    "Waterside",
+    7
+   ]
+  ]
+ },
+ "common_townlands": [
+  [
+   "Glebe",
+   220
+  ],
+  [
+   "Newtown",
+   156
+  ],
+  [
+   "Milltown",
+   74
+  ],
+  [
+   "Grange",
+   73
+  ],
+  [
+   "Killeen",
+   69
+  ],
+  [
+   "Commons",
+   65
+  ],
+  [
+   "Knockroe",
+   65
+  ],
+  [
+   "Deerpark",
+   65
+  ]
+ ],
+ "audit": {
+  "elements": [
+   "ton",
+   "ley",
+   "ing",
+   "ham",
+   "ford",
+   "by",
+   "bury",
+   "wick",
+   "pen",
+   "dun",
+   "kil",
+   "bal",
+   "town",
+   "ard"
+  ],
+  "per_element": 20,
+  "n": 280,
+  "false": 9,
+  "ok_share": 0.9679,
+  "rows": [
+   {
+    "key": "ton",
+    "sample": [
+     "Pemberton",
+     "West Carlton",
+     "Tidmington",
+     "Willington",
+     "Heiton",
+     "Dalton",
+     "Upper Stratton",
+     "Shotton",
+     "Grafton",
+     "Newton Abbot",
+     "Parton",
+     "Dodington",
+     "Elton",
+     "Riccarton",
+     "Chilton Lane",
+     "Thorpe Langton",
+     "Bilton",
+     "Irthington",
+     "Stretton",
+     "Rainton Gate"
+    ],
+    "false_friends": [],
+    "ok": 20
+   },
+   {
+    "key": "ley",
+    "sample": [
+     "Green Hailey",
+     "Folley",
+     "Knowley",
+     "Brinkley",
+     "Weekley",
+     "Healey",
+     "Ashley Heath",
+     "Dursley",
+     "Warleigh",
+     "Chitterley",
+     "Staveley",
+     "Umberleigh",
+     "Bickleigh",
+     "Yorkley",
+     "Cleveleys",
+     "Little Dawley",
+     "Whitley Bay",
+     "Far Bletchley",
+     "Butley High Corner",
+     "Shelley"
+    ],
+    "false_friends": [
+     "Folley"
+    ],
+    "ok": 19
+   },
+   {
+    "key": "ing",
+    "sample": [
+     "Quenington",
+     "Tucking Mill",
+     "Burringham",
+     "Helpringham",
+     "Far Headingley",
+     "Babingley",
+     "Chipping Norton",
+     "Donington on Bain",
+     "Doddington",
+     "Wormingford",
+     "Oughtrington",
+     "Cowling",
+     "Swannington",
+     "White Roding",
+     "Derrington",
+     "Bickington",
+     "Easington",
+     "Lissington",
+     "Little Bealings",
+     "New Herrington"
+    ],
+    "false_friends": [
+     "Tucking Mill",
+     "Chipping Norton"
+    ],
+    "ok": 18
+   },
+   {
+    "key": "ham",
+    "sample": [
+     "Mottingham",
+     "Clapham Green",
+     "Damerham",
+     "Needham",
+     "Denham",
+     "Badlingham",
+     "Coldham",
+     "Gislingham",
+     "Thurnham",
+     "Upper Layham",
+     "Lower Bodham",
+     "Edenham",
+     "Remenham",
+     "Sutton Bingham",
+     "Barkham",
+     "Dunham-on-the-Hill",
+     "Wrotham",
+     "Irnham",
+     "Fetcham Grove",
+     "St Margaret South Elmham"
+    ],
+    "false_friends": [],
+    "ok": 20
+   },
+   {
+    "key": "ford",
+    "sample": [
+     "Widford",
+     "Burford",
+     "Derriford",
+     "Hannaford",
+     "Rochford",
+     "Ashford",
+     "Aylesford",
+     "Grimeford Village",
+     "Chatford",
+     "Cuttiford's Door",
+     "Great Linford",
+     "Crateford",
+     "Brampford Speke",
+     "Bromford",
+     "Knutsford",
+     "Pyrford Village",
+     "Stolford",
+     "Woodford",
+     "Cessford",
+     "Dartford Marshes"
+    ],
+    "false_friends": [],
+    "ok": 20
+   },
+   {
+    "key": "by",
+    "sample": [
+     "Saltfleetby All Saints",
+     "Great Asby",
+     "Claxby",
+     "Tumby",
+     "Derby War Memorial Village",
+     "Lowesby",
+     "Kirby Cane",
+     "Gaulby",
+     "Sutterby",
+     "Grimsby",
+     "Salmonby",
+     "Derby",
+     "Rickerby",
+     "Easby",
+     "Thealby",
+     "Brocklesby",
+     "Barnaby Green",
+     "Saltfleetby St Clement",
+     "Scotby",
+     "Great Corby"
+    ],
+    "false_friends": [
+     "Barnaby Green"
+    ],
+    "ok": 19
+   },
+   {
+    "key": "bury",
+    "sample": [
+     "Sedbury",
+     "North Shoebury",
+     "Habrough",
+     "Adsborough",
+     "Owslebury",
+     "Tetbury Upton",
+     "Musselburgh",
+     "Narborough",
+     "Alderbury",
+     "Norbury",
+     "Astbury Marsh",
+     "Claverhambury",
+     "Worsbrough Dale",
+     "Kingsbury",
+     "Worlebury",
+     "Sudbury",
+     "Ellesborough",
+     "Winklebury",
+     "Bucklebury",
+     "Albury End"
+    ],
+    "false_friends": [],
+    "ok": 20
+   },
+   {
+    "key": "wick",
+    "sample": [
+     "High Southwick",
+     "West Hardwick",
+     "Boslowick",
+     "Bathwick",
+     "Pattiswick",
+     "Shelwick Green",
+     "Hawkswick",
+     "Lower Swanwick",
+     "Southwick",
+     "Tingewick",
+     "Northwick",
+     "Burymewick",
+     "East Keswick",
+     "Southwick",
+     "Osbaldwick",
+     "Hammerwich",
+     "Hawick",
+     "Little Barwick",
+     "Berwick",
+     "Butterwick"
+    ],
+    "false_friends": [
+     "Boslowick"
+    ],
+    "ok": 19
+   },
+   {
+    "key": "pen",
+    "sample": [
+     "Pentre-cwrt",
+     "Penbryn",
+     "Penshaw",
+     "Pencraig",
+     "Penrhos",
+     "Penrhiw",
+     "Pennorth",
+     "Penpillick",
+     "Penberth",
+     "Pentre-Gwenlais",
+     "Pentre'r Felin",
+     "Penygraigwen",
+     "Pendoggett",
+     "Pennypot",
+     "Penygroes",
+     "Pentre-chwyth",
+     "Penhill",
+     "Penpergwm",
+     "Pencroesoped",
+     "Penperlleni"
+    ],
+    "false_friends": [
+     "Pennypot"
+    ],
+    "ok": 19
+   },
+   {
+    "key": "dun",
+    "sample": [
+     "Donibristle",
+     "Dunlichity",
+     "Dunreggan",
+     "Dunquin",
+     "Dunfermline",
+     "Dunans",
+     "Dunkeld",
+     "Duntulm",
+     "Dunbog",
+     "Dunglass",
+     "Dunskiag",
+     "Duncanstone",
+     "Duntiblae",
+     "Dundrum",
+     "Dunan",
+     "Duncansclett",
+     "Dunfanaghy",
+     "Dunalastair",
+     "Dunmanway",
+     "Dunmore"
+    ],
+    "false_friends": [
+     "Duncanstone",
+     "Duncansclett"
+    ],
+    "ok": 18
+   },
+   {
+    "key": "kil",
+    "sample": [
+     "Kilfinny",
+     "Killilan",
+     "Kilchrenan",
+     "Kilshanny",
+     "Kilcolman",
+     "Kilmacolm",
+     "Killybegs",
+     "Killarga",
+     "Kilmore Quay",
+     "Kilpatrick",
+     "Kilmichael of Inverlussa",
+     "Kilbride",
+     "Killucan",
+     "Kilmuckridge",
+     "Kilrane",
+     "Kilgarvan",
+     "Killiecrankie",
+     "Kilwinning",
+     "Upper Kilchattan",
+     "Killeshin"
+    ],
+    "false_friends": [],
+    "ok": 20
+   },
+   {
+    "key": "bal",
+    "sample": [
+     "Ballyvelaghan",
+     "Ballinabrackey",
+     "Balcurvie",
+     "Ballysadare",
+     "Balnabodach",
+     "Ballymichael",
+     "Ballycahill",
+     "Ballinderreen",
+     "Baluain",
+     "Ballycommon",
+     "Baleshare",
+     "Ballineen",
+     "Ballyhornan",
+     "Balintore",
+     "Ballinruan",
+     "Ballynacarrow",
+     "Ballyconneely",
+     "Balfarg",
+     "Ballymun",
+     "Balmore"
+    ],
+    "false_friends": [],
+    "ok": 20
+   },
+   {
+    "key": "town",
+    "sample": [
+     "Durns Town",
+     "Newtown",
+     "Newtown",
+     "Heath Town",
+     "Church Town",
+     "Hightown",
+     "Folly Town",
+     "Newtownards",
+     "New Town",
+     "Newtown",
+     "Piltown",
+     "Blackwatertown",
+     "Meadowtown",
+     "Roberttown",
+     "Newtown",
+     "Highertown",
+     "West Town",
+     "Castletown",
+     "Milltown of Auchindoun",
+     "Charlestown of Aberlour"
+    ],
+    "false_friends": [],
+    "ok": 20
+   },
+   {
+    "key": "ard",
+    "sample": [
+     "Newton of Ardtoe",
+     "Ardrossan",
+     "Ardtun",
+     "Ardgayhill",
+     "Ardee",
+     "Ardbrecknish",
+     "Ardbeg",
+     "Ardmulchan",
+     "Ardlui",
+     "Ardheslaig",
+     "Upper Ardchronie",
+     "Upper Ardelve",
+     "Ardmore",
+     "Ardmore",
+     "Ardgay",
+     "Ardnastang",
+     "Ardersier",
+     "Ardoch",
+     "Ardhasaig",
+     "Ardwell"
+    ],
+    "false_friends": [
+     "Ardee"
+    ],
+    "ok": 19
+   }
+  ],
+  "reasons": {
+   "ley": {
+    "Folley": "probably folly"
+   },
+   "ing": {
+    "Tucking Mill": "tucking, cloth fulling",
+    "Chipping Norton": "chipping, a market"
+   },
+   "by": {
+    "Barnaby Green": "may be the personal name Barnaby"
+   },
+   "wick": {
+    "Boslowick": "a Cornish name"
+   },
+   "pen": {
+    "Pennypot": "penny"
+   },
+   "dun": {
+    "Duncanstone": "personal name Duncan",
+    "Duncansclett": "personal name Duncan"
+   },
+   "ard": {
+    "Ardee": "Irish Baile Atha Fhirdhia"
+   }
+  }
+ },
+ "page": {
+  "chester_town": 0.3284,
+  "tre_hamlet": 0.4982,
+  "cot_hamlet": 0.4893,
+  "kil_coill_share": 0.2966981132075472,
+  "kil_cill_share": 0.6830188679245283,
+  "bal_baile_share": 0.9015544041450777,
+  "ards_bal": 0.4807,
+  "wex_bal": 0.2084,
+  "lincs_norse": 0.3326,
+  "thwaite_top": "Cumberland",
+  "aber_town": 0.1494,
+  "inver_town": 0.1296,
+  "bury_town": 0.0915
+ }
+}

@@ -1,0 +1,68 @@
+key,label,family,meaning,settlements,townlands,settlements_E,settlements_W,settlements_S,settlements_NI,settlements_ROI,townlands_NI,townlands_ROI
+llan,llan-,brittonic,"church enclosure, church (Welsh llan)",394,0,10,384,0,0,0,0,0
+pen,pen-,brittonic,"head, top, end (Brittonic penn)",336,0,103,233,0,0,0,0,0
+tre,tre- / tref-,brittonic,"farmstead, settlement (Welsh tref, Cornish tre)",279,0,184,95,0,0,0,0,0
+cwm,cwm-,brittonic,valley (Welsh cwm),97,0,0,97,0,0,0,0,0
+aber,aber-,brittonic,river mouth or confluence (Brittonic aber),87,0,1,64,22,0,0,0,0
+bryn,bryn-,brittonic,hill (Welsh bryn),82,0,0,82,0,0,0,0,0
+rhyd,rhyd-,brittonic,ford (Welsh rhyd),42,0,0,42,0,0,0,0,0
+nant,nant-,brittonic,"stream, stream valley (Welsh nant)",40,0,0,40,0,0,0,0,0
+porth,porth-,brittonic,"cove, landing place (Cornish porth)",28,0,28,0,0,0,0,0,0
+pit,pit-,brittonic,"a portion of land, farm (Pictish pett)",25,0,0,0,25,0,0,0,0
+caer,caer- / car-,brittonic,fort (Brittonic caer),23,0,0,23,0,0,0,0,0
+maes,maes-,brittonic,open field (Welsh maes),21,0,0,21,0,0,0,0,0
+lan,lan-,brittonic,church enclosure (Cornish lann),19,0,19,0,0,0,0,0,0
+pol,pol-,brittonic,"pool, cove (Cornish pol)",18,0,18,0,0,0,0,0,0
+bos,bos-,brittonic,"dwelling (Cornish bod, bos)",17,0,17,0,0,0,0,0,0
+ros,ros-,brittonic,"heath, promontory (Cornish ros)",17,0,17,0,0,0,0,0,0
+betws,betws,brittonic,"chapel, prayer house (Welsh betws, from Old English bedhus)",8,0,0,8,0,0,0,0,0
+ton,-ton,english,"farmstead, estate, later village (Old English tun). Some -ston names are stan, stone",5949,185,5331,168,432,3,15,34,151
+ley,-ley / -leigh,english,"woodland clearing, later meadow (Old English leah)",1902,0,1870,16,16,0,0,0,0
+ing,-ing / -ings,english,"the people of, or place of (Old English -ingas, -ing)",1724,0,1653,8,63,0,0,0,0
+ham,-ham,english,"homestead, village (Old English ham); some are hamm, land in a river bend, which the spelling cannot separate",1251,0,1230,8,13,0,0,0,0
+ford,-ford,english,"ford, a river crossing (Old English ford)",1020,0,959,15,46,0,0,0,0
+field,-field,english,"open land, cleared country (Old English feld)",819,0,705,19,95,0,0,0,0
+town,-town,english,"town, farm or settlement (later English town, from Old English tun)",783,3013,464,47,118,26,128,154,2859
+bury,-bury / -borough,english,"fortified place, later manor or town (Old English burh); some -borough names are beorg, hill",601,0,567,7,27,0,0,0,0
+don,-don,english,hill (Old English dun),431,0,431,0,0,0,0,0,0
+worth,-worth,english,"enclosure, enclosed farmstead (Old English worth)",392,0,392,0,0,0,0,0,0
+cot,-cote / -cott,english,"cottage, hut, shelter (Old English cot)",374,0,365,6,3,0,0,0,0
+den,-den / -dean,english,"valley (denu) or woodland pasture for pigs (denn), Old English",336,0,336,0,0,0,0,0,0
+wick,-wick / -wich,english,"specialised farm (often a dairy farm) or trading place (Old English wic, from Latin vicus)",308,0,293,5,10,0,0,0,0
+stead,-stead,english,"place, site, farm (Old English stede)",168,0,168,0,0,0,0,0,0
+hurst,-hurst,english,wooded hill (Old English hyrst),120,0,120,0,0,0,0,0,0
+stow,-stow,english,"place, often a holy place or meeting place (Old English stow)",82,0,77,4,1,0,0,0,0
+minster,-minster,english,monastery or major church (Old English mynster),33,0,33,0,0,0,0,0,0
+bal,bally- / bal-,goidelic,"baile: farm, homestead, settlement. In Irish names Bally- can also be beal atha, ford mouth",343,6282,0,0,127,24,192,1122,5160
+kil,kil- / kill-,goidelic,"cill: church. Kil- can also be coill, wood, and other words",267,3054,0,0,90,12,165,398,2656
+auch,auch- / agha-,goidelic,achadh: field,147,629,0,0,126,4,17,158,471
+dun,dun- / dum-,goidelic,"dun: fort, stronghold. Irish Don- is often domhnach, church",121,437,0,0,65,15,41,121,316
+glen,glen-,goidelic,"gleann: glen, valley",103,617,0,0,73,4,26,98,519
+drum,drum- / drom-,goidelic,druim: ridge,102,2389,0,0,51,9,42,743,1646
+kin,kin- / ken-,goidelic,"ceann: head, end",98,150,0,0,84,1,13,38,112
+ard,ard-,goidelic,"ard: height, high place, promontory",83,608,0,0,66,1,16,70,538
+knock,knock-,goidelic,cnoc: hill,56,1781,0,0,26,1,29,116,1665
+inver,inver-,goidelic,inbhir: river mouth or confluence,55,1,0,0,54,0,1,0,1
+clon,clon- / cloon-,goidelic,"cluain: meadow, pasture",48,1703,0,0,0,1,47,95,1608
+inis,ennis- / inish-,goidelic,"inis: island, river meadow",46,310,0,0,21,1,24,31,279
+carrick,carrick- / carrig-,goidelic,carraig: rock,35,642,0,0,5,3,27,79,563
+rath,rath-,goidelic,rath: ringfort,33,698,0,0,0,1,32,27,671
+lis,lis-,goidelic,"lios: ringfort, enclosure",31,1394,0,0,0,3,28,311,1083
+strath,strath-,goidelic,srath: broad river valley,28,0,0,0,28,0,0,0,0
+bel,bel- / bella-,goidelic,"beal: mouth, approach (often to a ford)",21,176,0,0,0,7,14,34,142
+tully,tully- / tulla-,goidelic,"tulach: low hill, mound",13,797,0,0,0,0,13,293,504
+derry,derry-,goidelic,doire: oak wood,13,1281,0,0,0,2,11,258,1023
+mullagh,mullagh-,goidelic,mullach: summit,4,455,0,0,0,1,3,162,293
+chester,-chester / -caster,latin,"Old English ceaster, a Roman fort or town (from Latin castra)",67,0,65,0,2,0,0,0,0
+strat,strat- / stret-,latin,"Old English straet, a paved road, often Roman (from Latin strata)",65,0,64,1,0,0,0,0,0
+pont,pont-,latin,"bridge (Welsh pont, from Latin pons)",52,0,0,52,0,0,0,0,0
+eccles,eccles-,latin,"church, from Brittonic, from Latin ecclesia",20,0,18,0,2,0,0,0,0
+by,-by,norse,"farmstead, village (Old Norse byr)",719,0,697,0,22,0,0,0,0
+thorpe,-thorpe,norse,outlying farm (Old Norse thorp; a few are Old English throp),389,0,389,0,0,0,0,0,0
+holme,-holme / -holm,norse,"island, dry ground in marsh, water meadow (Old Norse holmr)",162,0,139,0,23,0,0,0,0
+thwaite,-thwaite,norse,"clearing, meadow (Old Norse thveit)",85,0,85,0,0,0,0,0,0
+kirk,kirk-,norse,"church (Old Norse kirkja). Counted in England only, because Scots kirk is an everyday word",84,0,84,0,0,0,0,0,0
+setter,-setter / -bister,norse,"dwelling, farm (Old Norse setr, bolstadr)",75,0,0,0,75,0,0,0,0
+vik,-wick (bay),norse,bay (Old Norse vik),50,0,0,0,50,0,0,0,0
+toft,-toft,norse,"site of a house, homestead (Old Norse topt)",45,0,41,0,4,0,0,0,0
+scale,-scale(s),norse,"hut, shieling (Old Norse skali)",6,0,6,0,0,0,0,0,0

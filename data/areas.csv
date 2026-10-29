@@ -1,0 +1,250 @@
+nation,area,layer,names,tagged,fam_english,fam_norse,fam_latin,fam_brittonic,fam_goidelic,top_elements
+England,Barnsley,settlement,123,54,49,4,0,1,0,ley 13; ton 10; bury 8; worth 7; field 4; thorpe 4
+England,Bath and North East Somerset,settlement,201,88,88,0,0,1,0,ton 47; ing 8; ley 8; field 8; ford 6; wick 5
+England,Bedford,settlement,126,56,55,1,0,0,0,ton 22; ing 10; ham 8; den 7; ley 4; ford 3
+England,Birmingham,settlement,143,53,51,0,2,0,0,ley 21; ton 8; field 6; ing 4; ford 3; town 3
+England,Blackburn with Darwen,settlement,85,17,16,0,1,0,0,ton 3; worth 3; ley 3; town 2; ing 2; ford 1
+England,Blackpool,settlement,23,12,11,1,0,0,0,ton 7; ham 3; town 1; holme 1
+England,Bolton,settlement,90,23,23,0,0,0,0,ley 9; ton 7; ing 3; field 2; wick 1; worth 1
+England,"Bournemouth, Christchurch and Poole",settlement,98,35,35,0,0,0,0,ton 9; ley 6; ford 6; town 3; bury 3; worth 2
+England,Bracknell Forest,settlement,48,15,15,0,0,0,0,field 7; hurst 2; town 2; ing 1; stow 1; worth 1
+England,Bradford,settlement,253,101,82,19,1,0,0,ton 21; ley 21; ing 12; holme 9; field 6; don 6
+England,Buckinghamshire,settlement,416,167,167,0,2,0,0,ton 45; ham 22; don 20; ley 18; ing 15; cot 14
+England,Bury,settlement,83,24,24,1,0,0,0,field 6; ton 4; ley 3; worth 3; ing 2; wick 2
+England,Calderdale,settlement,148,52,46,6,0,0,0,ley 14; den 11; town 6; ton 5; holme 4; field 4
+England,Cambridgeshire,settlement,443,241,236,4,2,0,0,ton 94; ing 44; ham 38; ley 23; worth 15; ford 14
+England,Central Bedfordshire,settlement,191,85,84,1,2,0,0,ton 32; ing 13; ley 9; worth 7; ford 7; don 6
+England,Cheshire East,settlement,331,138,136,3,0,0,0,ton 49; ley 37; bury 14; ing 12; ford 10; field 7
+England,Cheshire West and Chester,settlement,265,150,147,2,3,0,0,ton 80; ley 22; ford 13; ing 9; ham 8; town 6
+England,City of Bristol,settlement,90,33,32,0,1,0,0,ton 14; field 5; bury 3; ham 3; ley 2; minster 2
+England,City of Derby,settlement,28,17,13,3,1,0,0,ton 9; by 2; don 1; worth 1; ley 1; den 1
+England,City of Kingston upon Hull,settlement,28,8,5,3,0,0,0,ton 4; by 2; field 1; ing 1; holme 1
+England,City of Leicester,settlement,32,12,10,1,1,0,0,ton 6; field 2; ing 2; chester 1; cot 1; don 1
+England,City of Nottingham,settlement,37,17,17,0,0,0,0,ton 7; ford 4; ley 3; bury 2; ing 2; ham 1
+England,City of Peterborough,settlement,61,44,36,8,0,0,0,ton 24; thorpe 6; ing 4; bury 3; ford 2; field 2
+England,City of Plymouth,settlement,73,23,21,0,0,2,0,ton 10; ley 4; ford 3; pen 2; ham 2; don 1
+England,City of Portsmouth,settlement,27,9,9,0,0,0,0,ton 5; ing 2; ham 1; bury 1; town 1
+England,City of Southampton,settlement,51,20,20,0,0,0,0,ley 4; ton 4; town 4; ford 2; ing 2; field 2
+England,City of Stoke-on-Trent,settlement,74,31,30,0,0,1,0,ton 10; ley 7; field 4; ford 4; den 1; ing 1
+England,City of Wolverhampton,settlement,77,28,28,0,0,1,0,field 8; ley 8; ton 4; ing 3; bury 2; ford 1
+England,Cornwall,settlement,1122,430,137,1,1,305,0,tre 183; ton 38; pen 36; town 25; porth 24; bos 17
+England,County Durham,settlement,433,176,157,15,7,0,0,ton 53; ley 31; ing 17; field 14; don 13; ham 9
+England,County of Herefordshire,settlement,669,279,262,2,5,15,0,ton 143; ley 40; ing 29; field 17; ford 16; ham 10
+England,Coventry,settlement,77,26,26,0,0,0,0,ley 13; ford 6; don 3; ham 1; field 1; wick 1
+England,Cumberland,settlement,538,204,116,92,0,0,0,ton 71; by 42; thwaite 28; town 14; field 10; kirk 10
+England,Darlington,settlement,54,28,27,1,0,0,0,ton 15; worth 4; ham 2; field 2; ing 2; by 1
+England,Derbyshire,settlement,788,332,303,29,1,2,0,ton 129; ley 83; ing 27; field 18; thorpe 13; town 11
+England,Devon,settlement,1228,599,581,1,2,17,0,ton 196; ford 90; ley 77; cot 47; ing 41; bury 38
+England,Doncaster,settlement,119,70,48,21,1,0,0,ton 17; ley 11; ing 7; by 7; thorpe 5; holme 5
+England,Dorset,settlement,710,292,286,3,4,1,0,ton 144; ford 39; ing 26; bury 25; ham 19; town 14
+England,Dudley,settlement,77,28,26,1,0,1,0,ley 13; ton 5; ford 3; cot 2; field 1; pen 1
+England,East Riding of Yorkshire,settlement,353,215,155,61,0,0,0,ton 87; ing 29; thorpe 25; by 21; ham 18; wick 14
+England,East Sussex,settlement,448,150,150,0,0,1,0,ton 40; ing 35; field 21; ham 19; ley 16; town 10
+England,Essex,settlement,873,346,335,9,1,2,0,ing 75; ley 59; ham 43; don 33; ton 33; ford 27
+England,Gateshead,settlement,80,35,34,1,0,0,0,ton 9; ley 5; worth 5; field 3; don 3; ham 3
+England,Gloucestershire,settlement,834,388,376,5,8,0,0,ton 141; ley 69; ing 56; ford 24; cot 24; field 22
+England,Greater London,settlement,690,318,315,1,4,1,0,ton 80; ing 45; ham 43; ley 35; ford 25; bury 19
+England,Halton,settlement,58,25,25,0,0,0,0,ton 17; field 3; town 2; wick 1; bury 1; worth 1
+England,Hampshire,settlement,983,448,443,1,7,1,0,ton 120; ley 98; ham 40; ing 39; ford 36; field 31
+England,Hartlepool,settlement,23,13,12,1,0,0,0,ton 9; ham 1; town 1; wick 1; ley 1; thorpe 1
+England,Hertfordshire,settlement,537,176,175,1,0,0,0,ley 29; ford 19; ton 19; den 17; ing 14; field 13
+England,Isle of Wight,settlement,168,52,52,0,0,0,0,ton 18; ley 8; ford 7; field 6; ing 4; stead 3
+England,Isles of Scilly,settlement,13,11,8,2,0,1,0,town 8; by 2; porth 1
+England,Kent,settlement,1207,430,426,2,2,3,0,ton 86; ing 79; ham 73; den 56; ley 36; hurst 25
+England,Kirklees,settlement,282,106,86,22,0,0,0,ley 27; ton 20; town 12; thorpe 8; field 7; by 7
+England,Knowsley,settlement,30,14,11,4,0,0,0,ton 6; by 4; kirk 2; ham 1; ley 1; ing 1
+England,Lancashire,settlement,772,279,249,27,5,6,0,ton 113; ley 27; ham 26; ing 26; holme 16; den 16
+England,Leeds,settlement,282,121,102,18,0,2,0,ton 40; ley 32; ing 11; thorpe 8; town 7; field 6
+England,Leicestershire,settlement,390,282,195,88,5,0,0,ton 118; by 63; thorpe 24; ing 21; ley 14; worth 12
+England,Lincolnshire,settlement,926,631,329,308,1,0,0,by 205; ton 189; ing 81; thorpe 73; ham 57; worth 17
+England,Liverpool,settlement,60,19,17,2,0,0,0,ton 8; ley 5; field 3; ing 2; kirk 1; by 1
+England,Luton,settlement,20,11,11,0,0,0,0,ley 3; town 3; ton 1; ham 1; ing 1; cot 1
+England,Manchester,settlement,51,31,27,3,1,0,0,ton 9; ley 4; bury 3; holme 3; wick 3; ing 2
+England,Medway,settlement,58,23,22,0,1,0,0,ing 6; ham 4; bury 3; ton 3; town 2; den 1
+England,Middlesbrough,settlement,22,12,9,4,0,0,0,ton 5; by 2; thorpe 2; ham 1; field 1; wick 1
+England,Milton Keynes,settlement,157,69,66,2,2,1,0,ton 32; ley 13; ford 6; ing 5; field 5; don 3
+England,Newcastle upon Tyne,settlement,54,24,24,0,0,0,0,ton 16; ing 4; ley 2; wick 2; field 1; don 1
+England,Norfolk,settlement,1068,637,563,72,9,2,0,ham 187; ton 186; ing 118; thorpe 39; bury 24; ford 24
+England,North East Lincolnshire,settlement,45,30,15,15,0,0,0,by 12; ham 3; ing 3; bury 3; ton 3; ley 3
+England,North Lincolnshire,settlement,108,80,42,38,0,0,0,by 25; ton 19; ham 8; thorpe 7; ing 7; toft 3
+England,North Northamptonshire,settlement,138,101,89,10,2,0,0,ton 46; ing 20; ley 11; thorpe 6; bury 5; wick 5
+England,North Somerset,settlement,149,66,66,0,0,0,0,ton 29; ley 9; ing 6; ford 6; bury 5; don 4
+England,North Tyneside,settlement,44,25,25,0,0,0,0,ton 12; ing 5; don 5; ley 3; worth 3; den 1
+England,North Yorkshire,settlement,1155,665,475,202,2,0,0,ton 314; by 130; ley 48; ing 46; thorpe 34; ham 25
+England,Northumberland,settlement,489,243,240,5,1,0,0,ton 113; ing 40; ley 26; ham 24; wick 18; field 15
+England,Nottinghamshire,settlement,423,270,220,52,1,0,0,ton 112; thorpe 26; ham 25; ley 22; ing 21; by 20
+England,Oldham,settlement,167,34,32,2,0,0,0,ton 12; field 5; ley 5; ham 2; wick 2; worth 1
+England,Oxfordshire,settlement,596,349,342,5,4,0,0,ton 148; ing 48; ford 39; cot 32; ley 32; ham 19
+England,Reading,settlement,15,11,11,0,0,0,0,ley 3; ham 3; ing 1; den 1; cot 1; town 1
+England,Redcar and Cleveland,settlement,52,32,23,11,0,0,0,ton 16; by 7; ham 3; thorpe 2; town 2; kirk 1
+England,Rochdale,settlement,102,26,24,2,0,0,0,ley 10; field 4; ton 3; ing 2; den 2; bury 1
+England,Rotherham,settlement,117,59,50,10,0,0,0,ton 23; ley 8; thorpe 6; field 5; worth 5; ing 3
+England,Rutland,settlement,57,42,37,5,1,0,0,ton 21; ham 8; thorpe 5; ing 4; cot 3; ley 2
+England,Salford,settlement,61,27,26,0,1,2,0,ton 15; ley 3; town 3; pen 2; ford 2; bury 1
+England,Sandwell,settlement,86,26,26,0,0,0,0,ley 8; ton 4; field 3; bury 3; wick 3; ing 2
+England,Sefton,settlement,40,15,11,4,0,0,0,ton 5; by 4; town 2; ing 2; wick 1; field 1
+England,Sheffield,settlement,239,65,56,8,2,0,0,ley 20; field 14; ton 10; thorpe 8; worth 6; ing 3
+England,Shropshire,settlement,967,493,483,0,7,11,0,ton 255; ley 83; ford 43; ing 28; cot 28; bury 24
+England,Slough,settlement,15,7,7,0,0,0,0,ton 4; ham 2; ley 1
+England,Solihull,settlement,68,28,28,0,0,0,0,ton 8; ley 7; wick 4; field 2; don 2; ing 1
+England,Somerset,settlement,1166,508,497,3,7,5,0,ton 207; ford 82; ing 56; ley 51; town 31; ham 30
+England,South Gloucestershire,settlement,171,82,82,0,0,0,0,ton 36; bury 13; ley 9; field 9; ing 9; wick 3
+England,South Tyneside,settlement,31,12,12,0,0,0,0,don 4; ton 4; ley 2; town 1; worth 1
+England,Southend-on-Sea,settlement,15,7,6,1,0,0,0,town 3; ton 1; thorpe 1; bury 1; ley 1
+England,St. Helens,settlement,66,20,20,0,3,0,0,ton 11; eccles 3; ley 3; ford 2; town 2; ham 1
+England,Staffordshire,settlement,847,363,355,4,5,1,0,ton 151; ley 85; ford 31; ing 23; field 16; don 15
+England,Stockport,settlement,74,22,21,1,0,0,0,ton 7; ley 6; bury 4; ing 3; holme 1; ford 1
+England,Stockton-on-Tees,settlement,51,31,27,6,0,0,0,ton 15; ing 5; by 4; ham 3; field 2; wick 2
+England,Suffolk,settlement,922,483,467,18,3,0,0,ton 124; ham 122; ing 72; field 47; ley 45; ford 32
+England,Sunderland,settlement,101,52,50,0,0,2,0,ton 24; ing 9; don 6; town 5; ley 4; worth 3
+England,Surrey,settlement,488,187,182,4,1,0,0,ley 36; ham 35; ton 25; ford 25; ing 16; field 15
+England,Swindon,settlement,82,39,38,0,3,1,0,ton 14; don 7; bury 5; ing 5; town 3; cot 3
+England,Tameside,settlement,82,26,26,0,0,0,0,ley 9; ton 8; hurst 3; field 2; town 1; ford 1
+England,Telford and Wrekin,settlement,129,63,63,0,0,0,0,ton 33; ley 15; ing 8; ford 5; cot 3; worth 2
+England,The City of Brighton and Hove,settlement,32,19,19,0,0,0,0,den 10; ton 6; ing 3; ham 1; town 1; bury 1
+England,Thurrock,settlement,28,16,16,0,0,0,0,ford 5; bury 3; ing 3; don 2; ley 1; field 1
+England,Torbay,settlement,36,18,18,0,0,0,0,ton 12; don 3; ham 2; ing 2; ford 1
+England,Trafford,settlement,34,19,18,1,1,0,0,ton 8; ing 3; ham 3; ford 3; ley 2; town 1
+England,Wakefield,settlement,181,83,64,19,0,0,0,ton 22; thorpe 13; ley 11; town 6; field 6; worth 6
+England,Walsall,settlement,64,17,17,0,0,0,0,ton 4; ley 3; wick 3; ing 3; cot 2; field 1
+England,Warrington,settlement,84,29,27,1,2,1,0,ton 13; ley 6; ing 4; wick 2; strat 2; ford 2
+England,Warwickshire,settlement,474,287,280,6,5,0,0,ton 137; ley 47; ing 35; cot 26; ford 25; bury 12
+England,West Berkshire,settlement,170,93,92,1,2,0,0,ton 21; ham 16; ford 9; ley 9; stead 9; field 7
+England,West Northamptonshire,settlement,258,178,151,26,2,0,0,ton 71; ing 17; cot 15; by 14; don 13; ford 11
+England,West Sussex,settlement,487,237,236,0,2,0,0,ton 61; ing 58; ham 46; ley 17; stead 13; hurst 13
+England,Westmorland and Furness,settlement,541,182,106,74,1,2,0,ton 63; by 32; thwaite 25; ley 10; town 9; wick 9
+England,Wigan,settlement,117,47,45,1,1,0,0,ley 18; ton 15; ing 8; town 4; field 4; ford 3
+England,Wiltshire,settlement,753,388,388,0,2,1,0,ton 175; ley 49; ford 46; ing 33; bury 23; ham 20
+England,Windsor and Maidenhead,settlement,71,22,22,0,0,0,0,ham 7; ley 5; field 2; town 2; wick 1; ford 1
+England,Wirral,settlement,61,32,24,8,0,1,0,ton 20; by 8; ing 3; bury 2; hurst 1; ham 1
+England,Wokingham,settlement,50,24,23,1,0,0,0,ley 8; field 5; ham 5; ford 2; ing 2; stead 1
+England,Worcestershire,settlement,676,275,272,0,2,3,0,ton 98; ley 61; ford 26; ing 16; field 15; ham 14
+England,York,settlement,52,33,22,10,1,0,0,ton 14; thorpe 7; ing 4; wick 3; by 3; ham 2
+Northern Ireland,Antrim and Newtownabbey,settlement,18,5,3,0,0,0,2,town 3; bal 1; kil 1
+Northern Ireland,Antrim and Newtownabbey,townland,309,150,11,0,0,0,141,bal 83; drum 12; dun 10; kil 9; town 9; lis 7
+Northern Ireland,Ards and North Down,settlement,24,7,2,0,0,0,5,bal 3; town 2; dun 1; kil 1
+Northern Ireland,Ards and North Down,townland,285,195,15,0,0,0,183,bal 137; town 14; tully 12; kil 10; drum 7; ard 4
+Northern Ireland,"Armagh City, Banbridge and Craigavon",settlement,40,15,9,0,0,0,7,town 7; ton 2; dun 2; bal 1; bel 1; drum 1
+Northern Ireland,"Armagh City, Banbridge and Craigavon",townland,969,542,8,0,0,0,536,bal 127; drum 107; derry 59; tully 55; lis 50; kil 41
+Northern Ireland,Belfast,settlement,2,2,0,0,0,0,2,bel 1; dun 1
+Northern Ireland,Belfast,townland,70,42,5,0,0,0,38,bal 31; town 4; kil 3; dun 2; ton 1; tully 1
+Northern Ireland,Causeway Coast and Glens,settlement,50,17,2,0,0,0,15,bal 6; dun 3; kil 2; town 2; auch 1; drum 1
+Northern Ireland,Causeway Coast and Glens,townland,1445,594,31,0,0,0,568,bal 231; drum 85; kil 43; lis 35; knock 26; glen 25
+Northern Ireland,Derry City and Strabane,settlement,19,7,2,0,0,0,5,bal 1; carrick 1; drum 1; dun 1; ton 1; kil 1
+Northern Ireland,Derry City and Strabane,townland,705,244,31,0,0,0,215,bal 45; lis 30; kil 29; town 28; drum 18; glen 16
+Northern Ireland,Fermanagh and Omagh,settlement,37,16,3,0,0,0,13,town 3; bel 2; drum 2; lis 2; bal 1; carrick 1
+Northern Ireland,Fermanagh and Omagh,townland,2782,1117,23,0,0,0,1096,drum 322; kil 130; derry 122; tully 76; lis 68; mullagh 65
+Northern Ireland,Lisburn and Castlereagh,settlement,21,10,1,0,0,0,9,drum 3; dun 2; auch 1; bal 1; glen 1; lis 1
+Northern Ireland,Lisburn and Castlereagh,townland,264,146,1,0,0,0,146,bal 67; lis 15; drum 14; auch 12; tully 8; kil 6
+Northern Ireland,Mid Ulster,settlement,43,14,4,0,0,0,10,town 4; dun 3; auch 2; bal 2; bel 1; clon 1
+Northern Ireland,Mid Ulster,townland,1389,619,19,0,0,0,603,bal 108; drum 103; kil 81; tully 56; lis 54; derry 45
+Northern Ireland,Mid and East Antrim,settlement,29,10,1,0,0,0,9,bal 4; glen 2; bel 1; carrick 1; kil 1; town 1
+Northern Ireland,Mid and East Antrim,townland,480,233,23,0,0,0,212,bal 88; kil 24; drum 23; town 22; lis 15; tully 13
+Northern Ireland,"Newry, Mourne and Down",settlement,53,15,2,0,0,0,13,bal 4; kil 4; town 2; ard 1; bel 1; derry 1
+Northern Ireland,"Newry, Mourne and Down",townland,822,418,21,0,0,0,404,bal 166; drum 52; tully 36; lis 32; kil 22; carrick 21
+Republic of Ireland,Carlow,settlement,28,13,2,0,0,0,11,kil 3; town 2; bal 2; rath 2; clon 2; tully 1
+Republic of Ireland,Carlow,townland,560,302,56,0,0,0,251,bal 108; town 49; kil 41; knock 26; rath 26; clon 17
+Republic of Ireland,Cavan,settlement,61,23,2,0,0,0,21,kil 4; bal 4; lis 3; drum 2; carrick 2; bel 2
+Republic of Ireland,Cavan,townland,1977,854,12,0,0,0,843,drum 279; kil 119; lis 79; derry 66; tully 51; auch 46
+Republic of Ireland,Clare,settlement,86,39,3,0,0,0,36,kil 15; lis 4; bal 4; town 3; inis 2; tully 2
+Republic of Ireland,Clare,townland,2221,961,19,0,0,0,943,bal 261; kil 136; knock 111; clon 106; drum 75; derry 66
+Republic of Ireland,Cork,settlement,213,99,15,0,0,0,85,bal 27; kil 12; town 12; carrick 6; dun 5; drum 5
+Republic of Ireland,Cork,townland,5326,2394,128,0,0,0,2271,bal 700; kil 310; knock 291; drum 136; derry 123; lis 121
+Republic of Ireland,Donegal,settlement,141,51,6,0,0,0,46,bal 10; glen 7; kil 6; dun 5; town 5; carrick 5
+Republic of Ireland,Donegal,townland,2739,954,61,0,0,0,898,drum 201; bal 168; tully 70; kil 64; town 57; glen 53
+Republic of Ireland,Dublin,settlement,124,56,18,0,0,0,38,town 16; bal 9; kil 9; dun 5; rath 4; clon 4
+Republic of Ireland,Dublin,townland,883,428,245,0,0,0,190,town 234; bal 79; kil 39; rath 14; ton 11; clon 9
+Republic of Ireland,Galway,settlement,131,54,4,0,0,0,50,kil 15; bal 13; clon 5; inis 4; town 4; ard 2
+Republic of Ireland,Galway,townland,4255,1381,53,0,0,0,1331,bal 320; kil 196; clon 194; lis 120; knock 113; derry 104
+Republic of Ireland,Kerry,settlement,87,34,5,0,0,0,30,kil 8; bal 7; town 4; glen 4; lis 3; drum 1
+Republic of Ireland,Kerry,townland,2692,1046,15,0,0,0,1033,bal 265; kil 162; knock 136; drum 93; derry 74; lis 56
+Republic of Ireland,Kildare,settlement,55,27,11,0,0,0,16,town 11; kil 9; bal 2; rath 2; derry 1; carrick 1
+Republic of Ireland,Kildare,townland,1210,629,315,0,0,0,320,town 306; bal 93; kil 76; clon 27; rath 22; dun 18
+Republic of Ireland,Kilkenny,settlement,52,21,7,0,0,0,14,town 7; kil 4; bal 3; dun 2; tully 2; inis 1
+Republic of Ireland,Kilkenny,townland,1573,641,166,0,0,0,483,bal 201; town 158; kil 79; rath 42; knock 39; dun 23
+Republic of Ireland,Laois,settlement,39,18,4,0,0,0,14,bal 8; town 3; kil 2; dun 1; ton 1; rath 1
+Republic of Ireland,Laois,townland,1111,457,39,0,0,0,423,bal 133; clon 71; kil 58; derry 40; town 31; knock 29
+Republic of Ireland,Leitrim,settlement,49,29,2,0,0,0,27,kil 6; drum 5; glen 4; bal 2; auch 2; tully 2
+Republic of Ireland,Leitrim,townland,1483,626,12,0,0,0,615,drum 198; kil 67; derry 55; auch 51; lis 49; clon 43
+Republic of Ireland,Limerick,settlement,97,37,5,0,0,0,32,kil 10; bal 9; knock 3; town 3; ard 2; drum 2
+Republic of Ireland,Limerick,townland,1929,939,96,0,0,0,846,bal 376; kil 111; town 85; knock 75; drum 47; clon 46
+Republic of Ireland,Longford,settlement,28,12,3,0,0,0,9,bal 3; town 3; kil 2; clon 2; drum 1; carrick 1
+Republic of Ireland,Longford,townland,886,411,24,0,0,0,389,clon 70; bal 65; lis 53; kil 45; auch 39; derry 33
+Republic of Ireland,Louth,settlement,35,13,4,0,0,0,9,town 4; drum 2; dun 2; knock 1; tully 1; bal 1
+Republic of Ireland,Louth,townland,674,359,157,0,0,0,207,town 154; bal 42; rath 27; drum 25; kil 19; mullagh 16
+Republic of Ireland,Mayo,settlement,140,53,3,0,0,0,50,kil 12; bal 11; knock 4; bel 4; clon 4; auch 3
+Republic of Ireland,Mayo,townland,3252,1237,25,0,0,0,1214,bal 203; clon 173; knock 154; derry 142; kil 124; drum 87
+Republic of Ireland,Meath,settlement,74,43,15,0,0,0,31,town 15; dun 7; rath 5; kil 5; bal 4; drum 3
+Republic of Ireland,Meath,townland,1599,968,565,0,0,0,432,town 561; bal 123; kil 59; clon 45; rath 45; knock 22
+Republic of Ireland,Monaghan,settlement,55,22,2,0,0,0,20,kil 3; drum 3; bal 2; carrick 2; clon 2; inis 1
+Republic of Ireland,Monaghan,townland,1848,819,5,0,0,0,815,drum 220; kil 106; lis 87; mullagh 67; tully 63; derry 60
+Republic of Ireland,Offaly,settlement,44,15,2,0,0,0,13,kil 4; clon 4; bal 2; dun 1; kin 1; ton 1
+Republic of Ireland,Offaly,townland,1143,574,48,0,0,0,530,bal 180; clon 94; kil 88; derry 53; town 39; rath 24
+Republic of Ireland,Roscommon,settlement,69,27,2,0,0,0,25,bal 10; kil 4; town 2; knock 2; bel 2; lis 2
+Republic of Ireland,Roscommon,townland,2045,867,35,0,0,0,839,clon 201; bal 113; kil 101; lis 84; derry 70; knock 44
+Republic of Ireland,Sligo,settlement,63,27,1,0,0,0,26,bal 9; drum 5; kil 4; clon 2; auch 1; town 1
+Republic of Ireland,Sligo,townland,1265,530,15,0,0,0,517,bal 83; clon 64; knock 59; kil 48; drum 41; rath 36
+Republic of Ireland,Tipperary,settlement,123,50,3,0,0,0,47,bal 17; kil 7; carrick 4; clon 4; drum 3; knock 3
+Republic of Ireland,Tipperary,townland,3140,1326,161,0,0,0,1169,bal 375; kil 184; town 150; knock 138; lis 91; clon 84
+Republic of Ireland,Waterford,settlement,41,23,4,0,0,0,19,bal 6; town 4; dun 3; knock 3; kil 2; ard 1
+Republic of Ireland,Waterford,townland,1572,780,68,0,0,0,716,bal 273; knock 128; kil 120; town 62; glen 52; carrick 40
+Republic of Ireland,Westmeath,settlement,59,26,8,0,0,0,18,bal 8; town 8; drum 2; kil 2; rath 2; kin 1
+Republic of Ireland,Westmeath,townland,1341,792,275,0,0,0,530,town 274; bal 165; kil 96; clon 66; rath 45; lis 25
+Republic of Ireland,Wexford,settlement,80,41,10,0,0,0,31,bal 14; kil 10; town 10; dun 2; inis 2; rath 1
+Republic of Ireland,Wexford,townland,2299,1109,305,0,0,0,817,bal 479; town 296; kil 111; knock 66; clon 44; rath 31
+Republic of Ireland,Wicklow,settlement,48,24,2,0,0,0,23,kil 6; bal 5; rath 3; dun 2; glen 2; knock 2
+Republic of Ireland,Wicklow,townland,1357,692,110,0,0,0,594,bal 307; town 102; kil 97; knock 60; rath 28; carrick 21
+Scotland,Aberdeen City,settlement,53,17,14,0,0,2,1,ton 7; field 4; aber 2; town 1; ing 1; ley 1
+Scotland,Aberdeenshire,settlement,494,141,66,1,0,10,66,ton 29; town 20; kin 14; auch 12; bal 11; inver 8
+Scotland,Angus,settlement,171,56,31,1,0,1,28,ton 21; bal 7; kin 4; ing 4; auch 3; glen 3
+Scotland,Argyll and Bute,settlement,331,100,13,1,0,0,89,kil 29; ard 22; bal 9; ton 8; glen 8; inver 7
+Scotland,City of Edinburgh,settlement,151,48,41,0,0,0,7,ton 32; field 5; ing 3; ford 2; town 2; drum 1
+Scotland,Clackmannanshire,settlement,21,5,3,0,0,0,2,field 2; glen 1; kin 1; ton 1
+Scotland,Dumfries and Galloway,settlement,319,90,49,12,0,0,30,ton 22; town 11; dun 8; ing 7; field 7; holme 6
+Scotland,Dundee City,settlement,25,9,5,1,0,0,4,field 3; bal 2; ton 1; ard 1; by 1; dun 1
+Scotland,East Ayrshire,settlement,93,28,18,2,0,0,8,ton 12; knock 3; ing 2; holme 2; ford 2; field 2
+Scotland,East Dunbartonshire,settlement,42,10,5,0,0,0,5,ton 4; bal 2; auch 2; dun 1; town 1
+Scotland,East Lothian,settlement,99,41,34,1,0,2,5,ton 20; ing 4; ford 3; inver 2; cot 2; wick 2
+Scotland,East Renfrewshire,settlement,41,10,7,1,0,0,2,ton 5; auch 1; ham 1; by 1; dun 1; ford 1
+Scotland,Falkirk,settlement,98,21,16,0,0,0,6,ton 6; ford 3; field 3; glen 2; dun 2; auch 1
+Scotland,Fife,settlement,267,96,45,2,0,11,43,ton 15; town 15; bal 11; field 7; pit 7; dun 7
+Scotland,Glasgow City,settlement,159,43,31,1,0,0,12,ton 19; field 5; drum 4; town 3; ley 2; ing 2
+Scotland,Highland,settlement,1330,391,75,37,0,5,285,auch 64; bal 43; ton 42; ard 28; kin 27; kil 24
+Scotland,Inverclyde,settlement,58,15,9,0,0,0,6,ton 7; auch 2; glen 1; ing 1; inver 1; drum 1
+Scotland,Midlothian,settlement,77,21,19,0,0,0,2,ton 10; field 4; town 2; ing 2; wick 1; glen 1
+Scotland,Moray,settlement,174,50,32,0,0,2,18,town 16; ton 10; auch 5; glen 3; knock 3; ford 3
+Scotland,Na h-Eileanan an Iar,settlement,323,41,7,5,0,0,29,ard 7; bal 6; ton 5; vik 4; knock 4; kil 4
+Scotland,North Ayrshire,settlement,107,32,11,0,0,0,22,kil 8; auch 6; ton 6; glen 2; ing 2; field 2
+Scotland,North Lanarkshire,settlement,169,37,21,0,0,0,16,ton 12; field 5; auch 3; bal 3; town 3; dun 3
+Scotland,Orkney Islands,settlement,168,56,24,31,0,0,2,setter 17; ton 14; town 8; vik 8; holme 2; by 2
+Scotland,Perth and Kinross,settlement,285,115,42,1,0,12,65,ton 23; kin 15; bal 15; dun 7; glen 7; aber 7
+Scotland,Renfrewshire,settlement,69,19,16,0,0,0,3,ton 10; field 2; bury 1; town 1; kil 1; inis 1
+Scotland,Scottish Borders,settlement,214,70,53,10,3,0,6,ton 32; holme 10; ford 5; ing 4; town 4; bury 3
+Scotland,Shetland Islands,settlement,266,88,19,66,0,0,3,setter 36; vik 27; ing 6; bury 6; by 3; bal 2
+Scotland,South Ayrshire,settlement,81,28,21,0,0,0,8,ton 11; field 3; knock 2; town 2; dun 2; ing 2
+Scotland,South Lanarkshire,settlement,177,46,37,0,0,0,9,ton 27; ing 9; ford 4; field 3; auch 3; kil 2
+Scotland,Stirling,settlement,92,34,10,0,0,1,23,ton 7; auch 4; bal 3; kil 3; inver 2; kin 2
+Scotland,West Dunbartonshire,settlement,38,13,7,0,0,0,7,ton 4; dun 2; town 2; kil 2; inis 1; bal 1
+Scotland,West Lothian,settlement,90,20,14,1,1,1,3,ton 8; field 3; ford 1; strath 1; glen 1; bal 1
+Wales,Blaenau Gwent,settlement,55,19,6,0,0,13,0,town 6; cwm 3; nant 2; tre 2; bryn 2; aber 2
+Wales,Bridgend,settlement,85,30,8,0,1,21,0,bryn 6; ton 4; pen 3; town 3; tre 2; aber 2
+Wales,Caerphilly,settlement,116,47,10,0,4,33,0,pen 8; tre 6; cwm 6; town 4; aber 4; pont 4
+Wales,Cardiff,settlement,67,26,6,0,2,18,0,pen 7; llan 7; town 3; ton 3; caer 2; pont 2
+Wales,Carmarthenshire,settlement,339,123,6,0,6,111,0,llan 47; cwm 21; pen 18; bryn 7; pont 6; rhyd 5
+Wales,Ceredigion,settlement,247,94,1,0,5,88,0,llan 25; pen 20; cwm 8; rhyd 8; aber 7; tre 7
+Wales,Conwy,settlement,127,53,0,0,1,52,0,llan 19; pen 17; nant 5; rhyd 4; bryn 3; betws 2
+Wales,Denbighshire,settlement,123,40,1,0,0,39,0,llan 16; pen 9; bryn 4; tre 4; nant 2; cwm 2
+Wales,Flintshire,settlement,165,57,23,0,3,32,0,ton 14; pen 10; maes 4; bryn 4; tre 3; llan 3
+Wales,Gwynedd,settlement,325,115,2,0,1,113,0,llan 42; pen 25; bryn 12; aber 10; rhyd 7; tre 6
+Wales,Isle of Anglesey,settlement,148,65,1,0,0,64,0,llan 36; pen 14; bryn 5; tre 5; caer 1; aber 1
+Wales,Merthyr Tydfil,settlement,51,18,4,0,1,13,0,aber 4; pen 4; town 4; tre 3; pont 1; cwm 1
+Wales,Monmouthshire,settlement,210,83,22,0,0,63,0,llan 42; ton 8; pen 7; cwm 4; tre 4; field 3
+Wales,Neath Port Talbot,settlement,95,32,4,0,3,26,0,cwm 5; bryn 5; aber 5; llan 3; pont 3; pen 3
+Wales,Newport,settlement,76,20,8,0,0,12,0,llan 5; ton 4; caer 3; pen 2; stow 1; town 1
+Wales,Pembrokeshire,settlement,369,134,78,0,4,52,0,ton 63; llan 21; tre 13; pen 9; ford 6; pont 4
+Wales,Powys,settlement,504,206,27,0,6,174,0,llan 80; pen 35; cwm 16; tre 16; ton 16; aber 11
+Wales,Rhondda Cynon Taf,settlement,139,65,12,0,5,48,0,town 11; bryn 10; pen 9; cwm 7; tre 7; llan 6
+Wales,Swansea,settlement,173,59,22,0,2,35,0,ton 18; pen 12; cwm 9; llan 8; pont 2; wick 2
+Wales,Torfaen,settlement,73,26,3,0,8,16,0,pont 8; cwm 7; llan 4; pen 3; field 2; tre 1
+Wales,Vale of Glamorgan,settlement,118,49,24,0,0,25,0,ton 17; llan 13; pen 7; town 4; aber 3; tre 2
+Wales,Wrexham,settlement,161,53,30,0,1,24,0,ton 15; pen 10; tre 5; bryn 5; ley 5; field 3

@@ -1,0 +1,216 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage{fontspec}
+\setmainfont{TeX Gyre Pagella}
+\newfontfamily\headfont{Inter}[UprightFont=*-ExtraBold,BoldFont=*-ExtraBold,Extension=.otf,Path=/usr/share/fonts/opentype/inter/]
+\usepackage[a4paper,margin=2.3cm]{geometry}
+\usepackage{graphicx,booktabs,float,caption,array}
+\usepackage[hidelinks]{hyperref}
+\usepackage{titlesec}
+\usepackage{setspace}
+\setstretch{1.05}
+\renewcommand{\topfraction}{0.9}
+\renewcommand{\bottomfraction}{0.8}
+\renewcommand{\textfraction}{0.1}
+\renewcommand{\floatpagefraction}{0.75}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.55em}
+\titleformat{\section}{\headfont\Large}{\thesection}{0.8em}{}
+\titleformat{\subsection}{\headfont\large}{\thesubsection}{0.8em}{}
+\captionsetup{font=small,labelfont=bf}
+\urlstyle{same}
+\hypersetup{pdftitle={What Is Your Town's Name Made Of? A Spelling-Based Atlas of Place-Name Elements in Britain and Ireland},pdfauthor={Tristan Hotham}}
+
+\begin{document}
+\begin{center}
+{\Large\bfseries What Is Your Town's Name Made Of?\\[2pt] A Spelling-Based Atlas of Place-Name Elements in Britain and Ireland\par}
+\vspace{1.2em}
+{\large Tristan Hotham\par}
+\vspace{0.3em}
+{\small Independent researcher\\
+ORCID: 0000-0003-4931-9349\\
+DOI: \href{https://doi.org/10.5281/zenodo.23761433}{https://doi.org/10.5281/zenodo.23761433}\par}
+\vspace{0.8em}
+2026
+\end{center}
+
+\begin{quote}
+\small
+\begin{center}\textbf{Abstract}\end{center}
+Place names in Britain and Ireland preserve words from Old English, Old Norse, Latin, the Brittonic languages and Gaelic. They have been studied in depth county by county, but rarely mapped together from open data across both islands. I tag {{meta.n_names|int}} names with {{meta.n_rules|int}} spelling rules for common elements: {{meta.n_settlements|int}} settlements (OS Open Names for Great Britain; the OSNI and Tailte Éireann gazetteers for Ireland) and {{meta.n_townlands|int}} Irish townlands. {{coverage.settlements_any|pct}} of settlements and {{coverage.townlands_any|pct}} of townlands carry at least one element. The commonest is the English -ton ({{elements.ton.n|int}} settlements, {{ton_share_england|pct}} of England's); Bally- leads among townlands ({{ireland.bal_townlands|int}}). Simple profiles show sharp linguistic edges: within 20 to 40 km of the England and Wales border, {{border.welsh_20_40_w|pct}} of settlements on the Welsh side have a Welsh element against {{border.welsh_20_40_e|pct1}} on the English side, and Cornish elements fall from {{cornwall.cornwall_share|pct}} of settlements in Cornwall to {{cornwall.devon_share|pct1}} in Devon. Settlements with the Latin-derived -chester are towns or cities ten times as often as settlements in general ({{page.chester_town|pct}} against {{size.base_town_share|pct1}}). Official Irish forms for {{irish_forms.n_with_irish|int}} names in the Republic allow a test of what anglicised spellings stand for. Most are reliable (Knock- is cnoc, a hill, in {{irish_forms.rows.knock.agree_share|pct}} of cases), but Kil- is cill, a church, in only {{page.kil_cill_share|pct}}, and coill, a wood, in {{page.kil_coill_share|pct}}, rising to {{irish_forms.kil_townlands.counties.0.1|int}} of {{irish_forms.kil_townlands.counties.0.2|int}} Kil- townlands in {{irish_forms.kil_townlands.counties.0.0}}. Spelling rules are a first guess, not an etymology, and the datasets differ in detail; the interactive map lets readers look up any name.
+
+\textbf{Keywords:} place names; toponymy; place-name elements; Old English; Old Norse; Welsh; Cornish; Gaelic; townlands; open data
+\end{quote}
+
+\section{Introduction}
+
+A place name is often the oldest piece of language in daily use. Bradford is the broad ford, Grimsby a Norse farmstead, Lancaster a Roman fort on the Lune, Llandudno the church of Tudno and Ballymena a settlement in the middle. Each name carries an element, a word from the language that named the place, and the distribution of these elements has long been used as evidence for the history of settlement and language: the Norse -bys of eastern England, the Welsh llan- names, the Gaelic and Pictish names of Scotland, and the Irish townland names.
+
+That work is mostly done name by name in county surveys and dictionaries (for example Ekwall 1960; Watts 2004; Owen and Morgan 2007; Padel 1985; Flanagan and Flanagan 1994). This note asks a simpler, broader question. If we take every settlement name in the open national gazetteers of both islands, and every Irish townland, how far do a few dozen spelling rules go in showing the language layers of the map? Where are the edges sharp, and where are spellings misleading?
+
+Three things are new here. First, the map covers Great Britain, Northern Ireland and the Republic of Ireland together, from open data. Second, it measures the sharpness of two well-known linguistic edges, the England and Wales border and the Tamar between Cornwall and Devon, with the same rules applied on both sides. Third, it uses the official Irish forms of names in the Republic to test what common anglicised beginnings, such as Bally-, Kil- and Dun-, actually stand for. The interactive version is at \url{https://maps.tristanhotham.com/place-name-endings/}. A companion study maps landscape words and the Danelaw line (\url{https://maps.tristanhotham.com/dale-down-fell-beck/}); I do not repeat that analysis.
+
+\section{Data}
+
+\subsection{Great Britain}
+
+OS Open Names is Ordnance Survey's open gazetteer of Great Britain (Ordnance Survey 2026). I used its {{meta.gb_n|int}} populated places: {{meta.gb_kinds.Village|int}} villages, {{meta.gb_kinds.Hamlet|int}} hamlets, {{meta.gb_kinds.Suburban Area|int}} suburban areas, {{meta.gb_kinds.Other Settlement|int}} other settlements, {{meta.gb_kinds.Town|int}} towns and {{meta.gb_kinds.City|int}} cities. Where Ordnance Survey gives a Welsh or Scottish Gaelic form, I kept the English form as the main name and the other as an alternative. Each place has a point, a county or unitary area and a region.
+
+\subsection{Northern Ireland}
+
+Ordnance Survey's open data stop at Great Britain. For Northern Ireland I used two OSNI Open Data products published by Land and Property Services under the Open Government Licence: the Gazetteer Place Names, {{meta.ni_places_n|int}} towns and villages (Land and Property Services 2015), and the Largescale Boundaries Townlands, from which I took the name and centroid of each of {{meta.ni_townlands_n|int}} townlands (Land and Property Services 2026). Both were retrieved on {{meta.ni_retrieved}}; the townland centroids came from a hosted copy of the OSNI layer. Each Northern Ireland name was assigned to its current council area using ONS boundaries.
+
+\subsection{Republic of Ireland}
+
+Tailte Éireann publishes the National Placenames Gazetteer as open data under CC BY 4.0 (Tailte Éireann 2024). I used two layers, retrieved on {{meta.ie_retrieved}}: Centres of Population ({{meta.roi_cop_n|int}} towns and villages) and Townlands ({{meta.roi_townlands_n|int}}). Both give an English name, a county and, for most names, an official Irish form: {{irish_forms.n_with_irish|int}} names in all, including {{irish_forms.n_townlands_irish|int}} townlands. These forms are the basis of the test in Section 4.7.
+
+\subsection{Comparability}
+
+The three sources differ. Great Britain's list goes down to hamlets; the Irish town lists hold only larger places, so Ireland has {{meta.n_settlements_ie|int}} settlements against {{meta.n_settlements_gb|int}} in Great Britain. Townlands are land divisions, not settlements, but they carry most Irish place names, so I report them separately throughout and never add them to the settlement counts.
+
+\section{Methods}
+
+\textbf{Tokens.} Each name is folded to lower-case letters without accents or apostrophes and split into words at spaces, hyphens and slashes. Common qualifiers (Upper, Lower, Great, Little, North, South, East, West, Saint, the Welsh Uchaf and Isaf, the Gaelic Beag and Mór and similar) are dropped, unless nothing else is left.
+
+\textbf{Rules.} {{meta.n_rules|int}} rules, each a regular expression that must match a whole word, tag elements in five families: English (for example -ton, -ham, -ing, -ley, -worth, -bury, -field, -ford, -wick, -stow, -minster and the later -town), Norse (-by, -thorpe, -thwaite, -toft, -holme, Kirk-, -scale, the Northern Isles' -setter and -bister, and -wick from vík in the north of Scotland), Latin borrowed through English or Welsh (-chester and -caster, strat- and stret-, eccles-, pont-), Brittonic (Welsh llan-, aber-, pen-, tre-, caer-, cwm, bryn, nant, rhyd, maes and betws; Cornish pol-, porth-, bos-, lan- and ros-; Pictish pit-) and Gaelic (bal- and bally-, kil-, inver-, dun-, strath-, auch- and agha-, glen-, knock-, drum-, ard-, kin-, carrick-, and in Ireland clon-, rath-, lis-, tully-, derry-, inis-, mullagh- and bel-). Endings need at least two letters in front of them. Some rules run only where the language was spoken, to avoid well-known false friends: Gaelic beginnings are not tested in England or Wales (Balham, Kilburn), Kirk- counts as Norse only in England, aber- is tested across Great Britain, llan- and pen- in Wales and England, tre- in Wales, Cornwall and Devon, the other Welsh rules only in Wales, and the Cornish rules only in Cornwall, the Isles of Scilly and Devon. A name may carry several elements; Birmingham has -ing and -ham. Each element has a short gloss based on the commonly given meaning, with the main alternatives where one spelling covers several words. The glosses are a guide; individual names need a place-name dictionary.
+
+\textbf{Families and grids.} A name belongs to every family of its elements. For mapping, names are counted in cells of 0.15 degrees of latitude by 0.25 degrees of longitude (about 16 km) and 0.3 by 0.5 degrees; a cell's leading family is the one found in most of its tagged names.
+
+\textbf{Border profiles.} For the England and Wales border I computed each settlement's distance from the land border (ONS district boundaries; Office for National Statistics 2025), signed negative in England and positive in Wales, for settlements between latitude 51.45 and 53.45 within 60 km, and applied the Welsh rules on both sides regardless of nation. For Cornwall I took settlements in Cornwall and Devon in quarter-degree bands of longitude, again applying the Cornish rules everywhere.
+
+\textbf{Irish forms.} For Republic of Ireland names with an official Irish form, I took the first word of the Irish form (after the article and initial mutations: Chill becomes Cill, tArd becomes Ard) and compared it with the Irish word each anglicised beginning is usually said to stand for: Bally- with baile, Kil- with cill, Knock- with cnoc, and so on. Only names whose first English word carries the element are used.
+
+\textbf{Spelling check.} During the analysis, 20 random matches for each of {{audit.elements|len}} common elements ({{audit.n|int}} names) were read through for plain false friends, such as Tucking Mill caught by -ing or Duncanstone by dun-. {{audit.false|int}} were found, so about {{audit.ok_share|pct}} of matches fit the intended spelling. This checks the rules, not the history.
+
+\section{Results}
+
+\subsection{Coverage and families}
+
+{{coverage.settlements_any_n|int}} settlements ({{coverage.settlements_any|pct}}) and {{coverage.townlands_any_n|int}} townlands ({{coverage.townlands_any|pct}}) carry at least one element; {{coverage.multi|int}} settlements carry more than one. Coverage is highest in England ({{coverage.by_nation.England|pct}}) and lowest in Scotland ({{coverage.by_nation.Scotland|pct}}), where many names use words not on the list. Figure~\ref{fig:fam} shows the family shares by nation and Table~\ref{tab:top} the commonest elements.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=\textwidth]{b_families.png}
+\caption{Share of settlements with an element from each language family, by nation, and of Irish townlands. A name can count towards more than one family.}
+\label{fig:fam}
+\end{figure}
+
+{{tab_top}}
+
+England is overwhelmingly English ({{families.settlements.England.english|pct}} of settlements, against {{families.settlements.England.norse|pct1}} Norse). Wales is Brittonic ({{families.settlements.Wales.brittonic|pct}}) with an English minority ({{families.settlements.Wales.english|pct}}). Scotland is the most mixed: Gaelic {{families.settlements.Scotland.goidelic|pct}}, English {{families.settlements.Scotland.english|pct}}, Norse {{families.settlements.Scotland.norse|pct1}}, with Norse elements on {{scotland.norse_isles.Shetland Islands|pct}} of Shetland's settlements and {{scotland.norse_isles.Orkney Islands|pct}} of Orkney's. In Ireland, Gaelic elements mark {{families.townlands.Republic of Ireland.goidelic|pct}} of townlands in the Republic and {{families.townlands.Northern Ireland.goidelic|pct}} in Northern Ireland. Of the {{grid.dominant_n|int}} fine grid cells with at least three tagged settlements, English leads in {{grid.dominant_counts.english|int}}, Gaelic in {{grid.dominant_counts.goidelic|int}}, Brittonic in {{grid.dominant_counts.brittonic|int}} and Norse in {{grid.dominant_counts.norse|int}} (Figure~\ref{fig:map}).
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.86\textwidth]{b_map.png}
+\caption{Settlements in Great Britain and townlands in Ireland, coloured by the first language family in the name. Grey: none of the {{meta.n_rules|int}} elements.}
+\label{fig:map}
+\end{figure}
+
+\subsection{English and Latin elements, and the size of places}
+
+The commonest element is -ton, from Old English tūn, a farmstead or estate that later became a village: {{elements.ton.n|int}} settlements, {{ton_share_england|pct}} of all those in England. Then come -ley ({{elements.ley.n|int}}), -ing ({{elements.ing.n|int}}), -ham ({{elements.ham.n|int}}), -ford ({{elements.ford.n|int}}) and -field ({{elements.field.n|int}}). Some -ston names are from stān, stone, and some -ham names from hamm, a river meadow; spelling cannot separate them.
+
+Elements differ in the size of the places that carry them. In Great Britain, {{size.base_town_share|pct1}} of settlements are towns or cities in Ordnance Survey's classification. For -chester and -caster (Old English ceaster, from Latin castra, used of Roman forts and towns) the share is {{page.chester_town|pct}} of {{elements.chester.n|int}}; for aber- {{page.aber_town|pct}} and inver- {{page.inver_town|pct}}; for -bury {{page.bury_town|pct}}. At the other end, {{page.tre_hamlet|pct}} of tre- settlements and {{page.cot_hamlet|pct}} of -cote settlements are hamlets. The data show the association, not its cause; the usual reading is that many ceaster sites were already important places when the English named them.
+
+\subsection{Norse elements}
+
+Norse elements are concentrated: -by ({{elements.by.n|int}} settlements), -thorpe ({{elements.thorpe.n|int}}) and -thwaite ({{elements.thwaite.n|int}}). In Lincolnshire {{page.lincs_norse|pct}} of settlements have a Norse element, against {{norse.england|pct1}} across England. Because some -thorpes may be Old English throp and some -bys may have been coined by English speakers, these counts mark Norse influence on naming rather than Norse settlers as such.
+
+\subsection{The England and Wales border}
+
+Figure~\ref{fig:border} shows the share of settlements with Welsh and English elements by distance from the border. Between 20 and 40 km inside Wales, {{border.welsh_20_40_w|pct}} have a Welsh element; at the same distance inside England, {{border.welsh_20_40_e|pct1}}. In the 5 km next to the border the shares are {{border.welsh_within5_w|pct}} (Wales) and {{border.welsh_within5_e|pct}} (England). {{border.welsh_in_england_n|int}} English settlements within 60 km of the border have Welsh spellings, mostly in western Shropshire and Herefordshire (Llanyblodwel, Llanfair Waterdine, Pontrilas, Llangrove). English elements fall from {{border.english_within5_e|pct}} just inside England to {{border.english_within5_w|pct}} just inside Wales and {{border.english_20_40_w|pct}} at 20 to 40 km.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=\textwidth]{b_border.png}
+\caption{Share of settlements with a Welsh element (green) or an English element (red), in 5 km bands by distance from the England and Wales land border. Welsh rules applied on both sides.}
+\label{fig:border}
+\end{figure}
+
+\subsection{Cornwall and the Tamar}
+
+With the Cornish rules (tre-, pol-, pen-, porth-, bos-, lan-, ros-) applied in both counties, {{cornwall.cornwall_share|pct}} of Cornwall's {{cornwall.cornwall_n|int}} settlements carry a Cornish element against {{cornwall.devon_share|pct1}} of Devon's {{cornwall.devon_n|int}}, and most of the Devon matches are false friends (Rosemary Lane, Pennymoor). Tre- alone appears in {{cornwall.tre_cornwall|int}} Cornish settlements and {{cornwall.tre_devon|int}} in Devon. Within Cornwall the share falls only gently from west ({{cornwall.west_share|pct}} west of 5 degrees west) to east ({{cornwall.east_share|pct}} east of 4.6 degrees west), then drops at the Tamar (Figure~\ref{fig:corn}).
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=\textwidth]{b_cornwall.png}
+\caption{Share of settlements in Cornwall and Devon with a Cornish element, in quarter-degree bands of longitude.}
+\label{fig:corn}
+\end{figure}
+
+\subsection{Scotland}
+
+Scotland has two words for a river mouth: Brittonic aber- ({{scotland.aber|int}} settlements) and Gaelic inver- ({{scotland.inver|int}}). {{scotland.aber_east_of_4w|int}} of the abers lie east of 4 degrees west, in Perth and Kinross, Fife and Aberdeenshire, while the invers spread across the west and north ({{scotland.inver_areas.0.1|int}} in Highland). Pit-, from Pictish pett, a portion of land, appears in {{scotland.pit|int}} settlement names, {{scotland.pit_east_of_4w|int}} of them east of 4 degrees west. The pattern matches the familiar picture of a Brittonic and Pictish east overlaid by Gaelic, though the counts are small.
+
+\subsection{Ireland: what the spellings stand for}
+
+Bally- (with Balli- and Bal-) begins {{ireland.bal_townlands|int}} townlands, {{ireland.bal_townland_share|pct}} of all; {{ireland.bal_share_ni|pct}} in Northern Ireland and {{ireland.bal_share_roi|pct}} in the Republic. Its share ranges from {{page.ards_bal|pct}} of townlands in Ards and North Down and {{page.wex_bal|pct}} in Wexford to under 2\% in Leitrim, Monaghan, Cavan and Fermanagh and Omagh, where Drum-, Kil-, Lis-, Derry- and Tully- names lead instead. The English -town marks {{elements.town.top_share_areas.0.3|pct}} of townlands in Meath, {{elements.town.top_share_areas.1.3|pct}} in Dublin and {{elements.town.top_share_areas.2.3|pct}} in Kildare, the counties of the medieval English Pale, against {{ireland.town_share_townlands|pct}} across Ireland.
+
+Table~\ref{tab:irish} and Figure~\ref{fig:irish} compare anglicised beginnings with the first word of the official Irish form. Most are what they seem: Drum- is droim in {{irish_forms.rows.drum.agree_share|pct}} of cases, Knock- is cnoc in {{irish_forms.rows.knock.agree_share|pct}}, Lis- is lios in {{irish_forms.rows.lis.agree_share|pct}}, and Bally- is baile in {{irish_forms.rows.bal.agree_share|pct}}. The exceptions are informative. Of {{irish_forms.bal.n|int}} Bally- names, {{irish_forms.bal.beal|int}} begin with Béal (as in Béal an Átha, ford mouth: Ballina) and {{irish_forms.bal.bealach|int}} with Bealach, a pass or road. Dun- is domhnach, a church, in {{irish_forms.dun.domhnach|int}} of {{irish_forms.dun.n|int}} cases (Donaghmore, Domhnach Mór). Agha- is áth, a ford, in {{irish_forms.auch.ath|int}} of {{irish_forms.auch.n|int}}. Kil- is cill, a church or monastic cell, in only {{irish_forms.kil.cill|int}} of {{irish_forms.kil.n|int}} ({{page.kil_cill_share|pct}}) and coill, a wood, in {{irish_forms.kil.coill|int}} ({{page.kil_coill_share|pct}}).
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=\textwidth]{b_irish.png}
+\caption{Republic of Ireland names with an official Irish form: share whose Irish form begins with the Irish word the anglicised spelling usually stands for. Elements with at least 20 names.}
+\label{fig:irish}
+\end{figure}
+
+{{tab_irish}}
+
+The wood names are not spread evenly (Figure~\ref{fig:kil}). Among townlands, coill accounts for {{irish_forms.kil_townlands.counties.0.1|int}} of {{irish_forms.kil_townlands.counties.0.2|int}} Kil- names in {{irish_forms.kil_townlands.counties.0.0}}, {{irish_forms.kil_townlands.counties.1.1|int}} of {{irish_forms.kil_townlands.counties.1.2|int}} in {{irish_forms.kil_townlands.counties.1.0}} and {{irish_forms.kil_townlands.counties.2.1|int}} of {{irish_forms.kil_townlands.counties.2.2|int}} in {{irish_forms.kil_townlands.counties.2.0}}, but {{irish_forms.kil_townlands.counties.-1.1|int}} of {{irish_forms.kil_townlands.counties.-1.2|int}} in {{irish_forms.kil_townlands.counties.-1.0}}. A reader who takes every Kil- in south Ulster and the north midlands for a church will be wrong most of the time.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.78\textwidth]{b_kil_map.png}
+\caption{Townlands in the Republic of Ireland beginning with Kil- or Kill-, by the first word of the official Irish form: cill, church, or coill, wood.}
+\label{fig:kil}
+\end{figure}
+
+\section{Discussion}
+
+A few dozen spelling rules recover the broad language layers of the map: English across England and lowland Scotland, Norse in the east Midlands, Yorkshire and the Northern Isles, Welsh west of the border, Cornish west of the Tamar, Gaelic in the Highlands and across Ireland. None of this is new to place-name scholars. What the open data add is scale, the same measure on both sides of a border, and a check of meaning where official forms exist.
+
+Two results stand out. The edges are sharp but not clean: Welsh spellings reach some kilometres into Shropshire and Herefordshire, and English elements reach into Wales, as one would expect where a border moved and populations mixed. And the Irish test shows that the commonest anglicised beginnings are mostly reliable guides, with clear exceptions. Kil- is the most important: about {{page.kil_coill_share|pct}} of Kil- names with an official form are wood names, and in Monaghan, Cavan and Leitrim most are. Maps of early church sites drawn from Kil- names alone would be badly inflated there.
+
+\section{Limitations}
+
+A spelling is not an etymology. The rules find letters, not words, and the glosses are general readings, not verified for each name. The spelling check covers obvious false friends only. The datasets differ: Great Britain's covers hamlets and suburbs, the Irish town lists only larger places, and Northern Ireland's town list is older (2015). Names have changed over time, and modern spellings can hide an element or produce a false one. Newer names (Newtown, Mount Pleasant) count as English. The Irish-form test depends on the official forms, which are themselves the result of research and can be uncertain for individual names; it is available only for the Republic in this data. Grid cells are equal steps of latitude and longitude, so northern cells are smaller. Nothing here dates a name.
+
+\section{Conclusion}
+
+Across {{meta.n_names|int}} names, a simple, open and repeatable tagging shows where the languages of Britain and Ireland left their words, how sharply their territories end, and, in Ireland, how often familiar spellings mislead. The interactive map lets anyone look up their own place and see which elements its name carries, with the meaning usually given and a reminder of the caveats.
+
+\section*{Data and code availability}
+
+Data, code and the interactive page: GitHub, \url{https://github.com/Tristan-Hotham/place-name-endings}; interactive version, \url{https://maps.tristanhotham.com/place-name-endings/}; archived release, \url{https://doi.org/10.5281/zenodo.23761433}. The repository holds every name with its tags (names\_tagged.csv.gz), the counts by area and by grid cell, the Irish-form comparison, the rules (code/elements.py) and results.json with every number used here. Code is MIT licensed; data and text CC BY 4.0, with the source credits below.
+
+Sources: OS Open Names, contains OS data © Crown copyright and database right 2026 (Open Government Licence v3.0); OSNI Open Data, contains public sector information licensed under the Open Government Licence v3.0; National Placenames Gazetteer © Tailte Éireann (CC BY 4.0).
+
+\section*{AI statement}
+
+I wrote the text, with drafting and editing assistance from Claude (Anthropic), which also helped prepare the analysis code. I reviewed and checked all text and results.
+
+\section*{References}
+
+\small
+\setlength{\parskip}{0.35em}
+Ekwall, E. (1960) \textit{The Concise Oxford Dictionary of English Place-Names}. 4th edn. Oxford: Clarendon Press.
+
+Flanagan, D. and Flanagan, L. (1994) \textit{Irish Place Names}. Dublin: Gill and Macmillan.
+
+Land and Property Services (2015) OSNI Open Data, Gazetteer, Place Names. OpenDataNI. \url{https://admin.opendatani.gov.uk/dataset/osni-open-data-gazetteer-place-names}
+
+Land and Property Services (2026) OSNI Open Data, Largescale Boundaries, Townlands. OpenDataNI. \url{https://admin.opendatani.gov.uk/dataset/osni-open-data-largescale-boundaries-townlands}
+
+Office for National Statistics (2025) Local authority district boundaries. Open Government Licence v3.0. Via \url{https://github.com/onsvisual/uk-topojson}
+
+Ordnance Survey (2026) OS Open Names. \url{https://www.ordnancesurvey.co.uk/products/os-open-names}
+
+Owen, H. W. and Morgan, R. (2007) \textit{Dictionary of the Place-Names of Wales}. Llandysul: Gomer.
+
+Padel, O. J. (1985) \textit{Cornish Place-Name Elements}. Nottingham: English Place-Name Society.
+
+Tailte Éireann (2024) National Placenames Gazetteer: Centres of Population; Townlands. CC BY 4.0. \url{https://data.gov.ie/}
+
+Watts, V. (ed.) (2004) \textit{The Cambridge Dictionary of English Place-Names}. Cambridge: Cambridge University Press.
+
+\end{document}
